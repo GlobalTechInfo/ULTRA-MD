@@ -148,9 +148,10 @@ if (opcion === '2' || methodCode) {
   let addNumber
   if (!!phoneNumber) {
   addNumber = phoneNumber.replace(/[^0-9]/g, '')
-  if (!Object.keys(PHONENUMBER_MCC).some(v => numeroTelefono.startsWith(v))) {
-  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Your number must begin with the country code")))
-  process.exit(0)
+  if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Number must start with the country code")));
+  process.exit(0);
+  }
   }} else {
   while (true) {
   addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Write Your Number\n\nExample: 923444844xxxx\n\n\n\n")))
