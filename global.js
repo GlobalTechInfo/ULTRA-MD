@@ -139,53 +139,54 @@ const connectionOptions = {
   }
 
 //--
-global.conn = makeWASocket(connectionOptions)
+global.conn = makeWASocket(connectionOptions);
 
 if (opcion === '2' || methodCode) {
-  if (!conn.authState.creds.registered) {  
-  if (MethodMobile) throw new Error('⚠️ An Error Occurred')
-  
-  let addNumber
-  if (!!phoneNumber) {
-  addNumber = phoneNumber.replace(/[^0-9]/g, '')
-  if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
-  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Number must start with the country code")));
-  process.exit(0);
+  if (!conn.authState.creds.registered) {
+    if (MethodMobile) throw new Error('⚠️ An Error Occurred');
+    let addNumber;
+    if (!!phoneNumber) {
+      addNumber = phoneNumber.replace(/[^0-9]/g, '');
+      if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+        console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Number must start with the country code")));
+        process.exit(0);
+      }
+    } else {
+      while (true) {
+        addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Write Your Number\n\nExample: 923444844xxxx\n\n\n\n")));
+        addNumber = addNumber.replace(/[^0-9]/g, '');
+        if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+          break;
+        } else {
+          console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Make Sure To Add Country Code First")));
+        }
+      }
+    }
+    setTimeout(async () => {
+      let codeBot = await conn.requestPairingCode(addNumber);
+      codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
+      console.log(chalk.bold.red(`\n\n🟢 Your Code Is:  ${codeBot}\n\n`));
+      rl.close();
+    }, 3000);
   }
-  }} else {
-  while (true) {
-  addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Write Your Number\n\nExample: 923444844xxxx\n\n\n\n")))
-  addNumber = addNumber.replace(/[^0-9]/g, '')
-  
-  if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
-  break 
-  } else {
-  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Make Sure To Add Country Code First")))
-  }}
- 
-  }
-  
-  setTimeout(async () => {
-  let codeBot = await conn.requestPairingCode(addNumber)
-  codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
-  console.log(chalk.bold.red(`\n\n🟢   Your Code Is:  ${codeBot}\n\n`)) 
-  rl.close()
-  }, 3000)
-  }}
-conn.isInit = false
+}
+
+conn.isInit = false;
 
 if (!opts['test']) {
   setInterval(async () => {
-    if (global.db.data) await global.db.write().catch(console.error)
-    if (opts['autocleartmp']) try {
-      clearTmp()
-
-    } catch (e) { console.error(e) }
-  }, 60 * 1000)
+    if (global.db.data) await global.db.write().catch(console.error);
+    if (opts['autocleartmp']) {
+      try {
+        clearTmp();
+      } catch (e) {
+        console.error(e);
+      }
+    }
+  }, 60 * 1000);
 }
 
-if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
-
+if (opts['server']) (await import('./server.js')).default(global.conn, PORT);
 /* Clear */
 async function clearTmp() {
   const tmp = [tmpdir(), join(__dirname, './tmp')]
