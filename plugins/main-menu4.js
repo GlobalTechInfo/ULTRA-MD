@@ -49,17 +49,17 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 📜 *_Quote of the day: ${quote}_* 📜
 
 ┏━💼 _User Info:_ 💼━┓
-┃ 👾  *User Tag:* ${taguser} 
+┃ 👾  *User:* ${taguser} 
 ┃ 🎩  *Name:* ${name} 
-┃ 🦸  *Master Mind:* ${author} 
+┃ 🦸  *Master:* ${author} 
 ┃ 💎  *Diamonds:* ${diamond} 
 ┃ 🏆  *Rank:* ${role}
 ┃ 🎮  *XP:* ${exp} 
 ┗━━━━━━━━━━━┛
 
 ┏━━⏰ _Today's Sauce!_ ⏰━┓
-┃ 📆  *Today's Date:* ${date} 
-┃ ⏲️  *Current Time:* ${wib} 
+┃ 📆  *Date:* ${date} 
+┃ ⏲️  *Time:* ${wib} 
 ┗━━━━━━━━━━━━━┛
 
 ┏━━🤖 _BOT STATUS:_🤖━━┓
