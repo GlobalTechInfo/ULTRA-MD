@@ -43,27 +43,21 @@ Fork Repo & Just Replace Your Number
 
 globalbotNumber = '923051391007'
 
-in config.js and it will directly shows you a pairing code at the end of Deployment, pair and get connected.
+In config.js And It Will Directly Shows You A Pairing Code At The End Of Deployment, Pair And Enjoy.
 
 ----
 <p align="center">
 
 2. #### Second Method
 
-Fork Repo 
+Fork Repo , Then Pair From Following, You'll Get A File After Pairing
 
-Then Pair From Following
+Upload Your Creds.json File Inside The session Folder/Directory Of Fork
 
-----
-
-----
-<a href='https://necessary-margaretha-oletters-ba309cdc.koyeb.app/' target="_blank"><img alt='Fork repo' src='https://img.shields.io/badge/PAIRING CODE-green?style=for-the-badge&logo=opencv&logoColor=white'/></a>
+Then Deploy And Enjoy
 
 ----
-----
- Then Upload Creds.json In Session Folder And Then Deploy & Enjoy.
 
-----
 1. #### SETUP
 
 1. Fork the repo
@@ -150,9 +144,46 @@ Then Pair From Following
    <br>
    <p align="center"><a href="https://dashboard.render.com"> <img src="https://img.shields.io/badge/Deploy%20To%20Render-maroon?style=for-the-badge&logo=render" width="220" height="38.45"/></a></p>
   
- 
+ <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+<p align="center">
 
-- Star тнР the repo if you like ULTRA-MD.
+
+<p align="center">
+  
+ 7. #### DEPLOY IN TERMUX/UBUNTU
+ 
+```
+apt update && apt upgrade -y
+```
+```
+pkg install proot-distro
+```
+```
+proot-distro install ubuntu
+```
+```
+proot-distro login ubuntu
+```
+```
+apt update && apt upgrade -y
+```
+```
+apt install -y webp git ffmpeg curl imagemagick
+```
+```
+apt -y remove nodejs
+curl -fsSl https://deb.nodesource.com/setup_lts.x | bash - && apt -y install nodejs
+```
+```
+git clone https://github.com/<your gitHub Username>/ULTRA-MD
+cd ULTRA-MD
+```
+```
+npm install && npm start
+```
+<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+
+- Star ⭐ the repo if you like ULTRA-MD.
 
 6. #### CREDITS 
 <div><button id="boton" type="button">FG98F</button></div>
@@ -187,44 +218,6 @@ Then Pair From Following
 - Have A Good Day ❤️
 
 
-
-  <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-<p align="center">
-
-
-<p align="center">
   
- 7. #### DEPLOY IN TERMUX/UBUNTU
- 
-```
-apt update && apt upgrade -y
-```
-```
-pkg install proot-distro
-```
-```
-proot-distro install ubuntu
-```
-```
-proot-distro login ubuntu
-```
-```
-apt update && apt upgrade -y
-```
-```
-apt install -y webp git ffmpeg curl imagemagick
-```
-```
-apt -y remove nodejs
-curl -fsSl https://deb.nodesource.com/setup_lts.x | bash - && apt -y install nodejs
-```
-```
-git clone https://github.com/<your gitHub Username>/GLOBAL-MD
-cd GLOBAL-MD
-```
-```
-npm install && npm start
-```
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <p align="center">
 Thanks To Microsoft Copilot 🩷
