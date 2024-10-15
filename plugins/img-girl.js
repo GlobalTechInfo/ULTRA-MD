@@ -8,6 +8,6 @@ let handler = async(m, { conn, usedPrefix, command }) => {
 handler.help = ['girl']
 handler.tags = ['img']
 handler.command = ['girl', 'woman']
-handler.diamond = true
+handler.diamond = false
 
 export default handler
