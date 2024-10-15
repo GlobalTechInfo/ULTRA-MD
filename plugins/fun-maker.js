@@ -3,8 +3,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     
     let who = m.quoted ? m.quoted.sender : m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
     let who2 = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : false 
-    let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://i.imgur.com/whjlJSf.jpg')
-    let me = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.imgur.com/whjlJSf.jpg')
+    let pp = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://i.ibb.co/G2dh9cB/qasim.jpg')
+    let me = await conn.profilePictureUrl(m.sender, 'image').catch(_ => 'https://i.ibb.co/G2dh9cB/qasim.jpg')
 
     m.react(rwait)
     switch (command) {
