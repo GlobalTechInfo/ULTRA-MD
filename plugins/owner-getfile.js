@@ -1,68 +1,30 @@
-import fs from 'fs'
-import syntaxError from 'syntax-error'
-import path from 'path'
-
-const _fs = fs.promises
+import fs from 'fs/promises';
+import path from 'path';
 
 let handler = async (m, { text, usedPrefix, command, __dirname }) => {
-  if (!text)
-    throw `
-✳️ user  : ${usedPrefix + command} <name file>
-
-📌 Example:
-        ${usedPrefix}getfile main.js
-        ${usedPrefix}getplugin owner
-`.trim()
-  if (/p(lugin)?/i.test(command)) {
-    const filename = text.replace(/plugin(s)\//i, '') + (/\.js$/i.test(text) ? '' : '.js')
-    const pathFile = path.join(__dirname, filename)
-    const file = await _fs.readFile(pathFile, 'utf8')
-    m.reply(file)
-    const error = syntaxError(file, filename, {
-      sourceType: 'module',
-      allowReturnOutsideFunction: true,
-      allowAwaitOutsideFunction: true,
-    })
-    if (error) {
-      await m.reply(
-        `
-❎ bug found in  *${filename}*:
-
-${error}
-
-`.trim()
-      )
-    }
-  } else {
-    const isJavascript = /\.js/.test(text)
-    if (isJavascript) {
-      const file = await _fs.readFile(text, 'utf8')
-      m.reply(file)
-      const error = syntaxError(file, text, {
-        sourceType: 'module',
-        allowReturnOutsideFunction: true,
-        allowAwaitOutsideFunction: true,
-      })
-      if (error) {
-        await m.reply(
-          `
-❌ bug found in *${text}*:
-
-${error}
-
-`.trim()
-        )
-      }
+  if (!text) {
+    m.reply(`Usage: ${usedPrefix + command} <filename>\n❇️ Example:\n${usedPrefix}getfile main.js`);
+    return;
+  }
+  
+  const filePath = path.join(__dirname, text);
+  try {
+    await fs.access(filePath); // Check if file exists
+    const fileContent = await fs.readFile(filePath, 'utf8');
+    m.reply(fileContent);
+  } catch (e) {
+    if (e.code === 'ENOENT') {
+      m.reply(`❌  Error: No file named "${text}" found.`);
     } else {
-      const file = await _fs.readFile(text, 'base64')
-      await m.reply(Buffer.from(file, 'base64'))
+      console.error(e);
+      m.reply(`❌  Error: ${e.message}`);
     }
   }
 }
-handler.help = ['plugin', 'file'].map(v => `get${v} <name file>`)
-handler.tags = ['owner']
-handler.command = /^g(et)?(p(lugin)?|f(ile)?)$/i
 
-handler.rowner = true
+handler.help = ['getfile <filename>'];
+handler.tags = ['owner'];
+handler.command = ['getfile'];
+handler.rowner = true;
 
-export default handler
+export default handler;
