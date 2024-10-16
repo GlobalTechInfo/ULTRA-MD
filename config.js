@@ -75,9 +75,9 @@ global.APIKeys = {
 // Sticker WM
 global.botname = process.env.BOTNAME
 global.premium = 'true'
-global.packname = 'GLOBAL BOT'
+global.packname = 'GLOBAL-MD'
 global.author = 'GlobalTechInfo'
-global.menuvid = ''
+global.menuvid = 'https://i.imgur.com/2U2K9YA.mp4'
 global.igfg = ' Follow on Instagram\nhttps://www.instagram.com/global.techinfo'
 global.dygp = 'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07'
 global.fgsc = 'https://github.com/GlobalTechInfo/ULTRA-MD'
@@ -87,11 +87,11 @@ global.fglog = 'https://i.ibb.co/G2dh9cB/qasim.jpg'
 global.thumb = fs.readFileSync('./assets/qasim.jpg')
 
 global.wait = '⏳'
-global.rwait = ''
-global.dmoji = ''
-global.done = ''
-global.error = ''
-global.xmoji = ''
+global.rwait = '⏳'
+global.dmoji = '🤭'
+global.done = '✅'
+global.error = '❌'
+global.xmoji = '🤩'
 
 global.multiplier = 69
 global.maxwarn = '3'
