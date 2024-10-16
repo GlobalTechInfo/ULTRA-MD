@@ -30,7 +30,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {
-        title: '𝙂𝙇𝙊𝘽𝘼𝙇 𝙈𝘿 𝙄𝙎 𝘼𝙇𝙄𝙑𝙀',
+        title: 'CYBER SHAGEE IS NOT ALIVE.....',
         body: '© GlobalTechInfo',
         thumbnailUrl: img,
         sourceUrl: 'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07',
