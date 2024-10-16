@@ -1,5 +1,5 @@
 {
-    "name": "GLOBAL MD",
+    "name": "Ultra",
     "version": "3.1.0",
     "description": "Advanced WhatsApp",
     "main": "index.js",
@@ -28,16 +28,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/GlobalTechInfo/GLOBAL-MD",
+    "homepage": "https://github.com/GlobalTechInfo/ULTRA-MD",
     "author": {
         "name": "GlobalTechInfo"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/GlobalTechInfo/GLOBAL-MD.git"
+        "url": "git+https://github.com/GlobalTechInfo/ULTRA-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/GlobalTechInfo/GLOBAL-MD/issues"
+        "url": "https://github.com/GlobalTechInfo/ULTRA-MD/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
