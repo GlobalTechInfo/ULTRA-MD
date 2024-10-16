@@ -7,10 +7,10 @@ RUN sudo dnf -y update &&\
 
 RUN git clone https://github.com/GlobalTechInfo/ULTRA-MD
 
-WORKDIR /root/global-md
+WORKDIR /root/ultra-md
 
-COPY ./root/global-md
+COPY ./root/ultra-md
 
-RUN yarn install
+RUN npm install
 
 CMD ["node", "index.js"]
