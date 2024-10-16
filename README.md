@@ -3,7 +3,7 @@
 
 <p align="center">  
   <a href="https://youtu.be/oXQjl39Bl7M">
-    <img alt="ULTRA" height="500" width="900" src="https://i.ibb.co/G2dh9cB/qasim.jpg">
+    <img alt="ULTRA" height="500" width="900" src="https://i.imgur.com/K7q4Xh4.jpeg">
     <h1 align="center">ULTRA-MD 3.O</h1>
   </a>
 </p>
