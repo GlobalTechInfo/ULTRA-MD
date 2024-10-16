@@ -45,17 +45,17 @@ let greeting = ucapan()
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 let str = `
-  『 *GLOBAL-MD* 』  
+  『 *SHAGEE-MD* 』  
   
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
-╎❒ *CREATOR : QASIM*
+╎❒ *CREATOR : SHAGEE*
 ╎
 ╎❒ *PLUGINS : 250 +*
 ╎
 ╎❒ *FEATURE : 700 +*
 ╚┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-© 2024 *GlobalTechInfo*`
+© 2024 *CYBERTechInfo*`
 
 let msg = generateWAMessageFromContent(m.chat, {
 
