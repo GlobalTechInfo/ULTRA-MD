@@ -1,12 +1,30 @@
-import { smsg } from './lib/simple.js'
-import { format } from 'util'
-import { fileURLToPath } from 'url'
-import path, { join } from 'path'
-import { unwatchFile, watchFile } from 'fs'
-import chalk from 'chalk'
-import fetch from 'node-fetch'
-import Pino from 'pino'
+import { smsg } from './lib/simple.js';
+import { format } from 'util';
+import { fileURLToPath } from 'url';
+import path, { join } from 'path';
+import { unwatchFile, watchFile } from 'fs';
+import chalk from 'chalk';
+import fetch from 'node-fetch';
+import Pino from 'pino';
+import autoreactCommand from './plugins/Autoreact.js';
 
+const commands = new Map(); // Ensure commands is defined
+
+// Function to handle all messages
+const mainHandler = async (m, conn) => {
+  await autoreactCommand.all(m, { conn });
+  // other handlers...
+};
+
+// Ensure this listener is properly set up
+conn.ev.on('messages.upsert', async (msg) => {
+  const m = msg.messages[0];
+  if (!m.message) return;
+  await mainHandler(m, conn);
+});
+
+// Register commands
+commands.set('autoreact', autoreactCommand);
 /**
  * @type {import("@whiskeysockets/baileys")}
  */
