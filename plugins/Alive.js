@@ -1,10 +1,10 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   // Sound
   let name = m.pushName || conn.getName(m.sender)
-  var vn = 'https://cdn.jsdelivr.net/gh/GlobalTechInfo/ULTRA-MD@main/assets/qasim2.mp3'
+  var vn = 'https://i.imgur.com/QWELPBi.mp4'
   let url = 'https://github.com/GlobalTechInfo/ULTRA-MD'
   let murl = 'https://youtu.be/3j_EIP--2t8?si=4TFWV0On6Bl1wr-e'
-  let img = 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg'
+  let img = 'https://i.imgur.com/3C6dAGg.mp4'
   let con = {
     key: {
       fromMe: false,
@@ -30,10 +30,10 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {
-        title: '𝙂𝙇𝙊𝘽𝘼𝙇 𝙈𝘿 𝙄𝙎 𝘼𝙇𝙄𝙑𝙀',
+        title: '𝗮𝘃𝗶𝘀𝗵𝗻𝗮 𝗯𝗼𝘁 𝗶𝘀 𝗮𝗹𝗶𝘃𝗲',
         body: '© GlobalTechInfo',
         thumbnailUrl: img,
-        sourceUrl: 'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07',
+        sourceUrl: 'https://www.whatsapp.com/channel/0029Vaqkg8jEVccTlVpD1g2B?fbclid=PAZXh0bgNhZW0CMTEAAaZSJEiA5TYp7LtQ7Xi_l21NVUXu-J_TLlg1S7niH9OJ1RbusOGamPHCz7Q_aem_cXo-4Ex5Z0s3iQjtJpd6Hg',
         mediaType: 1,
         renderLargerThumbnail: true,
       },
