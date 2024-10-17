@@ -1,24 +1,34 @@
-import pkg from 'youtubedl-core';
-const { youtubedl, youtubedlv2 } = pkg;
+import pkg from 'nayan-media-downloader';
+const { ytdown } = pkg;
 
-let handler = async (m, { conn, text, args, isPrems, isOwner, usedPrefix, command }) => {
-  if (!args || !args[0]) throw `✳️ Example :\n${usedPrefix + command} https://youtu.be/YzkTFFwxtXI`;
+let handler = async (m, { conn, text, args, usedPrefix, command }) => {
+  if (!args || !args[0]) throw `✳️ Example: ${usedPrefix + command} https://youtu.be/YzkTFFwxtXI`;
   if (!args[0].match(/youtu/gi)) throw `❎ Verify that it is a YouTube link.`;
-  
-  m.react(rwait);
-  
+
+  m.react('⏳');
+
   try {
-    let q = '128kbps';
-    let v = args[0];
-    const yt = await youtubedl(v).catch(async () => await youtubedlv2(v));
-    const dl_url = await yt.audio[q].download();
-    const title = await yt.title;
-    conn.sendFile(m.chat, dl_url, title + '.mp3', null, m, false, { mimetype: 'audio/mpeg' });
-    m.react(xmoji);
-  } catch {
+    const { data } = await ytdown(args[0]);
+    const url = data.audio; // Directly use the audio URL
+    if (!url) throw new Error('Error fetching audio URL');
+    const title = data.title || 'audio';
+    const txt = 'Here is your requested audio';
+    
+    // Download and send the file
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Error downloading audio');
+
+    const buffer = await response.arrayBuffer();
+    const fileBuffer = Buffer.from(buffer);
+
+    await conn.sendMessage(m.chat, { audio: fileBuffer, mimetype: 'audio/mpeg', fileName: `${title}.mp3` }, { quoted: m });
+    m.react('✅');
+  } catch (err) {
+    console.error('Error downloading audio:', err);
     await m.reply(`❌ Error: Could not download the audio.`);
+    m.react('❌');
   }
-}
+};
 
 handler.help = ['ytmp3 <url>'];
 handler.tags = ['downloader'];
