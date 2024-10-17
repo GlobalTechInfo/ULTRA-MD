@@ -24,7 +24,7 @@
  <h2 align="center">  NOTICE
 </h2>
 
-_`Project Is Still Under Development So If You Find Any Errors Please Don't Bother Me By Keep Asking About Those, Because I'm Fixing It Already`_
+#### Bot Is Able To Reply In 5 Different Languages So Use .language command First After Getting Connection And Choose Your Native Language If It Is There, If Your Native Language Is Not Present There Then Choose en For English.
 
 ----
  <p align="center"><img src="https://profile-counter.glitch.me/{ULTRA-MD}/count.svg" alt="GlobalTechInfo :: Visitor's Count" old_src="https://profile-counter.glitch.me/{GlobalTechInfo}/count.svg" /></p>
