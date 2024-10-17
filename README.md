@@ -85,7 +85,7 @@ Then Deploy And Enjoy
 | Variable | Description 
 |---|---| 
 | REMOVEBG_KEY | API key for www.remove.bg | 
-| PREFIX | put any one symbol here except @ and + , leave it Blank if you want to use default prefix |
+| PREFIX | put any one symbol here except @ and + , leave it Blank if you want to use multi prefix |
 | MODE | mode public or private |
 | autoRead | make it true if you want bot to read messages |
 | statusview | make it true if you want bot to view status | 
@@ -110,7 +110,7 @@ Then Deploy And Enjoy
 
 
 
-3. #### DEPLOY TO HEROKU ( Not Yet )
+3. #### DEPLOY TO HEROKU
 
 1. If You don't have an account in Heroku. Create a account.
     <br>
