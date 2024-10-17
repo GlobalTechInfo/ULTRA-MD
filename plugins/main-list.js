@@ -202,7 +202,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╭───『 *Download* 』─❍
 ◈ •video
 ◈ •itunes
-◈ •play9
+◈ •play
 ◈ •play2
 ◈ •play3
 ◈ •play7
