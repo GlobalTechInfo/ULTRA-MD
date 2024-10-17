@@ -200,9 +200,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     case 'dlmenu':
       lkr = `
 ╭───『 *Download* 』─❍
-◈  video
+◈ •video
 ◈ •itunes
-◈ •play
+◈ •play9
 ◈ •play2
 ◈ •play3
 ◈ •play7
