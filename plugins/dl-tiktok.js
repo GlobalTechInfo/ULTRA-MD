@@ -1,5 +1,5 @@
-import { tiktokdl } from '@bochilteam/scraper';
-import fg from 'api-dylux';
+import pkg from 'nayan-media-downloader';
+const { tikdown } = pkg;
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   if (!args[0] && m.quoted && m.quoted.text) {
@@ -7,24 +7,19 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
   }
   if (!args[0] && !m.quoted) throw 'Give the link of the video TikTok or quote a TikTok link';
   if (!args[0].match(/tiktok/gi)) throw 'Verify that the link is from TikTok';
-
   let txt = 'Here is your requested video';
-  m.react(rwait);
+  m.react('⏳');
 
   try {
-    const { author: { nickname }, video, description } = await tiktokdl(args[0]);
-    const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd;
+    const { data } = await tikdown(args[0]);
+    const url = data.video;  // Directly use the video URL
     if (!url) throw new Error('Error fetching video URL');
-
-    await conn.sendFile(m.chat, url, 'tiktok.mp4', '', m);
+    await conn.sendFile(m.chat, url, 'tiktok.mp4', txt, m);
+    m.react('✅');
   } catch (err) {
-    try {
-      let p = await fg.tiktok(args[0]);
-      await conn.sendFile(m.chat, p.play, 'tiktok.mp4', txt, m);
-    } catch (error) {
-      console.error(error); // Added error logging
-      await m.reply('*An unexpected error occurred*');
-    }
+    console.error(err); // Added error logging
+    await m.reply('*An unexpected error occurred*');
+    m.react('❌');
   }
 };
 
