@@ -112,7 +112,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Owner* 』─❍
 ◈ •enable
-◈ •disable
+◈ •autoreact
 ◈ •banchat
 ◈ •unbanchat
 ◈ •banuser
