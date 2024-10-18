@@ -11,7 +11,7 @@ const handler = async (m, { conn, args }) => {
     let data = await pintarest(url);
     const { download, fileName, mimetype } = data;
     
-    let caption = `≡ *Pinterest DL*\n▢ *Number:* ${fileName}\n▢ *Type:* ${mimetype}`.trim();
+    const caption = `❥ HERE IS YOUR VIDEO \n\n☆ *VIDEO TITLE:* ${fileName}\n\n❥ © GlobalTechInfo`;
     
     await conn.sendFile(m.chat, download, fileName, caption, m, false, { mimetype });
     m.react('✅');
@@ -24,6 +24,6 @@ const handler = async (m, { conn, args }) => {
 
 handler.help = ['pinterest <url>'];
 handler.tags = ['downloader'];
-handler.command = ['pinterest', 'pin'];
+handler.command = ['pinterest', 'pint'];
 
 export default handler;
