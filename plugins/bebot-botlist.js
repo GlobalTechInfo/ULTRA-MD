@@ -13,6 +13,6 @@ ${b}`)
 }
 handler.help = ['botlist']
 handler.tags = ['bebot']
-handler.command = ['listbot', 'listbots', 'bots', 'bebots', 'botlist'] 
+handler.command = ['listbot', 'listbots', 'bots', 'bebots', 'botlist', 'listrent', 'subbots'] 
 
 export default handler
