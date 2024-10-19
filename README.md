@@ -108,7 +108,7 @@ Then Deploy And Enjoy
   </a>
 </div>
 
-
+----
 
 3. #### DEPLOY TO HEROKU
 
@@ -124,6 +124,8 @@ Then Deploy And Enjoy
   </a>
 </div>
 
+----
+
 4. #### DEPLOY TO KOYEB
 
 1. if you don't have a koyeb account. Create an account.
@@ -134,6 +136,7 @@ Then Deploy And Enjoy
    <br>
 <p align="center"><a href="https://app.koyeb.com/auth/signin"> <img src="https://img.shields.io/badge/Deploy%20To%20Koyeb-orange?style=for-the-badge&logo=koyeb" width="220" height="38.45"/></a></p>
   
+----
 
 5. #### DEPLOY TO RENDER
 
@@ -144,10 +147,24 @@ Then Deploy And Enjoy
 2. Now deploy
    <br>
    <p align="center"><a href="https://dashboard.render.com"> <img src="https://img.shields.io/badge/Deploy%20To%20Render-maroon?style=for-the-badge&logo=render" width="220" height="38.45"/></a></p>
+
+----
+
+6. #### Deploy In Replit
+   <br>
+   <p align="center"><a href="https://repl.it/github/GlobalTechInfo/ULTRA-MD"> <img src="https://img.shields.io/badge/Deploy%20To%20Replit-orange?style=for-the-badge&logo=replit" width="220" height="38.45"/></a></p>
+
+----
+
+7. #### Deploy In Code Space
+   <br>
+   <p align="center"><a href="https://github.com/codespaces/new"> <img src="https://img.shields.io/badge/Deploy%20To%20CodeSpace-black?style=for-the-badge&logo=visualstudiocode" width="220" height="38.45"/></a></p>
+  
   
  <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <p align="center">
 
+----
 
 <p align="center">
   
