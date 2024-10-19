@@ -132,7 +132,8 @@ Then Deploy And Enjoy
 
 2. Now deploy
    <br>
-  <p align="center"><img src="https://www.koyeb.com/static/images/deploy/button.svg" width="380" height="38.45"/></a></p>
+  <p align="center"><a href="https://app.koyeb.com/auth/signin"> <img src="https://img.shields.io/badge/Deploy%to%koyeb-orange?style=for-the-badge&logo=koyeb" width="220" height="38.45"/></a></p>
+  
 
 5. #### DEPLOY TO RENDER
 
@@ -215,9 +216,9 @@ npm install && npm start
 - Not For Sale
 - If A plugin's code is obfuscated , You don't have permission to edit it in any form 
 - Don't Forget to Give Credits If you are using or Reuploading My Plugins/files
-- Have A Good Day ❤️
+- Have A Good Day
 
 
   
 <p align="center">
-Thanks To Microsoft Copilot 🩷
+Thanks To Microsoft Copilot And Chatgpt🩷
