@@ -10,7 +10,7 @@ let handler = async (m, { conn }) => {
 };
 handler.help = ['stop']
 handler.tags = ['bebot']
-handler.command = ['stop', 'stopbot', 'stopbebot']
+handler.command = ['stop', 'stopbot', 'stopbebot', 'stoprent']
 handler.owner = true
 
 export default handler
