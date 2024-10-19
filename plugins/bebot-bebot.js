@@ -24,10 +24,12 @@ if (global.conns instanceof Array) console.log();
 else global.conns = [];
 
 let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => {
-    let parent = args[0] && args[0] == 'plz' ? _conn : await global.conn;
-    if (!((args[0] && args[0] == 'plz') || (await global.conn).user.jid == _conn.user.jid)) {
+    let parent = args[0] && args[0] === 'plz' ? _conn : await global.conn;
+    if (!((args[0] && args[0] === 'plz') || (await global.conn).user.jid === _conn.user.jid)) {
         throw `📌 ${mssg.nobbot}\n\n wa.me/${global.conn.user.jid.split`@`[0]}?text=${usedPrefix}botclone`;
     }
+
+    let isInit = false; // Declare isInit here
 
     async function bbts() {
         let authFolderB = crypto.randomBytes(10).toString('hex').slice(0, 8);
@@ -35,10 +37,11 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
         if (!fs.existsSync("./bebots/" + authFolderB)) {
             fs.mkdirSync("./bebots/" + authFolderB, { recursive: true });
         }
-        args[0] ? fs.writeFileSync("./bebots/" + authFolderB + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t')) : "";
+        if (args[0]) {
+            fs.writeFileSync("./bebots/" + authFolderB + "/creds.json", JSON.stringify(JSON.parse(Buffer.from(args[0], "base64").toString("utf-8")), null, '\t'));
+        }
 
         const { state, saveState, saveCreds } = await useMultiFileAuthState(`./bebots/${authFolderB}`);
-        const msgRetryCounterMap = (MessageRetryMap) => {};
         const msgRetryCounterCache = new NodeCache();
         const { version } = await fetchLatestBaileysVersion();
         let phoneNumber = m.sender.split('@')[0];
@@ -65,7 +68,6 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
                 return msg?.message || "";
             },
             msgRetryCounterCache,
-            msgRetryCounterMap,
             defaultQueryTimeoutMs: undefined,
             version
         };
@@ -85,18 +87,15 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
                 let codeBot = await conn.requestPairingCode(cleanedNumber);
                 codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot;
 
-                // Send a message in English
                 parent.sendMessage(m.chat, { text: `➤ Code: *${codeBot}*\n\nUse this code to become a Bot:\n\n1. Click on the three dots in the top right corner.\n2. Tap on Linked Devices.\n3. Select *Link with Phone Number*\n\n*Note:* The code is only valid for this number.` }, { quoted: m });
 
                 rl.close();
             }, 3000);
         }
 
-        conn.isInit = false;
-
         async function connectionUpdate(update) {
             const { connection, lastDisconnect, isNewLogin } = update;
-            if (isNewLogin) conn.isInit = true;
+            if (isNewLogin) isInit = true;
 
             const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
             if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
@@ -111,7 +110,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
                     parent.sendMessage(m.chat, { text: `⛔ ${mssg.sesClose}` }, { quoted: m });
                 }
             }
-            if (connection == 'open') {
+            if (connection === 'open') {
                 conn.isInit = true;
                 global.conns.push(conn);
                 await parent.sendMessage(m.chat, { text: args[0] ? `✅ ${mssg.connet}` : `✅ ${mssg.connID}` }, { quoted: m });
@@ -141,23 +140,40 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
             } catch (e) {
                 console.error(e);
             }
+            
             if (restatConn) {
                 try { conn.ws.close(); } catch { }
                 conn.ev.removeAllListeners();
                 conn = makeWASocket(connectionOptions);
-                isInit = true;
+                isInit = true; // Update isInit when restarting
             }
 
             if (!isInit) {
-                conn.ev.off('messages.upsert', conn.handler);
-                conn.ev.off('group-participants.update', conn.participantsUpdate);
-                conn.ev.off('groups.update', conn.groupsUpdate);
-                conn.ev.off('message.delete', conn.onDelete);
-                conn.ev.off('call', conn.onCall);
-                conn.ev.off('connection.update', conn.connectionUpdate);
-                conn.ev.off('creds.update', conn.credsUpdate);
+                // Only remove listeners if they were set
+                if (conn.handler) {
+                    conn.ev.off('messages.upsert', conn.handler);
+                }
+                if (conn.participantsUpdate) {
+                    conn.ev.off('group-participants.update', conn.participantsUpdate);
+                }
+                if (conn.groupsUpdate) {
+                    conn.ev.off('groups.update', conn.groupsUpdate);
+                }
+                if (conn.onDelete) {
+                    conn.ev.off('message.delete', conn.onDelete);
+                }
+                if (conn.onCall) {
+                    conn.ev.off('call', conn.onCall);
+                }
+                if (conn.connectionUpdate) {
+                    conn.ev.off('connection.update', conn.connectionUpdate);
+                }
+                if (conn.credsUpdate) {
+                    conn.ev.off('creds.update', conn.credsUpdate);
+                }
             }
 
+            // Setup handlers
             conn.welcome = global.conn.welcome + '';
             conn.bye = global.conn.bye + '';
             conn.spromote = global.conn.spromote + '';
@@ -176,7 +192,7 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
             conn.ev.on('message.delete', conn.onDelete);
             conn.ev.on('connection.update', conn.connectionUpdate);
             conn.ev.on('creds.update', conn.credsUpdate);
-            isInit = false;
+            isInit = false; // Reset isInit after setup
             return true;
         }
         creloadHandler(false);
@@ -186,11 +202,11 @@ let handler = async (m, { conn: _conn, args, usedPrefix, command, isOwner }) => 
 
 handler.help = ['botclone'];
 handler.tags = ['bebot'];
-handler.command = ['bebot', 'rentbot', 'jadibot', 'botclone', 'clonebot'];
+handler.command = ['bebot', 'serbot', 'jadibot', 'botclone', 'clonebot', 'rent', 'rentbot'];
 handler.rowner = false;
 
 export default handler;
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-		}
+	}
