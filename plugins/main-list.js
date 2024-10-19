@@ -75,6 +75,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •alive
 ◈ •language
 ◈ •server
+◈ •rentbot
+◈ •listrent
+◈ •stoprent
 ◈ •botinfo
 ◈ •owner
 ◈ •script
