@@ -67,6 +67,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Bot* 』─❍
 ◈ •quran
+◈ •autoreact
 ◈ •bible
 ◈ •gita
 ◈ •ping
@@ -200,20 +201,16 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     case 'dlmenu':
       lkr = `
 ╭───『 *Download* 』─❍
-◈ •video
+◈ •likee
 ◈ •pinterest
 ◈ •threads
 ◈ •capcut
 ◈ •itunes
 ◈ •play
 ◈ •play2
-◈ •play3
 ◈ •play7
-◈ •apk
 ◈ •mega
 ◈ •yts
-◈ •yta
-◈ •ytv
 ◈ •ytmp3 
 ◈ •ytmp4
 ◈ •gimage
