@@ -68,9 +68,9 @@ Fork the repo
 
 Get Creds.json (Server 1)
     
-     <a href='https://necessary-margaretha-oletters-ba309cdc.koyeb.app/' target="_blank"><img alt='SERVER 1' src='https://img.shields.io/badge/Creds.json-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
+ <a href='https://necessary-margaretha-oletters-ba309cdc.koyeb.app/' target="_blank"><img alt='SERVER 1' src='https://img.shields.io/badge/Creds.json-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
 
-
+----
 Get Creds.json (Server 2)
     <br>
 <a href='https://replit.com/@tlptrends92/GLOBAL-SESSIONS#main.sh' target="_blank"><img alt='SERVER 2' src='https://img.shields.io/badge/Creds.json-100000?style=for-the-badge&logo=scan&logoColor=white&labelColor=black&color=black'/></a>
