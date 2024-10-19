@@ -132,7 +132,7 @@ Then Deploy And Enjoy
 
 2. Now deploy
    <br>
-  <p align="center"><a href="https://app.koyeb.com/auth/signin"> <img src="https://img.shields.io/badge/Deploy%to%koyeb-orange?style=for-the-badge&logo=koyeb" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://app.koyeb.com/auth/signin"> <img src="https://img.shields.io/badge/Deploy%20To%20Koyeb-orange?style=for-the-badge&logo=koyeb" width="220" height="38.45"/></a></p>
   
 
 5. #### DEPLOY TO RENDER
