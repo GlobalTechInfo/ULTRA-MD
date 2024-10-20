@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+/*import fetch from 'node-fetch'
 import displayLoadingScreen from '../lib/loading.js'
 let handler = async (m, { conn, text }) => {
   if (!text) {
@@ -44,4 +44,4 @@ handler.help = ['spotify']
 handler.tags = ['downloader']
 handler.command = /^(spotify|song)$/i
 
-export default handler
+export default handler */
