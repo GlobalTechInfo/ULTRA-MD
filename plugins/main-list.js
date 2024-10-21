@@ -382,6 +382,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •toimg
 ◈ •tovid
 ◈ •ttp
+◈ •ttp2
+◈ •ttp3
+◈ •ttp4
+◈ •ttp5
 ◈ •attp
 ◈ •attp2
 ◈ •attp3
