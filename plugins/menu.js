@@ -50,7 +50,7 @@ let str = `
 ╔┈┈┈┈┈┈┈┈┈┈┈┈┈
 ╎❒ *CREATOR : QASIM*
 ╎
-╎❒ *PLUGINS : 250 +*
+╎❒ *PLUGINS : 350 +*
 ╎
 ╎❒ *FEATURE : 700 +*
 ╚┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -78,7 +78,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           }),
 
           header: proto.Message.InteractiveMessage.Header.create({
-          ...(await prepareWAMessageMedia({ image : { url: 'https://i.imgur.com/K7q4Xh4.jpeg'}}, { upload: conn.waUploadToServer})), 
+          ...(await prepareWAMessageMedia({ image : { url: 'https://i.ibb.co/jy7f9Wm/Ultra.jpg'}}, { upload: conn.waUploadToServer})), 
             title: null,
             subtitle: null,
             hasMediaAttachment: false
