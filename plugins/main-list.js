@@ -369,11 +369,11 @@ let handler = async (m, { conn, usedPrefix, command }) => {
     case 'stickermenu':
       lkr = `
 ╭───『 *Sticker* 』─❍
-◈ •sticker
+◈ •s
 ◈ •take
 ◈ •scircle
 ◈ •smaker
-◈ •sremovebg
+◈ •removebg
 ◈ •smeme
 ◈ •trigger
 ◈ •getsticker
@@ -385,7 +385,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •attp
 ◈ •attp2
 ◈ •attp3
-◈ Would Not Work Without bg Key
+◈ Add remove bg key First
 ╰─────────❍` //
       break
     case 'toolmenu':
