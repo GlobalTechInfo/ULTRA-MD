@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+/* import fetch from 'node-fetch'
 
 let handler = async (m, { conn }) => {
 
@@ -16,4 +16,4 @@ if (response.ok) {
 handler.tags = ['images']
 handler.help = handler.command = ['ram', 'shreeram']
 
-export default handler
+export default handler */
