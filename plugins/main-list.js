@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         : m.sender
   if (!(who in global.db.data.users)) throw `✳️ The user is not found in my database`
 
-  let pp = './assets/ultra.jpg'
+  let pp = './assets/Ultra.jpg'
   let more = String.fromCharCode(8206)
   let readMore = more.repeat(850)
 
