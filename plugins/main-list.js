@@ -60,7 +60,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'animemenu* - Animated Images,Stickers and Videos.\n\n' +
          '🪁 *' +
         usedPrefix +
-        'infoanime* - Full Information About Animes Like imdb.' 
+        'infoanime* - Full Information About Animes Like imdb.\n\n' +
+        '💡 *' +
+        usedPrefix +
+        'imagen* - Create Images and designs based on your thoughts/prompts.' 
         break
 
     case 'botmenu':
@@ -112,6 +115,21 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  ◈ •ai
  ╰─────────❍` //
  break
+      case 'imagen':
+      lkr=`
+ ╭───『 *Imagen* 』─❍
+ ◈ •hercai-lexica
+ ◈ •hercai-raava
+ ◈ •hercai-shonin
+ ◈ •hercai-cartoon
+ ◈ •hercai-animefy
+ ◈ •hercai-prodia
+ ◈ •hercai-simurg
+ ◈ •photoleap
+ ◈ •realistic
+ ◈ •dalle
+ ╰─────────❍` //
+ break
     case 'ownermenu':
       lkr = `
 ╭───『 *Owner* 』─❍
@@ -154,6 +172,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •getfile
 ◈ •logout
 ◈ •unban
+◈ •update
 ◈ •ban
 ◈ •afk
 ◈ •save
@@ -579,6 +598,7 @@ lkr=`
 handler.help = [
   'list',
   'aimenu',
+  'imagen',
   'animemenu',
   'aeditor',
   'infoanime',
@@ -599,6 +619,7 @@ handler.tags = ['main']
 handler.command = [
   'list',
   'aimenu',
+  'imagen',
   'animemenu',
   'aeditor',
   'infoanime',
