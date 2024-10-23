@@ -59,7 +59,7 @@ let str = `
 ◈┃• Enable
 ◈┃• Aimenu
 ◈┃• Aeditor
-◈┃• Play3
+◈┃• Imagen
 ◈┃• Menu
 ◈┃• Menu3
 ◈┃• Menu4
