@@ -21,7 +21,7 @@
   <a aria-label="Join our chats" href="https://t.me/GlobalBotInc" target="_blank">
     <img alt="telegram" src="https://img.shields.io/badge/Join Group-25D366?style=for-the-badge&logo=telegram&logoColor=white" />
   </a>
- <h2 align="center">  NOTICE
+ <h2 align="center">  NOTE
 </h2>
 
 ### Bot Is Able To Reply In 5 Different Languages So Use .language command First After Getting Connection And Choose Your Native Language If It Is There, If Your Native Language Is Not Present There Then Choose en For English.
@@ -245,4 +245,3 @@ npm install && npm start
 
   
 <p align="center">
-Thanks To Microsoft Copilot And Chatgpt🩷
