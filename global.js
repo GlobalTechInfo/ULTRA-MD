@@ -273,18 +273,24 @@ global.reloadHandler = async function (restatConn) {
 }
 import autoreactCommand from './plugins/Autoreact.js';
 
+// Declare the commands map here to make it accessible globally
 const commands = new Map(); // Ensure commands is defined
 
 // Ensure this listener is properly set up
 conn.ev.on('messages.upsert', async (msg) => {
   const m = msg.messages[0];
   if (!m.message) return;
-  await autoreactCommand.all(m, { conn });
-  // other global handlers...
+
+  // Call the autoreact command handler directly
+  await autoreactCommand(m, { conn });
+  // Add other global message handling logic here if needed
 });
 
 // Register commands globally
 commands.set('autoreact', autoreactCommand);
+
+// If you have any other command registration logic, include it here
+
 
 const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
 const pluginFilter = filename => /\.js$/.test(filename)
