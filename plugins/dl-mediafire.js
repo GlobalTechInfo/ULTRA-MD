@@ -1,4 +1,4 @@
-import fetch from 'node-fetch';
+/* import fetch from 'node-fetch';
 import { mediafiredl } from '@bochilteam/scraper';
 
 let handler = async (m, { conn, args, isOwner, isPrems }) => {
@@ -50,4 +50,4 @@ handler.tags = ['downloader', 'premium'];
 handler.command = ['mediafire', 'mfire'];
 handler.premium = false;
 
-export default handler;
+export default handler; */
