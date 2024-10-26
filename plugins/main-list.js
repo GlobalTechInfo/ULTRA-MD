@@ -63,7 +63,13 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'infoanime* - Full Information About Animes Like imdb.\n\n' +
         '💡 *' +
         usedPrefix +
-        'imagen* - Create Images and designs based on your thoughts/prompts.' 
+        'imagen* - Create Images and designs based on your thoughts/prompts.\n\n' +
+        '🃏 *' +
+        usedPrefix +
+        'randompic* - Random Images you might like and love.\n\n' +
+        '🎥 *' +
+        usedPrefix +
+        'randomvid* - Random Videos you might like and love 💖.' 
         break
 
     case 'botmenu':
@@ -179,6 +185,55 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •allow
 ◈ •listban
 ◈ •join
+╰─────────❍` //
+      break
+      case 'randompic':
+      lkr = `
+╭───『 *RandomPic* 』─❍
+◈ •chinese
+◈ •malaysia
+◈ •hijab
+◈ •japanese
+◈ •korean
+◈ •malay
+◈ •random
+◈ •random2
+◈ •thai
+◈ •vietnamese
+◈ •indo
+◈ •boneka
+◈ •blackpink3
+◈ •bike
+◈ •antiwork
+◈ •aesthetic
+◈ •justina
+◈ •doggo
+◈ •cat
+◈ •cosplay2
+◈ •car
+◈ •profile2
+◈ •notnot
+◈ •kpop
+◈ •kayes
+◈ •ulzzanggirl
+◈ •ulzzangboy
+◈ •ryujin
+◈ •pubg
+◈ •wallml
+◈ •wallhp
+╰─────────❍` //
+      break
+      case 'randomvid':
+      lkr = `
+╭───『 *RandomVid* 』─❍
+◈ •tiktokgirl
+◈ •tiktokghea
+◈ •tiktokbocil
+◈ •tiktoknukhty
+◈ •tiktoksantuy
+◈ •tiktokkayes
+◈ •tiktokpanrika
+◈ •tiktoknotnot
 ╰─────────❍` //
       break
     case 'groupmenu':
@@ -613,6 +668,8 @@ handler.help = [
   'stickermenu',
   'nsfwmenu',
   'logomenu',
+  'randompic',
+  'randomvid',
   'toolmenu',
 ]
 handler.tags = ['main']
@@ -634,6 +691,8 @@ handler.command = [
   'stickermenu',
   'nsfwmenu',
   'logomenu',
+  'randompic',
+  'randomvid',
   'toolmenu',
 ]
 
