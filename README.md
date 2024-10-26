@@ -89,7 +89,7 @@ set the Env Vars.
 | MODE | mode public or private |
 | autoRead | make it true if you want bot to read messages |
 | statusview | make it true if you want bot to view status | 
-| OWNERS | owner number(923444844060;Qasim) | 
+| OWNERS | owner number e.g 923444844060 | 
 | BOTNAME | Your Bot Name | 
 | antidelete | bot will forward deleted messages if you make it true | 
 
