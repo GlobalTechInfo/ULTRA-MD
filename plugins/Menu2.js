@@ -53,6 +53,8 @@ let str = `
 ◈┃• Toolsmenu
 ◈┃• Gamemenu
 ◈┃• Logomenu
+◈┃• Randompic
+◈┃• Randomvid
 ◈┃• Setprivacy
 ◈┃• Botmenu
 ◈┃• Dlmenu
@@ -68,7 +70,7 @@ let str = `
 
 © GlobalTechInfo
 
-> 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2. It's like my magic spell book!_* 💡
+> 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2 It's like my magic spell book!_* 💡
 `
 
     
