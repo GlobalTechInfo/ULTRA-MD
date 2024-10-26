@@ -6,25 +6,24 @@ import fs from 'fs'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const ownervb = process.env.OWNERS || "923444844060"
+const defaultOwner = '923444844060';
 
+
+// Check for the OWNERS environment variable; if not found, use the default
+const ownervb = process.env.OWNERS || defaultOwner;
 
 const ownerlist = ownervb.split(';');
 
 global.owner = [];
-for (let i = 0; i < ownerlist.length; i += 2) {
-    const owner = [
-        ownerlist[i],            
-        ownerlist[i + 1],         
-        true                        
-    ];
-    global.owner.push(owner);
+for (let i = 0; i < ownerlist.length; i++) {
+    global.owner.push([ownerlist[i], true]);
 }
+//
+global.botname = process.env.BOTNAME || 'ULTRA-MD';
+global.botNumber = '923051391007' //replace your bot number here
 
-global.botNumber = '923051391007' //put your bot number here
-
-global.mods = ['923444844060', '923051391007']
-global.prems = ['923444844060', '923051391007']
+global.mods = []
+global.prems = []
 global.allowed = ['923444844060', '923051391007']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
@@ -72,7 +71,6 @@ global.APIKeys = {
 }
 
 // Sticker WM
-global.botname = process.env.BOTNAME
 global.premium = 'true'
 global.packname = 'GLOBAL-MD'
 global.author = 'GlobalTechInfo'
