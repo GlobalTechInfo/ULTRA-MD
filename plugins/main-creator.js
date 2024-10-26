@@ -21,6 +21,6 @@ END:VCARD`;
 
 handler.help = ['owner'];
 handler.tags = ['main'];
-handler.command = ['owner', 'creator', 'creador', 'dueño'];
+handler.command = ['creator', 'creador', 'dueño'];
 
 export default handler;
