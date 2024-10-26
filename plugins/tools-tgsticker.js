@@ -1,4 +1,4 @@
-import { stickerTelegram } from '@bochilteam/scraper';
+/* import { stickerTelegram } from '@bochilteam/scraper';
 import axios from 'axios';
 
 let handler = async (m, { conn, args }) => {
@@ -60,4 +60,4 @@ async function Telesticker(url) {
     }
     resolve(hasil);
   });
-}
+} */
