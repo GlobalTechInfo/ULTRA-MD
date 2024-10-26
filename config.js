@@ -57,7 +57,7 @@ global.APIs = {
   akuari2: 'https://apimu.my.id',
   nrtm: 'https://fg-nrtm.ddns.net',
   bg: 'http://bochil.ddns.net',
-  fgmods: 'https://api-fgmods.ddns.net',
+  fgmods: 'https://api.fgmods.xyz',
 }
 global.APIKeys = {
   // APIKey Here
@@ -67,7 +67,7 @@ global.APIKeys = {
   'https://api.neoxr.my.id': `${keysneoxr}`,
   'https://violetics.pw': 'beta',
   'https://zenzapis.xyz': `${keysxxx}`,
-  'https://api-fgmods.ddns.net': 'fg-dylux',
+  'https://api.fgmods.xyz': 'm2XBbNvz',
 }
 
 // Sticker WM
