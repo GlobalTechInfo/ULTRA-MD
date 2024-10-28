@@ -45,15 +45,7 @@ let greeting = ucapan()
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 
 let str = `
-  『 *GLOBAL-MD* 』  
-  
-╔┈┈┈┈┈┈┈┈┈┈┈┈┈
-╎❒ *CREATOR : QASIM*
-╎
-╎❒ *PLUGINS : 350 +*
-╎
-╎❒ *FEATURE : 700 +*
-╚┈┈┈┈┈┈┈┈┈┈┈┈┈
+  『 *ULTRA-MD* 』  
 
 © 2024 *GlobalTechInfo*`
 
@@ -78,7 +70,7 @@ let msg = generateWAMessageFromContent(m.chat, {
           }),
 
           header: proto.Message.InteractiveMessage.Header.create({
-          ...(await prepareWAMessageMedia({ image : { url: 'https://i.ibb.co/jy7f9Wm/Ultra.jpg'}}, { upload: conn.waUploadToServer})), 
+          ...(await prepareWAMessageMedia({ image : { url: 'https://i.imgur.com/IfZsOhf.jpeg'}}, { upload: conn.waUploadToServer})), 
             title: null,
             subtitle: null,
             hasMediaAttachment: false
@@ -89,12 +81,12 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-                                "{\"title\":\"BUTTON MENU\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🎁 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🖲️ Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"🎉 AI Menu\",\"description\":\"Your Personal Artificial Intelligence Copilots\",\"id\":\".aimenu\"},{\"header\":\"\",\"title\":\"🎧 Audio Menu\",\"description\":\"Tune The Mp3/Audio As You Wish\",\"id\":\".aeditor\"},{\"header\":\"\",\"title\":\"🍫 Anime Menu\",\"description\":\"Animated Images,Stickers and Videos\",\"id\":\".animemenu\"},{\"header\":\"\",\"title\":\"🪁 Anime Info\",\"description\":\"Full Information About Animes Like imdb\",\"id\":\".infoanime\"},{\"header\":\"\",\"title\":\"🛫 Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🗂️ Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'.\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💵 Economy Menu\",\"description\":\"Your personal vault of virtual economy.\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🎮 Game Menu\",\"description\":\"Enter the gaming arena.\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🫐 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🎊 Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🏵️ Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🌄 NSFW Menu\",\"description\":\"The After Dark menu.\",\"id\":\".nsfwmenu\"}]}]}" 
+                                "{\"title\":\"TAP TO OPEN\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🎁 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🖲️ Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"🎉 AI Menu\",\"description\":\"Your Personal Artificial Intelligence Copilots\",\"id\":\".aimenu\"},{\"header\":\"\",\"title\":\"🎧 Audio Menu\",\"description\":\"Tune The Mp3/Audio As You Wish\",\"id\":\".aeditor\"},{\"header\":\"\",\"title\":\"🍫 Anime Menu\",\"description\":\"Animated Images,Stickers and Videos\",\"id\":\".animemenu\"},{\"header\":\"\",\"title\":\"🪁 Anime Info\",\"description\":\"Full Information About Animes Like imdb\",\"id\":\".infoanime\"},{\"header\":\"\",\"title\":\"🛫 Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🗂️ Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'.\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💵 Economy Menu\",\"description\":\"Your personal vault of virtual economy.\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🎮 Game Menu\",\"description\":\"Enter the gaming arena.\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🫐 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🎊 Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🏵️ Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🌄 NSFW Menu\",\"description\":\"The After Dark menu.\",\"id\":\".nsfwmenu\"}]}]}" 
                 },
                  {
                 "name": "quick_reply",
                 "buttonParamsJson": 
-                                "{\"display_text\":\"LIST MENU \",\"id\":\".menu2\"}"
+                                "{\"display_text\":\"MENU2 ❇️\",\"id\":\".menu2\"}"
                  },
                   {
                   "name": "cta_url",
@@ -102,7 +94,7 @@ let msg = generateWAMessageFromContent(m.chat, {
                   },
                   {
                   "name": "cta_url",
-                 "buttonParamsJson": "{\"display_text\":\"BOT REPO\",\"url\":\"https://github.com/GlobalTechInfo/ULTRA-MD\",\"merchant_url\":\"https://github.com/GlobalTechInfo\"}"
+                 "buttonParamsJson": "{\"display_text\":\"SCRIPT 💕\",\"url\":\"https://github.com/GlobalTechInfo/ULTRA-MD\",\"merchant_url\":\"https://github.com/GlobalTechInfo\"}"
               }
            ],
           })
