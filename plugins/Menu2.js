@@ -7,8 +7,8 @@ const { levelling } = '../lib/levelling.js'
 import moment from 'moment-timezone'
 import { promises } from 'fs'
 import { join } from 'path'
-const time = moment.tz('Asia/Karachi').format('HH')
-let wib = moment.tz('Asia/Karachi').format('HH:mm:ss')
+const time = moment.tz('Africa/Harare').format('HH')
+let wib = moment.tz('Africa/Harare').format('HH:mm:ss')
 //import db from '../lib/database.js'
 
 let handler = async (m, { conn, usedPrefix, command}) => {
@@ -41,7 +41,7 @@ let str = `
 
 📜 *_Quote of the day: ${quote}_* 📜
 
-乂─『 *INFO*』─乂 
+⇜─『 *INFO*』─⇝ 
 
 ◈┏━⟪ *MENU2* ⟫━⦿
 ◈┃• Groupmenu
@@ -71,6 +71,8 @@ let str = `
 ◈┗━♪♪━★━☆━⦿
 
 © GlobalTechInfo
+       &
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ
 
 > 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2 It's like my magic spell book!_* 💡
 `
@@ -97,7 +99,7 @@ function clockString(ms) {
     return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
     
     function ucapan() {
-      const time = moment.tz('Asia/Karachi').format('HH')
+      const time = moment.tz('Africa/Harare').format('HH')
       let res = "happy early in the day☀️"
       if (time >= 4) {
         res = "Good Morning 🌄"
