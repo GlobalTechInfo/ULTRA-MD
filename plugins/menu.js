@@ -15,8 +15,8 @@ const { levelling } = '../lib/levelling.js'
 import moment from 'moment-timezone'
 import { promises } from 'fs'
 import { join } from 'path'
-const time = moment.tz('Asia/Karachi').format('HH')
-let wib = moment.tz('Asia/Karachi').format('HH:mm:ss')
+const time = moment.tz('Africa/Harare').format('HH')
+let wib = moment.tz('Africa/Harare').format('HH:mm:ss')
 //import db from '../lib/database.js'
 
 let handler = async (m, { conn, usedPrefix, command}) => {
@@ -47,7 +47,8 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
   『 *ULTRA-MD* 』  
 
-© 2024 *GlobalTechInfo*`
+© 2024 *GlobalTechInfo*
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ`
 
 let msg = generateWAMessageFromContent(m.chat, {
 
@@ -81,7 +82,7 @@ let msg = generateWAMessageFromContent(m.chat, {
               {
                 "name": "single_select",
                 "buttonParamsJson": 
-                                "{\"title\":\"TAP TO OPEN\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"GLOBAL\",\"rows\":[{\"header\":\"\",\"title\":\"🎁 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🖲️ Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"🎉 AI Menu\",\"description\":\"Your Personal Artificial Intelligence Copilots\",\"id\":\".aimenu\"},{\"header\":\"\",\"title\":\"🎧 Audio Menu\",\"description\":\"Tune The Mp3/Audio As You Wish\",\"id\":\".aeditor\"},{\"header\":\"\",\"title\":\"🍫 Anime Menu\",\"description\":\"Animated Images,Stickers and Videos\",\"id\":\".animemenu\"},{\"header\":\"\",\"title\":\"🪁 Anime Info\",\"description\":\"Full Information About Animes Like imdb\",\"id\":\".infoanime\"},{\"header\":\"\",\"title\":\"🛫 Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🗂️ Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'.\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💵 Economy Menu\",\"description\":\"Your personal vault of virtual economy.\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🎮 Game Menu\",\"description\":\"Enter the gaming arena.\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🫐 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🎊 Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🏵️ Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🌄 NSFW Menu\",\"description\":\"The After Dark menu.\",\"id\":\".nsfwmenu\"}]}]}" 
+                                "{\"title\":\"TAP TO OPEN\",\"sections\":[{\"title\":\"HERE IS BUTTONS MENU\",\"highlight_label\":\"ULTRA\",\"rows\":[{\"header\":\"\",\"title\":\"🎁 Bot Menu\",\"description\":\"The Bot's secret control panel.\",\"id\":\".botmenu\"},{\"header\":\"\",\"title\":\"🖲️ Owner Menu\",\"description\":\"Yep, that's for you, Boss!\",\"id\":\".ownermenu\"},{\"header\":\"\",\"title\":\"🎉 AI Menu\",\"description\":\"Your Personal Artificial Intelligence Copilots\",\"id\":\".aimenu\"},{\"header\":\"\",\"title\":\"🎧 Audio Menu\",\"description\":\"Tune The Mp3/Audio As You Wish\",\"id\":\".aeditor\"},{\"header\":\"\",\"title\":\"🍫 Anime Menu\",\"description\":\"Animated Images,Stickers and Videos\",\"id\":\".animemenu\"},{\"header\":\"\",\"title\":\"🪁 Anime Info\",\"description\":\"Full Information About Animes Like imdb\",\"id\":\".infoanime\"},{\"header\":\"\",\"title\":\"🛫 Group Menu\",\"description\":\"Group shenanigans central!\",\"id\":\".groupmenu\"},{\"header\":\"\",\"title\":\"🗂️ Download Menu\",\"description\":\"'DL' stands for 'Delicious Loot'.\",\"id\":\".dlmenu\"},{\"header\":\"\",\"title\":\"🎭 Fun Menu\",\"description\":\"The bot's party hat. Games, jokes and instant ROFLs.\",\"id\":\".funmenu\"},{\"header\":\"\",\"title\":\"💵 Economy Menu\",\"description\":\"Your personal vault of virtual economy.\",\"id\":\".economymenu\"},{\"header\":\"\",\"title\":\"🎮 Game Menu\",\"description\":\"Enter the gaming arena.\",\"id\":\".gamemenu\"},{\"header\":\"\",\"title\":\"🫐 Sticker Menu\",\"description\":\"A rainbow of stickers.\",\"id\":\".stickermenu\"},{\"header\":\"\",\"title\":\"🎊 Tool Menu\",\"description\":\"Your handy-dandy toolkit.\",\"id\":\".toolmenu\"},{\"header\":\"\",\"title\":\"🏵️ Logo Menu\",\"description\":\"Create a logo that screams You.\",\"id\":\".logomenu\"},{\"header\":\"\",\"title\":\"🌄 NSFW Menu\",\"description\":\"The After Dark menu.\",\"id\":\".nsfwmenu\"}]}]}" 
                 },
                  {
                 "name": "quick_reply",
@@ -90,11 +91,11 @@ let msg = generateWAMessageFromContent(m.chat, {
                  },
                   {
                   "name": "cta_url",
-                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://wa.me/message/HA35ZL76JSHJB1\"}"
+                  "buttonParamsJson": "{\"display_text\":\"OWNER 🌟\",\"Url\":\"https://wa.me/263771110804\"}"
                   },
                   {
                   "name": "cta_url",
-                 "buttonParamsJson": "{\"display_text\":\"SCRIPT 💕\",\"url\":\"https://github.com/GlobalTechInfo/ULTRA-MD\",\"merchant_url\":\"https://github.com/GlobalTechInfo\"}"
+                 "buttonParamsJson": "{\"display_text\":\"SCRIPT 💕\",\"url\":\"https://github.com/Devenlee350/ULTRA-MD\",\"merchant_url\":\"https://github.com/Devenlee350\"}"
               }
            ],
           })
@@ -123,7 +124,7 @@ function clockString(ms) {
     return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}  
 
     function ucapan() {
-      const time = moment.tz('Asia/Karachi').format('HH')
+      const time = moment.tz('Africa/Harare').format('HH')
       let res = "happy early in the day☀️"
       if (time >= 4) {
         res = "Good Morning 🥱"
