@@ -40,7 +40,7 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
       let data = await response.json()
       let result = data.completion
 
-      await conn.sendButton(m.chat,result, author, 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg', [['Script', `.sc`]], null, [['Follow Me', `https://github.com/GlobalTechInfo`]], m)
+      await conn.sendButton(m.chat,result, author, 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg', [['Script', `.sc`]], null, [['Follow Me', `https://github.com/Devenlee350`]], m)
       m.react(done)
     }
   } catch (error) {
