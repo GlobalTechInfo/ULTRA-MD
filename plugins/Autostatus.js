@@ -74,7 +74,7 @@ export async function before(_0x586d09, { conn: _0x199d89, isAdmin: _0x20f37d, i
 function _0x818f() {
   const _0x5421ff = [
     'push', '750236GJVWyx', '13557ziClLM', 'status from ',
-    '70TgKmYl', '14CueJJS', '\x0a\x0a ©ULTRA-MD',
+    '70TgKmYl', '14CueJJS', '\x0a\x0a ©ULTRA-MD\n&\nᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ',
     'sender', 'audioMessage', 'videoMessage', 'log', 'story', 'key',
     '1739865tvmYNB', 'viewStory', 'sendFile', '611942MYrkGO',
     '2090238lEezsm', '398392cSGDln', 'download', 'split', 'reply',
