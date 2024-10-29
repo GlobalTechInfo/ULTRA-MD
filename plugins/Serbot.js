@@ -8,7 +8,7 @@ global.conns.forEach((conn) => {
 if (conn.user && conn.ws.socket && conn.ws.socket.readyState !== ws.CLOSED) {
 uniqueUsers.set(conn.user.jid.replace(/[^0-9]/g, ''), conn.user)}})
 
-const message = Array.from(uniqueUsers.values()).map((user, index) => `┌  ✩  *${index + 1}* : @${user.jid.replace(/[^0-9]/g, '')}\n│  ✩  *Link* : http://wa.me/${user.jid.replace(/[^0-9]/g, '')}\n└  ✩  *Name* : ${user.name || 'GLOBAL-MD-V3'}\n`
+const message = Array.from(uniqueUsers.values()).map((user, index) => `┌  ✩  *${index + 1}* : @${user.jid.replace(/[^0-9]/g, '')}\n│  ✩  *Link* : http://wa.me/${user.jid.replace(/[^0-9]/g, '')}\n└  ✩  *Name* : ${user.name || 'ULTRA-MD-V3'}\n`
   ).join('\n')
   
 const replyMessage = message.length === 0 ? "" : message
