@@ -4,13 +4,13 @@ let handler = async (m, { conn }) => {
     return; // or handle the error as appropriate
   }
 
-  const ownerNumber = global.owner[0] ? global.owner[0][0] : 'default_number_here'; // Fallback
+  const ownerNumber = global.owner[0] ? global.owner[0][0] : '263771110804'; // Fallback
 
   let vcard = `BEGIN:VCARD
 VERSION:3.0
 N:;${ownerNumber};;;
 FN:Owner
-ORG:GlobalTechInfo
+ORG:GlobalTechInfo & sᴛʀɪᴋᴇʀʙᴏʏ ᴡᴏʀʟᴅ
 TITLE:Owner
 item1.TEL;waid=${ownerNumber}:${ownerNumber}
 item1.X-ABLabel:Owner
