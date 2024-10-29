@@ -66,6 +66,8 @@ let str = `
 ◈┃• Menu3
 ◈┃• Menu4
 ◈┃• List
+◈┃• fancy
+◈┃• fancy2
 ◈┗━♪♪━★━☆━⦿
 
 © GlobalTechInfo
