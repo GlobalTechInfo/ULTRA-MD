@@ -1,47 +1,47 @@
-import fetch from 'node-fetch'
+import fs from 'fs';
+import path from 'path';
 
-let handler = async (m, { conn, text }) => {
-  // Split the text into words
-  let words = text.split(' ')
+// Load styles from fancyStyles.json
+const stylesFile = path.resolve('src/font/fancyStyles.json');
+const styles = JSON.parse(fs.readFileSync(stylesFile)).styles;
 
-  // The first word should be the key, the rest is the text to stylize
-  let key = words[0]
-  let textToStyle = words.slice(1).join(' ')
+async function handler(m, { args }) {
+    // If no style number is provided, display available styles
+    if (!args[0]) {
+        let styleList = styles.map((style, index) => `${index + 1}. ${style.styleName || 'Style ' + (index + 1)}`).join('\n');
+        await m.reply(`Please choose a style number:\n\n${styleList}\n\nUsage: .fancy <font_number> <text>`);
+        return;
+    }
 
-  // If no key and text provided, show all styles of a default text
-  if (words.length === 0 || !key || !textToStyle) {
-    let defaultText = 'GLOBAL BOT'
-    let styledTexts = await Promise.all(
-      [...Array(34).keys()].map(i => stylizeText(defaultText, i + 1))
-    )
-    conn.reply(m.chat, styledTexts.join`\n\n`, m)
-    return
-  }
+    // Parse style number and validate it
+    const styleNumber = parseInt(args[0]);
+    if (isNaN(styleNumber) || styleNumber < 1 || styleNumber > styles.length) {
+        await m.reply(`Invalid style number. Choose a number between 1 and ${styles.length}.`);
+        return;
+    }
 
-  // Check if the key is a number between 1 and 34
-  if (!Number.isInteger(+key) || +key < 1 || +key > 34) {
-    throw 'Invalid key. Please provide a number between 1 and 34.'
-  }
+    // Extract the text to style
+    const textToStyle = args.slice(1).join(' ');
+    if (!textToStyle) {
+        await m.reply('Please provide the text you want to style.');
+        return;
+    }
 
-  // Get the styled text
-  let styledText = await stylizeText(textToStyle, key)
+    // Get the selected style map
+    const selectedStyleMap = styles[styleNumber - 1];
 
-  conn.reply(m.chat, styledText, m)
+    // Convert text by replacing each character with the stylized version from selected style map
+    const styledText = textToStyle
+        .split('')
+        .map((char) => selectedStyleMap[char] || char) // Fallback to original if no match
+        .join('');
+
+    // Send the styled text
+    await m.reply(styledText);
 }
 
-handler.help = ['style'].map(v => v + ' <key> <text>')
-handler.tags = ['tools']
-handler.command = /^(fancy)$/i
-handler.exp = 0
+handler.help = ['fancy'];
+handler.tags = ['tools'];
+handler.command = /^fancy$/i;
 
-export default handler
-
-async function stylizeText(text, key) {
-  let res = await fetch(
-    `https://inrl-web-fkns.onrender.com/api/fancy?text=${encodeURIComponent(text)}&key=${key}`
-  )
-  let data = await res.json()
-
-  // Use 'result' field for the styled text.
-  return `*Key ${key}*\n${data.result}`
-}
+export default handler;
