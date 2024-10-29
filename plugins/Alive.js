@@ -2,9 +2,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   // Sound
   let name = m.pushName || conn.getName(m.sender)
   var vn = 'https://cdn.jsdelivr.net/gh/GlobalTechInfo/ULTRA-MD@main/assets/qasim2.mp3'
-  let url = 'https://github.com/GlobalTechInfo/ULTRA-MD'
+  let url = 'https://github.com/Devenlee350/ULTRA-MD'
   let murl = 'https://youtu.be/3j_EIP--2t8?si=4TFWV0On6Bl1wr-e'
-  let img = 'https://i.ibb.co/jy7f9Wm/Ultra.jpg'
+  let img = 'https://i.imgur.com/ZnfODeW.jpeg'
   let con = {
     key: {
       fromMe: false,
@@ -30,10 +30,10 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     contextInfo: {
       mentionedJid: [m.sender],
       externalAdReply: {
-        title: '𝙂𝙇𝙊𝘽𝘼𝙇 𝙈𝘿 𝙄𝙎 𝘼𝙇𝙄𝙑𝙀',
-        body: '© GlobalTechInfo',
+        title: '𝑼𝑳𝑻𝑹𝑨 𝑴𝑫 𝑰𝑺 𝑨𝑳𝑰𝑽𝑬',
+        body: '© GlobalTechInfo \n&\n ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ',
         thumbnailUrl: img,
-        sourceUrl: 'https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07',
+        sourceUrl: 'https://whatsapp.com/channel/0029VafbajGDuMRoRlel7k1p',
         mediaType: 1,
         renderLargerThumbnail: true,
       },
