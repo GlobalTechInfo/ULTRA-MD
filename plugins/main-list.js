@@ -69,7 +69,13 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'randompic* - Random Images you might like and love.\n\n' +
         '🎥 *' +
         usedPrefix +
-        'randomvid* - Random Videos you might like and love 💖.' 
+        'randomvid* - Random Videos you might like and love 💖.\n\n' +
+        '🖍️ *' +
+        usedPrefix +
+        'fancy* - Fancy text generator Menu.\n\n' + 
+        '🖌️ *' +
+        usedPrefix +
+        'fancy2* - Will Create Images With Fancy Text.' 
         break
 
     case 'botmenu':
@@ -494,6 +500,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •qrmaker
 ◈ •readqr
 ◈ •fancy
+◈ •fancy2
 ◈ •weather
 ◈ •tocartoon
 ◈ •quote
