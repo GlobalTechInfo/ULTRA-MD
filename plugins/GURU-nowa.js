@@ -1,7 +1,7 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
   let regex = /x/g
   if (!text) throw 'Give a number to search'
-  if (!text.match(regex)) throw `*Example: ${usedPrefix + command} 923444844060x*`
+  if (!text.match(regex)) throw `*Example: ${usedPrefix + command} 2637444844x*`
   let random = text.match(regex).length,
     total = Math.pow(10, random),
     array = []
@@ -37,5 +37,5 @@ handler.command = /^nowa$/i
 export default handler
 function formatDate(n, locale = 'in') {
   let d = new Date(n)
-  return d.toLocaleDateString(locale, { timeZone: 'Asia/Karachi' })
+  return d.toLocaleDateString(locale, { timeZone: 'Africa/Harare' })
 }
