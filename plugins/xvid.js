@@ -1,4 +1,4 @@
- /* import { xvideosSearch, xvideosdl } from '../lib/scraper.js'
+ import { xvideosSearch, xvideosdl } from '../lib/scraper.js'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   let chat = global.db.data.chats[m.chat]
@@ -56,10 +56,9 @@ handler.help = ['xvid']
 handler.tags = ['nsfw']
 handler.command = ['xvid']
 handler.group = true
-handler.premium = false
+handler.premium = true
 handler.register = true
 
-handler.premium = false
+handler.premium = true
 
 export default handler
-*/
