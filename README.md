@@ -27,14 +27,15 @@
 ### Bot Is Able To Reply In 5 Different Languages So Use .language command First After Getting Connection And Choose Your Native Language If It Is There, If Your Native Language Is Not Present There Then Choose en For English.
 
 ----
+
  <p align="center"><img src="https://profile-counter.glitch.me/{ULTRA-MD}/count.svg" alt="GlobalTechInfo :: Visitor's Count" old_src="https://profile-counter.glitch.me/{GlobalTechInfo}/count.svg" /></p>
-----
 
 ----
+
   <a href="https://github.com/GlobalTechInfo/ULTRA-MD/fork"><img title="GLOBAL-MD" src="https://img.shields.io/badge/FORK-ULTRA MD-h?color=blue&style=for-the-badge&logo=stackshare"></a>
 
-  
 ----
+
 <p align="center">
 
 1. #### First Method
