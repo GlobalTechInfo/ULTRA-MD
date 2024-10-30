@@ -1,23 +1,32 @@
-
 import fg from 'api-dylux';
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) throw `✳️ ${mssg.notext}`
+
+let handler = async (m, { conn, text }) => {
+  if (!text) throw `✳️ Please provide a search term for the wallpaper.\n\n*Example: .wallpapers technology*`;
+
   try {
     let res = await fg.wallpaper(text);
     let re = pickRandom(res);
-    await conn.sendMessage(m.chat, { image: { url: re.image[0] }, caption: `✅ ${mssg.result}` }, { quoted: m });
+    
+    if (!re.image || re.image.length === 0) throw 'No images found for this query.'; // Check if images are available
+
+    await conn.sendMessage(m.chat, {
+      image: { url: re.image[0] },
+      caption: `*𝘗𝘖𝘞𝘌𝘙𝘌𝘋 𝘉𝘠 © 𝘜𝘓𝘛𝘙𝘈-𝘔𝘋*`
+    }, { quoted: m });
+
   } catch (error) {
-   m.reply(`✳️ ${mssg.error}`)
+    console.error(error); // Log the error for debugging
+    m.reply(`✳️ An error occurred: ${error.message || error}`);
   }
-  
 }
-handler.help = ['wallpaper']
+
+handler.help = ['wallpapers']
 handler.tags = ['img']
-handler.command = ['wallpaper', 'wallpapers', 'wp']
-handler.diamond = true
+handler.command = ['wallpapers', 'wp']
+handler.diamond = false
 
 export default handler
 
 function pickRandom(list) {
-  return list[Math.floor(list.length * Math.random())]
+  return list[Math.floor(Math.random() * list.length)];
 }
