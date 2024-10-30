@@ -13,16 +13,17 @@ let handler = async (m, { conn, text }) => {
   }
 
   const message = `
-*Name:* ${json.name}
-*ID:* ${json.id}
-*Type:* ${json.type}
-*Abilities:* ${json.abilities}
-*Height:* ${json.height}
-*Weight:* ${json.weight}
-*Description:* ${json.description}
+*≡ Name:* ${json.name}
+*≡ ID:* ${json.id}
+*≡ Type:* ${json.type}
+*≡ Abilities:* ${json.abilities.join(', ')}
+*≡ Height:* ${json.height}
+*≡ Weight:* ${json.weight}
+*≡ Description:* ${json.description}
 `
 
-  conn.sendMessage(m.chat, { text: message }, 'extendedTextMessage', { quoted: m })
+  // Correctly send the message using the appropriate structure
+  conn.sendMessage(m.chat, { text: message }, { quoted: m })
 }
 
 handler.help = ['pokedex <pokemon>']

@@ -305,6 +305,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •insta
 ◈ •igstalk
 ◈ •facebook
+◈ •wallpapers
 ◈ •swdl
 ◈ •dlstatus
 ╰─────────❍` //
@@ -513,6 +514,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •readvo
 ◈ •true
 ◈ •wa
+◈ •pokedex
 ◈ •voz
 ╰─────────❍` //
 break
