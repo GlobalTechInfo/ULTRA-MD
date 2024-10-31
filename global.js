@@ -35,7 +35,7 @@ import readline from 'readline'
 import fs from 'fs'
 const { CONNECTING } = ws
 const { chain } = lodash
-const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
+const PORT = process.env.PORT || process.env.SERVER_PORT || 5000
 
 protoType()
 serialize()
@@ -106,11 +106,11 @@ const question = (texto) => new Promise((resolver) => rl.question(texto, resolve
 let opcion
 if (!fs.existsSync(`./${authFile}/creds.json`) && !methodCodeQR && !methodCode) {
 while (true) {
-opcion = await question("\n\n✳️ Ingrese el metodo de conexion\n🔺 1 : por QR\n🔺 2 : por CÓDIGO\n\n\n")
+opcion = await question("\n\n✳️ Enter the connection method\n🔺 1 : for QR\n🔺 2 : for CÓDE\n\n\n")
 if (opcion === '1' || opcion === '2') {
 break
 } else {
-console.log("\n\n🔴 Ingrese solo una opción \n\n 1 o 2\n\n" )
+console.log("\n\n🔴 Enter only one option \n\n 1 o 2\n\n" )
 }}
 opcion = opcion
 }
@@ -143,7 +143,7 @@ global.conn = makeWASocket(connectionOptions)
 
 if (opcion === '2' || methodCode) {
   if (!conn.authState.creds.registered) {  
-  if (MethodMobile) throw new Error('⚠️ Se produjo un Error en la API de movil')
+  if (MethodMobile) throw new Error('⚠️ An Error Occurred')
   
   let addNumber
   if (!!phoneNumber) {
@@ -360,17 +360,17 @@ if (opcion === '2' || methodCode) {
     // Add more if needed to reach 207
 };
   if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
-  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Su número debe comenzar  con el codigo de pais")))
+  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Your number must begin with the country code")))
   process.exit(0)
   }} else {
   while (true) {
-  addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Escriba su numero\n\nEjemplo: 5491168xxxx\n\n\n\n")))
+  addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Enter Your Number\n\nExample: 923444844060\n\n\n\n")))
   addNumber = addNumber.replace(/[^0-9]/g, '')
   
   if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
   break 
   } else {
-  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Asegúrese de agregar el código de país")))
+  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Make sure to add the country code")))
   }}
  
   }
@@ -378,7 +378,7 @@ if (opcion === '2' || methodCode) {
   setTimeout(async () => {
   let codeBot = await conn.requestPairingCode(addNumber)
   codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
-  console.log(chalk.bold.red(`\n\n🟢   Su Código es:  ${codeBot}\n\n`)) 
+  console.log(chalk.bold.red(`\n\n🟢   Your Code is:  ${codeBot}\n\n`)) 
   rl.close()
   }, 3000)
   }}
@@ -412,7 +412,7 @@ async function clearTmp() {
 
 setInterval(async () => {
 	await clearTmp()
-	//console.log(chalk.cyan(`✅  Auto clear  | Se limpio la carpeta tmp`))
+	//console.log(chalk.cyan(`✅  Auto clear  | Cleaned Temporary Files`))
 }, 60000) //1 munto
 
 async function connectionUpdate(update) {
@@ -456,14 +456,14 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = 'Hola, @user\nBienvenido a @group'
-  conn.bye = 'adiós @user'
-  conn.spromote = '@user promovió a admin'
-  conn.sdemote = '@user degradado'
-  conn.sDesc = 'La descripción ha sido cambiada a \n@desc'
-  conn.sSubject = 'El nombre del grupo ha sido cambiado a \n@group'
-  conn.sIcon = 'El icono del grupo ha sido cambiado'
-  conn.sRevoke = 'El enlace del grupo ha sido cambiado a \n@revoke'
+  conn.welcome = 'Hello @user\nWelcome to @group'
+  conn.bye = 'GoodBye @user'
+  conn.spromote = '@user Promoted to admin'
+  conn.sdemote = '@user Demoted'
+  conn.sDesc = 'Description has been changed to \n@desc'
+  conn.sSubject = 'The group name has been changed to \n@group'
+  conn.sIcon = 'The group icon has been changed'
+  conn.sRevoke = 'The group link has been changed to \n@revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
@@ -502,12 +502,12 @@ global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
     let dir = global.__filename(join(pluginFolder, filename), true)
     if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(`🌟 Plugin Actualizado - '${filename}'`)
+      if (existsSync(dir)) conn.logger.info(`🌟 Plugin Updated - '${filename}'`)
       else {
-        conn.logger.warn(`🗑️ Plugin Eliminado - '${filename}'`)
+        conn.logger.warn(`🗑️ Plugin Removed - '${filename}'`)
         return delete global.plugins[filename]
       }
-    } else conn.logger.info(`✨ Nuevo plugin - '${filename}'`)
+    } else conn.logger.info(`✨ New plugin - '${filename}'`)
     let err = syntaxerror(readFileSync(dir), filename, {
       sourceType: 'module',
       allowAwaitOutsideFunction: true
@@ -569,5 +569,5 @@ async function _quickTest() {
 }
 
 _quickTest()
-  .then(() => conn.logger.info('✅ Prueba rápida realizado!'))
+  .then(() => conn.logger.info('✅ Quick Test Performed Successfully'))
   .catch(console.error)
