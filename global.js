@@ -425,7 +425,7 @@ async function connectionUpdate(update) {
   }
   
   if (global.db.data == null) loadDatabase()
-
+}
 //-- cu 
 
 process.on('uncaughtException', console.error)
