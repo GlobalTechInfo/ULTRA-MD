@@ -415,35 +415,16 @@ setInterval(async () => {
 	//console.log(chalk.cyan(`✅  Auto clear  | Se limpio la carpeta tmp`))
 }, 60000) //1 munto
 
-let hasSentWelcomeMessage = false; // Track if the message has been sent
-
 async function connectionUpdate(update) {
-  const { connection, lastDisconnect, isNewLogin } = update;
-  
-  if (isNewLogin) {
-    conn.isInit = true;
-    hasSentWelcomeMessage = false; // Reset on new login
-  }
-
-  const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
+  const { connection, lastDisconnect, isNewLogin } = update
+  if (isNewLogin) conn.isInit = true
+  const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode
   if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
-    console.log(await global.reloadHandler(true).catch(console.error));
-    global.timestamp.connect = new Date();
+    console.log(await global.reloadHandler(true).catch(console.error))
+    global.timestamp.connect = new Date
   }
-
-  if (global.db.data == null) loadDatabase();
-
-  if (conn.user && !hasSentWelcomeMessage) { // Check if the message hasn't been sent yet
-    const { jid, name } = conn.user;
-    const msg = `Hi 🤩 ${name}\n\nCongrats You Have Successfully Deployed 𝗨𝗟𝗧𝗥𝗔-𝗠𝗗\n\nJoin My Support Channel For Updates\n https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07`;
-
-    await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null });
-    hasSentWelcomeMessage = true; // Set the flag to true after sending the message
-  }
-
-  conn.logger.info(chalk.cyan('\n✅ CONNECTED SUCCESSFULLY'));
-}
-
+  
+  if (global.db.data == null) loadDatabase()
 
 //-- cu 
 
