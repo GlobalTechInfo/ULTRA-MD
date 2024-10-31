@@ -19,7 +19,6 @@ import { Low, JSONFile } from 'lowdb';
 import pino from 'pino';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
 import store from './lib/store.js'
-import parsePhoneNumber from 'libphonenumber-js'
 import { Boom } from '@hapi/boom'
 import pkg from '@whiskeysockets/baileys'
 const {
