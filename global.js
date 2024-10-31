@@ -455,7 +455,7 @@ async function connectionUpdate(update) {
   const connection = update
   global.stopped = connection
 
-  if (isNewLogin) conn.isInit = true
+  conn.isInit = true
 
   
       console.error('Error reloading handler:', error)
