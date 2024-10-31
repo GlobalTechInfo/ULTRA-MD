@@ -20,16 +20,15 @@ import pino from 'pino';
 import { mongoDB, mongoDBV2 } from './lib/mongoDB.js';
 import store from './lib/store.js'
 import { Boom } from '@hapi/boom'
-import pkg from '@whiskeysockets/baileys'
 const {
     useMultiFileAuthState,
     DisconnectReason,
-    fetchLatestWaWebVersion, 
+    fetchLatestBaileysVersion, 
     MessageRetryMap,
     makeCacheableSignalKeyStore, 
     jidNormalizedUser,
     PHONENUMBER_MCC
-   } = pkg 
+   } = await import('@whiskeysockets/baileys')
 import moment from 'moment-timezone'
 import NodeCache from 'node-cache'
 import readline from 'readline'
@@ -90,89 +89,66 @@ global.loadDatabase = async function loadDatabase() {
 loadDatabase()
 
 //-- SESSION
-// Global variables and auth setup
-global.authFile = `session`;
-const { state, saveState, saveCreds } = await useMultiFileAuthState(global.authFile);
-const msgRetryCounterMap = (MessageRetryMap) => {};
-const msgRetryCounterCache = new NodeCache();
+global.authFile = `session`
+const {state, saveState, saveCreds} = await useMultiFileAuthState(global.authFile)
+const msgRetryCounterMap = (MessageRetryMap) => { };
+const msgRetryCounterCache = new NodeCache()
+const {version} = await fetchLatestBaileysVersion();
+let phoneNumber = global.botNumber
 
-let phoneNumber = global.botNumber;
-console.log('Processed Bot Number:', phoneNumber); // Log the processed number
+const methodCodeQR = process.argv.includes("qr")
+const methodCode = !!phoneNumber || process.argv.includes("code")
+const MethodMobile = process.argv.includes("mobile")
 
-const methodCodeQR = process.argv.includes("qr");
-const methodCode = !!phoneNumber || process.argv.includes("code");
-const MethodMobile = process.argv.includes("mobile");
+const rl = readline.createInterface({ input: process.stdin, output: process.stdout })
+const question = (texto) => new Promise((resolver) => rl.question(texto, resolver))
 
-const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
-const question = (texto) => new Promise((resolver) => rl.question(texto, resolver));
-
-let opcion;
+let opcion
 if (!fs.existsSync(`./${authFile}/creds.json`) && !methodCodeQR && !methodCode) {
-    while (true) {
-        opcion = await question("\n\n✳️ Enter Connection method\n🔺 1 : for QR Code\n🔺 2 : for PairingCode\n\n\n");
-        if (opcion === '1' || opcion === '2') {
-            break;
-        } else {
-            console.log("\n\n🔴 Enter only one option \n\n 1 or 2\n\n");
-        }
-    }
+while (true) {
+opcion = await question("\n\n✳️ Ingrese el metodo de conexion\n🔺 1 : por QR\n🔺 2 : por CÓDIGO\n\n\n")
+if (opcion === '1' || opcion === '2') {
+break
+} else {
+console.log("\n\n🔴 Ingrese solo una opción \n\n 1 o 2\n\n" )
+}}
+opcion = opcion
 }
 
-// Connection options
 const connectionOptions = {
-    logger: pino({ level: 'silent' }),
-    printQRInTerminal: opcion == '1',
-    mobile: MethodMobile,
-    browser: ["Ubuntu", "Chrome", "20.0.04"],
-    auth: {
-        creds: state.creds,
-        keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
-    },
-    markOnlineOnConnect: true,
-    generateHighQualityLinkPreview: true,
-    getMessage: async key => {
-    let jid = jidNormalizedUser(key.remoteJid)
-    let msg = await store.loadMessage(jid, key.id)
-    return msg?.message || ''
+  logger: pino({ level: 'silent' }),
+  printQRInTerminal: opcion == '1' ? true : false,
+  mobile: MethodMobile, 
+  //browser: ['Chrome (Linux)', '', ''],
+  browser: [ "Ubuntu", "Chrome", "20.0.04" ], 
+  auth: {
+  creds: state.creds,
+  keys: makeCacheableSignalKeyStore(state.keys, pino({ level: "fatal" }).child({ level: "fatal" })),
   },
-  patchMessageBeforeSending: message => {
-    const requiresPatch = !!(
-      message.buttonsMessage ||
-      message.templateMessage ||
-      message.listMessage
-    )
-    if (requiresPatch) {
-      message = {
-        viewOnceMessage: {
-          message: {
-            messageContextInfo: {
-              deviceListMetadataVersion: 2,
-              deviceListMetadata: {},
-            },
-            ...message,
-          },
-        },
-      }
-    }
-
-    return message
+  markOnlineOnConnect: true, 
+  generateHighQualityLinkPreview: true, 
+  getMessage: async (clave) => {
+  let jid = jidNormalizedUser(clave.remoteJid)
+  let msg = await store.loadMessage(jid, clave.id)
+  return msg?.message || ""
   },
   msgRetryCounterCache,
-  defaultQueryTimeoutMs: undefined,
-  syncFullHistory: false,
-};
+  msgRetryCounterMap,
+  defaultQueryTimeoutMs: undefined,   
+  version
+  }
 
-// Create the socket connection
-global.conn = makeWASocket(connectionOptions);
+//--
+global.conn = makeWASocket(connectionOptions)
 
 if (opcion === '2' || methodCode) {
-    if (!conn.authState.creds.registered) {  
-        if (MethodMobile) throw new Error('⚠️ An Error Occurred in the mobile API');
-
-        let addNumber;
-        if (!!phoneNumber) {
-            addNumber = phoneNumber.replace(/[^0-9]/g, '');
-		const PHONENUMBER_MCC = {
+  if (!conn.authState.creds.registered) {  
+  if (MethodMobile) throw new Error('⚠️ Se produjo un Error en la API de movil')
+  
+  let addNumber
+  if (!!phoneNumber) {
+  addNumber = phoneNumber.replace(/[^0-9]/g, '')
+	  const PHONENUMBER_MCC = {
     '93': 'Afghanistan',
     '355': 'Albania',
     '213': 'Algeria',
@@ -383,55 +359,43 @@ if (opcion === '2' || methodCode) {
     '263': 'Zimbabwe',
     // Add more if needed to reach 207
 };
-		
-            if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
-                console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Your number must start with the country code")));
-                process.exit(0);
-            }
-        } else {
-            while (true) {
-                addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Write Your Number\n\nExample: 5491168xxxx\n\n\n\n")));
-                addNumber = addNumber.replace(/[^0-9]/g, '');
-
-                if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
-                    break; 
-                } else {
-                    console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Make sure to add the country code")));
-                }
-            }
-        }
-
-        // Request pairing code for the bot number after validation
-        setTimeout(async () => {
-            try {
-                const pairingCode = await conn.requestPairingCode(addNumber);
-                const formattedCode = pairingCode?.match(/.{1,4}/g)?.join("-") || pairingCode;
-                console.log(chalk.bold.red(`\n\n🟢 Your Pairing Code Is: ${formattedCode}\n\n`));
-                rl.close();
-            } catch (error) {
-                console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Failed to send pairing code:", error.message)));
-            }
-        }, 3000);
-    }
-}
-conn.logger.info('\nWaiting For Login\n')
-
-conn.isInit = false;
+  if (!Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Su número debe comenzar  con el codigo de pais")))
+  process.exit(0)
+  }} else {
+  while (true) {
+  addNumber = await question(chalk.bgBlack(chalk.bold.greenBright("\n\n✳️ Escriba su numero\n\nEjemplo: 5491168xxxx\n\n\n\n")))
+  addNumber = addNumber.replace(/[^0-9]/g, '')
+  
+  if (addNumber.match(/^\d+$/) && Object.keys(PHONENUMBER_MCC).some(v => addNumber.startsWith(v))) {
+  break 
+  } else {
+  console.log(chalk.bgBlack(chalk.bold.redBright("\n\n✴️ Asegúrese de agregar el código de país")))
+  }}
+ 
+  }
+  
+  setTimeout(async () => {
+  let codeBot = await conn.requestPairingCode(addNumber)
+  codeBot = codeBot?.match(/.{1,4}/g)?.join("-") || codeBot
+  console.log(chalk.bold.red(`\n\n🟢   Su Código es:  ${codeBot}\n\n`)) 
+  rl.close()
+  }, 3000)
+  }}
+conn.isInit = false
 
 if (!opts['test']) {
   setInterval(async () => {
-    if (global.db.data) await global.db.write().catch(console.error);
-    if (opts['autocleartmp']) {
-      try {
-        clearTmp();
-      } catch (e) {
-        console.error(e);
-      }
-    }
-  }, 60 * 1000);
+    if (global.db.data) await global.db.write().catch(console.error)
+    if (opts['autocleartmp']) try {
+      clearTmp()
+
+    } catch (e) { console.error(e) }
+  }, 60 * 1000)
 }
 
-if (opts['server']) (await import('./server.js')).default(global.conn, PORT);
+if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
+
 /* Clear */
 async function clearTmp() {
   const tmp = [tmpdir(), join(__dirname, './tmp')]
@@ -448,30 +412,44 @@ async function clearTmp() {
 
 setInterval(async () => {
 	await clearTmp()
-	//console.log(chalk.cyan(`✅  Auto clear  | Successfully Cleaned tmp`))
+	//console.log(chalk.cyan(`✅  Auto clear  | Se limpio la carpeta tmp`))
 }, 60000) //1 munto
 
+let hasSentWelcomeMessage = false; // Track if the message has been sent
+
 async function connectionUpdate(update) {
-  const connection = update
-  global.stopped = connection
-
-  conn.isInit = true
-
+  const { connection, lastDisconnect, isNewLogin } = update;
   
-      console.error('Error reloading handler:', error)
+  if (isNewLogin) {
+    conn.isInit = true;
+    hasSentWelcomeMessage = false; // Reset on new login
+  }
+
+  const code = lastDisconnect?.error?.output?.statusCode || lastDisconnect?.error?.output?.payload?.statusCode;
+  if (code && code !== DisconnectReason.loggedOut && conn?.ws.socket == null) {
+    console.log(await global.reloadHandler(true).catch(console.error));
+    global.timestamp.connect = new Date();
+  }
+
+  if (global.db.data == null) loadDatabase();
+
+  if (conn.user && !hasSentWelcomeMessage) { // Check if the message hasn't been sent yet
+    const { jid, name } = conn.user;
+    const msg = `Hi 🤩 ${name}\n\nCongrats You Have Successfully Deployed 𝗨𝗟𝗧𝗥𝗔-𝗠𝗗\n\nJoin My Support Channel For Updates\n https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07`;
+
+    await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null });
+    hasSentWelcomeMessage = true; // Set the flag to true after sending the message
+  }
+
+  conn.logger.info(chalk.cyan('\n✅ CONNECTED SUCCESSFULLY'));
 }
 
-  if (global.db.data == null) loadDatabase()
 
-  {
-    const { jid, name } = conn.user
-    const msg = `Hi 🤩 ${name}\n\nCongrats You Have Successfully Deployed 𝗨𝗟𝗧𝗥𝗔-𝗠𝗗\n\nJoin My Support Channel For Updates\n https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07`
-
-    await conn.sendMessage(jid, { text: msg, mentions: [jid] }, { quoted: null })
-  }
-    conn.logger.info(chalk.cyan('\n✅ CONNECTED SUCCESSFULLY'))
+//-- cu 
 
 process.on('uncaughtException', console.error)
+// let strQuot = /(["'])(?:(?=(\\?))\2.)*?\1/
+
 let isInit = true;
 let handler = await import('./handler.js')
 global.reloadHandler = async function (restatConn) {
@@ -497,14 +475,14 @@ global.reloadHandler = async function (restatConn) {
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = 'Hello, @user\nWelcome To @group'
-  conn.bye = 'Good Bye @user'
-  conn.spromote = '@user promoted to admin'
-  conn.sdemote = '@user demoted'
-  conn.sDesc = 'Group description has been changed to \n@desc'
-  conn.sSubject = 'Group Name Has been Changed to \n@group'
-  conn.sIcon = 'The group icon has been updated'
-  conn.sRevoke = 'The group link has been reset to \n@revoke'
+  conn.welcome = 'Hola, @user\nBienvenido a @group'
+  conn.bye = 'adiós @user'
+  conn.spromote = '@user promovió a admin'
+  conn.sdemote = '@user degradado'
+  conn.sDesc = 'La descripción ha sido cambiada a \n@desc'
+  conn.sSubject = 'El nombre del grupo ha sido cambiado a \n@group'
+  conn.sIcon = 'El icono del grupo ha sido cambiado'
+  conn.sRevoke = 'El enlace del grupo ha sido cambiado a \n@revoke'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
@@ -543,12 +521,12 @@ global.reload = async (_ev, filename) => {
   if (pluginFilter(filename)) {
     let dir = global.__filename(join(pluginFolder, filename), true)
     if (filename in global.plugins) {
-      if (existsSync(dir)) conn.logger.info(`Plugin Updated - '${filename}'`)
+      if (existsSync(dir)) conn.logger.info(`🌟 Plugin Actualizado - '${filename}'`)
       else {
-        conn.logger.warn(`Plugin Removed - '${filename}'`)
+        conn.logger.warn(`🗑️ Plugin Eliminado - '${filename}'`)
         return delete global.plugins[filename]
       }
-    } else conn.logger.info(`New plugin - '${filename}'`)
+    } else conn.logger.info(`✨ Nuevo plugin - '${filename}'`)
     let err = syntaxerror(readFileSync(dir), filename, {
       sourceType: 'module',
       allowAwaitOutsideFunction: true
@@ -610,5 +588,5 @@ async function _quickTest() {
 }
 
 _quickTest()
-  .then(() => conn.logger.info('✅ Quick Test Perform!'))
+  .then(() => conn.logger.info('✅ Prueba rápida realizado!'))
   .catch(console.error)
