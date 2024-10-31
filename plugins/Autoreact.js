@@ -1,1 +1,72 @@
-const _0x3428bb=_0xd82e;function _0xd82e(_0x223a8e,_0x3b14b7){const _0x2c22b9=_0x2dae();return _0xd82e=function(_0x2eb9ac,_0x421b64){_0x2eb9ac=_0x2eb9ac-(0x2492+0x11e2+-0x223*0x19);let _0x74c04c=_0x2c22b9[_0x2eb9ac];return _0x74c04c;},_0xd82e(_0x223a8e,_0x3b14b7);}(function(_0x40edf7,_0x2b574e){const _0x4222ae=_0xd82e,_0x4f3fe0=_0x40edf7();while(!![]){try{const _0x3a4edd=parseInt(_0x4222ae(0x126))/(-0x1c48+-0x1d86+-0x39cf*-0x1)+-parseInt(_0x4222ae(0x12a))/(0x3c+-0xd04+0xcca)*(parseInt(_0x4222ae(0x144))/(0x1307*-0x1+0x1*0x853+0xd3*0xd))+-parseInt(_0x4222ae(0x134))/(-0x5*-0x6ac+0x1e36+-0xcb6*0x5)*(-parseInt(_0x4222ae(0x11d))/(-0x1*0x2e0+-0xa92*0x3+0x229b))+-parseInt(_0x4222ae(0x10b))/(0x1*-0x1b59+0xa4a*-0x1+-0x25a9*-0x1)+parseInt(_0x4222ae(0x13c))/(0x7b5+-0x1*0x20d5+-0x1927*-0x1)+-parseInt(_0x4222ae(0x131))/(-0x2bd*0x1+0x4*-0x1cf+-0xc5*-0xd)+-parseInt(_0x4222ae(0x113))/(0xc*-0xd2+0x303*0x6+-0x2bb*0x3)*(parseInt(_0x4222ae(0x11a))/(-0xd42+-0x122c+0x1f78));if(_0x3a4edd===_0x2b574e)break;else _0x4f3fe0['push'](_0x4f3fe0['shift']());}catch(_0x36780d){_0x4f3fe0['push'](_0x4f3fe0['shift']());}}}(_0x2dae,-0x18e497+0x1d1fe+0x2529ae));function _0x2dae(){const _0x1daa35=['72ZGKrgz','remoteJid','IDjbW','on:','error','<on|off>','tRzdh','3583592EQNDNs','Auto-react','ymBtT','4292bhcFxw','length','fUrga','key','autoreact\x20','Error\x20send','lSNrk','text','12626075jmucsZ','\x20disabled\x20','n\x0a-\x20autore','message','Usage:\x0a-\x20a','\x20disabled','floor','test','99291kGHxJU','act\x20off','tags','622722RsgXcj','conversati','ing\x20reacti','kTBLx','off','sendMessag','oEgqt','xtMessage','27UXfoxR','\x20enabled\x20✅','MYcpm','\x20enabled','XCMoc','command','help','4512260HENDOq','isAfter','owner','4700AchIUg','estamp','UimJj','random','extendedTe','ydioS','Yhgej','lBxnP','messageTim','1207974NnFlay','autoreact','utoreact\x20o','log'];_0x2dae=function(){return _0x1daa35;};return _0x2dae();}import{doReact,emojis}from'../lib/autoreact.cjs';import _0x4d296e from'moment-timezone';let AUTO_REACT=![],lastReactedTime=null;const handler=async(_0x2592d7,{conn:_0x314f70,args:_0x4904ad,command:_0x351537})=>{const _0x4f410f=_0xd82e,_0x24cfb9={'MYcpm':function(_0x2b102a,_0x1ad1dc){return _0x2b102a===_0x1ad1dc;},'tRzdh':_0x4f410f(0x127),'oEgqt':function(_0x5415f2){return _0x5415f2();},'lSNrk':_0x4f410f(0x132)+_0x4f410f(0x116),'ymBtT':_0x4f410f(0x132)+_0x4f410f(0x114),'Yhgej':_0x4f410f(0x10f),'UimJj':_0x4f410f(0x132)+_0x4f410f(0x141),'kTBLx':_0x4f410f(0x132)+_0x4f410f(0x13d)+'❌','IDjbW':_0x4f410f(0x140)+_0x4f410f(0x128)+_0x4f410f(0x13e)+_0x4f410f(0x109),'XCMoc':function(_0x9d523c,_0x20a02f){return _0x9d523c(_0x20a02f);},'ydioS':function(_0x151b63,_0x461707){return _0x151b63*_0x461707;},'lBxnP':function(_0x411b21,_0x15bb32,_0x14d51c,_0x1c2b50){return _0x411b21(_0x15bb32,_0x14d51c,_0x1c2b50);},'fUrga':_0x4f410f(0x139)+_0x4f410f(0x10d)+_0x4f410f(0x12d)};if(_0x24cfb9[_0x4f410f(0x115)](_0x351537,_0x24cfb9[_0x4f410f(0x130)])){if(_0x24cfb9[_0x4f410f(0x115)](_0x4904ad[-0x8d5+0x4e7*-0x2+-0x16f*-0xd],'on'))AUTO_REACT=!![],lastReactedTime=_0x24cfb9[_0x4f410f(0x111)](_0x4d296e),console[_0x4f410f(0x129)](_0x24cfb9[_0x4f410f(0x13a)]),await _0x314f70[_0x4f410f(0x110)+'e'](_0x2592d7[_0x4f410f(0x137)][_0x4f410f(0x12b)],{'text':_0x24cfb9[_0x4f410f(0x133)]},{'quoted':_0x2592d7});else _0x24cfb9[_0x4f410f(0x115)](_0x4904ad[-0x2a5*0x7+0x1435+-0x1b2],_0x24cfb9[_0x4f410f(0x123)])?(AUTO_REACT=![],console[_0x4f410f(0x129)](_0x24cfb9[_0x4f410f(0x11f)]),await _0x314f70[_0x4f410f(0x110)+'e'](_0x2592d7[_0x4f410f(0x137)][_0x4f410f(0x12b)],{'text':_0x24cfb9[_0x4f410f(0x10e)]},{'quoted':_0x2592d7})):await _0x314f70[_0x4f410f(0x110)+'e'](_0x2592d7[_0x4f410f(0x137)][_0x4f410f(0x12b)],{'text':_0x24cfb9[_0x4f410f(0x12c)]},{'quoted':_0x2592d7});return;}if(AUTO_REACT){const _0xe37483=_0x24cfb9[_0x4f410f(0x117)](_0x4d296e,_0x24cfb9[_0x4f410f(0x122)](_0x2592d7[_0x4f410f(0x125)+_0x4f410f(0x11e)],-0x31*-0x63+-0x1*-0x1f88+-0x2e93*0x1));if(!lastReactedTime||_0xe37483[_0x4f410f(0x11b)](lastReactedTime)){const _0x7b315b=/^[!#.$%^&*+=?<>]/[_0x4f410f(0x143)](_0x2592d7[_0x4f410f(0x13f)]?.[_0x4f410f(0x10c)+'on']||_0x2592d7[_0x4f410f(0x13f)]?.[_0x4f410f(0x121)+_0x4f410f(0x112)]?.[_0x4f410f(0x13b)]||'');if(!_0x7b315b){const _0x278061=emojis[Math[_0x4f410f(0x142)](_0x24cfb9[_0x4f410f(0x122)](Math[_0x4f410f(0x120)](),emojis[_0x4f410f(0x135)]))];try{await _0x24cfb9[_0x4f410f(0x124)](doReact,_0x278061,_0x2592d7,_0x314f70),lastReactedTime=_0xe37483;}catch(_0x5a9802){console[_0x4f410f(0x12e)](_0x24cfb9[_0x4f410f(0x136)],_0x5a9802);}}}}};handler[_0x3428bb(0x119)]=[_0x3428bb(0x138)+_0x3428bb(0x12f)],handler[_0x3428bb(0x10a)]=[_0x3428bb(0x11c)],handler[_0x3428bb(0x118)]=/^autoreact$/i,handler[_0x3428bb(0x11c)]=!![];export default handler;
+const emojis = [
+    '💘', '💝', '💖', '💗', '💓', '💞', '💕', '💟', '❣️', '❤️',
+    '🧡', '💛', '💚', '💙', '💜', '🤎', '🖤', '🤍', '❤️‍', '🔥',
+    '♥️', '🎈', '🎉', '🎊', '🎁', '💌', '📧', '📨', '📩', '💐',
+    '🌸', '💮', '🏵️', '🌹', '🥀', '🌺', '🌻', '🌼', '🌷', '☘️',
+    '🍀', '🍁', '🍂', '🍃', '⭐️', '🌟', '✨', '😊', '🥰', '😍',
+    '🤩', '☺️'
+];
+
+async function doReact(emoji, mek, gss) {
+    try {
+        const react = {
+            react: {
+                text: emoji,
+                key: mek.key,
+            },
+        };
+        await gss.sendMessage(mek.key.remoteJid, react);
+    } catch (error) {
+        console.error('Error sending auto reaction:', error);
+    }
+}
+
+let AUTO_REACT = false;
+let lastReactedTime = null;
+
+const handler = async (message, { conn, args, command }) => {
+    try {
+        const isAutoReactCommand = command === 'autoreact';
+
+        if (isAutoReactCommand) {
+            if (args[0] === 'on') {
+                AUTO_REACT = true;
+                lastReactedTime = Date.now(); // Set the last reacted time to now
+                console.log('Auto-react enabled ✅');
+                await conn.sendMessage(message.key.remoteJid, { text: 'Auto-react enabled ✅' }, { quoted: message });
+            } else if (args[0] === 'off') {
+                AUTO_REACT = false;
+                console.log('Auto-react disabled ❌');
+                await conn.sendMessage(message.key.remoteJid, { text: 'Auto-react disabled ❌' }, { quoted: message });
+            } else {
+                await conn.sendMessage(message.key.remoteJid, { text: 'Usage:\n- autoreact on\n- autoreact off' }, { quoted: message });
+            }
+            return;
+        }
+
+        if (AUTO_REACT) {
+            const currentTime = Date.now();
+            // Check if enough time has passed since the last reaction
+            if (!lastReactedTime || (currentTime - lastReactedTime > 5000)) {
+                const isCommand = /^[!#.$%^&*+=?<>]/.test(message.body || '');
+                if (!isCommand) {
+                    const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
+                    try {
+                        await doReact(randomEmoji, message, conn);
+                        lastReactedTime = currentTime; // Update last reacted time
+                    } catch (error) {
+                        console.error('Error during auto reaction:', error);
+                    }
+                }
+            }
+        }
+    } catch (error) {
+        console.error('Handler error:', error);
+    }
+};
+
+handler.help = ['autoreact'];
+handler.tags = ['main'];
+handler.command = /^(autoreact)$/i;
+
+export default handler;
