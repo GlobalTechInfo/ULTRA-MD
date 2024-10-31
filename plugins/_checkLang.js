@@ -17,7 +17,7 @@ export async function before(m,{ conn }) {
       } else if (lang === "ar") {
       translations = ar
      } else {
-      translations = es
+      translations = en
      }
 
 	global.mssg = translations
