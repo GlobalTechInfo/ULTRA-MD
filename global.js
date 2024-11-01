@@ -1,6 +1,7 @@
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '1';
-import './config.js'; 
+import './config.js';
+import dotenv from 'dotenv';
 import { createRequire } from "module"; // Bring in the ability to create the 'require' method
 import path, { join } from 'path'
 import { fileURLToPath, pathToFileURL } from 'url'
@@ -449,37 +450,60 @@ global.reloadHandler = async function (restatConn) {
   }
   if (!isInit) {
     conn.ev.off('messages.upsert', conn.handler)
+    conn.ev.off('messages.update', conn.pollUpdate)
     conn.ev.off('group-participants.update', conn.participantsUpdate)
     conn.ev.off('groups.update', conn.groupsUpdate)
     conn.ev.off('message.delete', conn.onDelete)
+    conn.ev.off('presence.update', conn.presenceUpdate)
     conn.ev.off('connection.update', conn.connectionUpdate)
     conn.ev.off('creds.update', conn.credsUpdate)
   }
 
-  conn.welcome = 'Hello @user\nWelcome to @group'
-  conn.bye = 'GoodBye @user'
-  conn.spromote = '@user Promoted to admin'
-  conn.sdemote = '@user Demoted'
-  conn.sDesc = 'Description has been changed to \n@desc'
-  conn.sSubject = 'The group name has been changed to \n@group'
-  conn.sIcon = 'The group icon has been changed'
-  conn.sRevoke = 'The group link has been changed to \n@revoke'
+  conn.welcome = ` Hello @user!\n\n🎉 *WELCOME* to the group @group!\n\n📜 Please read the *DESCRIPTION* @desc.`
+  conn.bye = `👋GOODBYE @user \n\nSee you later!`
+  conn.spromote = `*@user* has been promoted to an admin!`
+  conn.sdemote = `*@user* is no longer an admin.`
+  conn.sDesc = `The group description has been updated to:\n@desc`
+  conn.sSubject = `The group title has been changed to:\n@group`
+  conn.sIcon = `The group icon has been updated!`
+  conn.sRevoke = ` The group link has been changed to:\n@revoke`
+  conn.sAnnounceOn = `The group is now *CLOSED*!\nOnly admins can send messages.`
+  conn.sAnnounceOff = `The group is now *OPEN*!\nAll participants can send messages.`
+  conn.sRestrictOn = `Edit Group Info has been restricted to admins only!`
+  conn.sRestrictOff = `Edit Group Info is now available to all participants!`
+
   conn.handler = handler.handler.bind(global.conn)
+  conn.pollUpdate = handler.pollUpdate.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
   conn.onDelete = handler.deleteUpdate.bind(global.conn)
+  conn.presenceUpdate = handler.presenceUpdate.bind(global.conn)
   conn.connectionUpdate = connectionUpdate.bind(global.conn)
   conn.credsUpdate = saveCreds.bind(global.conn, true)
 
+  const currentDateTime = new Date()
+  const messageDateTime = new Date(conn.ev)
+  if (currentDateTime >= messageDateTime) {
+    const chats = Object.entries(conn.chats)
+      .filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats)
+      .map(v => v[0])
+  } else {
+    const chats = Object.entries(conn.chats)
+      .filter(([jid, chat]) => !jid.endsWith('@g.us') && chat.isChats)
+      .map(v => v[0])
+  }
+
   conn.ev.on('messages.upsert', conn.handler)
+  conn.ev.on('messages.update', conn.pollUpdate)
   conn.ev.on('group-participants.update', conn.participantsUpdate)
   conn.ev.on('groups.update', conn.groupsUpdate)
   conn.ev.on('message.delete', conn.onDelete)
+  conn.ev.on('presence.update', conn.presenceUpdate)
   conn.ev.on('connection.update', conn.connectionUpdate)
   conn.ev.on('creds.update', conn.credsUpdate)
   isInit = false
   return true
-}
+	  }
 
 const pluginFolder = global.__dirname(join(__dirname, './plugins/index'))
 const pluginFilter = filename => /\.js$/.test(filename)
