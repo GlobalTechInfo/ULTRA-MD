@@ -39,7 +39,7 @@ let handler = async (m, { conn, usedPrefix }) => {
                         text: "Use The Below Buttons"
                     }),
                     header: proto.Message.InteractiveMessage.Header.create({
-                        ...(await prepareWAMessageMedia({ image: { url: 'https://i.imgur.com/IfZsOhf.jpeg' } }, { upload: conn.waUploadToServer })),
+                        ...(await prepareWAMessageMedia({ image: { url: './assets/Ultra.jpg' } }, { upload: conn.waUploadToServer })),
                         title: null,
                         subtitle: null,
                         hasMediaAttachment: false
