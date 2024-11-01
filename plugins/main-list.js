@@ -303,6 +303,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •tiktok
 ◈ •tiktokstalk
 ◈ •insta
+◈ •igstory
 ◈ •igstalk
 ◈ •facebook
 ◈ •wallpapers
