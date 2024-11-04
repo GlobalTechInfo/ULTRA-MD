@@ -1,3 +1,4 @@
+/*
 import { xnxxSearch, xnxxdl } from '../lib/scraper.js'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
@@ -59,3 +60,4 @@ handler.premium = true
 handler.register = true
 
 export default handler
+*/
