@@ -9,21 +9,20 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
         
         if (!vid) throw `✳️ Video/Audio not found`;
 
-        let { title, description, thumbnail, videoId, timestamp, views, ago, url } = vid;
+        let { description, thumbnail, videoId, timestamp, views, ago, url } = vid;
         m.react('🎧');
 
         let play = `
 ≡ *ULTRA-MD MUSIC*
 ┌──────────────
-▢ 📌 *Title:* ${title}
 ▢ 📆 *Uploaded:* ${ago}
 ▢ ⌚ *Duration:* ${timestamp}
 ▢ 👀 *Views:* ${views.toLocaleString()}
 └──────────────`;
 
         await conn.sendButton(m.chat, play, null, null, [
-            ['🎶 MP3', `${usedPrefix}ytmp3 ${url}`],
-            ['🎥 MP4', `${usedPrefix}ytmp4 ${url}`]
+            ['🎶 MP3', `${usedPrefix}yta ${url}`],
+            ['🎥 MP4', `${usedPrefix}ytv ${url}`]
         ], m, { mentions: [m.sender] });
 
     } catch (error) {
