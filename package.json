@@ -28,16 +28,16 @@
         "MD",
         "baileys-md"
     ],
-    "homepage": "https://github.com/GlobalTechInfo/ULTRA-MD",
+    "homepage": "https://github.com/Devenlee350/ULTRA-MD",
     "author": {
         "name": "GlobalTechInfo"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/GlobalTechInfo/ULTRA-MD.git"
+        "url": "git+https://github.com/Devenlee350/ULTRA-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/GlobalTechInfo/ULTRA-MD/issues"
+        "url": "https://github.com/Devenlee350/ULTRA-MD/issues"
     },
     "license": "Apache License 2.0",
     "dependencies": {
