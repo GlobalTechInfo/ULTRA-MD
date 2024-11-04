@@ -29,6 +29,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 
 > CAN NOT DOWNLOAD FOR YOU WE ARE FIXING THE PROBLEM.
 > © GlobalTechInfo
+> ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ
 ❍─━━━━⊱༻●༺⊰━━━━─❍`;
 
     await conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid }, { quoted: m });
