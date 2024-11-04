@@ -111,13 +111,6 @@ set the Env Vars.
 
 ----
 
-_Heroku is not gonna work with creds.json for this bot only. So replace this number_
-
-_golbal.botNumber='923051391007'_
-_with your number in config.js_
-
-_Then in Deployment terminal It will Shows you a pairing code at the end of Deployment, Pair with your WhatsApp and enjoy._
-
 3. #### DEPLOY TO HEROKU
 
  If You don't have an account in Heroku. Create a account.
@@ -127,7 +120,7 @@ _Then in Deployment terminal It will Shows you a pairing code at the end of Depl
 Now Deploy
    <br>
  <div align="center">
-  <a href="https://heroku.com/deploy?template=https://github.com/GlobalTechInfo/Bypass">
+  <a href="https://heroku.com/deploy?template=https://github.com/GlobTechInfo/Bypass">
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy to Heroku">
   </a>
 </div>
