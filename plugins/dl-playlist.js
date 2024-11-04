@@ -29,7 +29,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         });
     }
 
-    await conn.sendList(m.chat, '  ≡ *ULTRA-MD MUSIC*🔎', `\n 📀 Results for:\n *${text}*`, `Click Here`, ytres[0].image, listSections, m);
+    await conn.sendList(m.chat, '  ≡ *ULTRA-MD ◑ MUSIC*🔎', `\n 📀 Results for:\n *${text}*`, `Click Here`, ytres[0].image, listSections, m);
 };
 
 handler.help = ['play2'];
