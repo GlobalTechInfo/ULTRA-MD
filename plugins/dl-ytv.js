@@ -1,1 +1,84 @@
-const _0x215cc2=_0xfcde;function _0xfcde(_0x8a3ec4,_0x460413){const _0x1aa447=_0x9309();return _0xfcde=function(_0xbda37b,_0x554f19){_0xbda37b=_0xbda37b-(0x1368+-0x91d+-0x65*0x19);let _0x1399fc=_0x1aa447[_0xbda37b];return _0x1399fc;},_0xfcde(_0x8a3ec4,_0x460413);}(function(_0x1573f8,_0x5b4de9){const _0x423bf9=_0xfcde,_0x1c91f7=_0x1573f8();while(!![]){try{const _0x24289c=-parseInt(_0x423bf9(0x72))/(0xa*-0x336+0x2351+-0x334)+parseInt(_0x423bf9(0x87))/(-0x2420+0x15bb*0x1+0xe67)*(parseInt(_0x423bf9(0x90))/(0xa88*-0x2+0x7*-0x4d4+0x36df*0x1))+parseInt(_0x423bf9(0x7a))/(0xe14+-0x228+0x2*-0x5f4)+parseInt(_0x423bf9(0xa5))/(0xd35+0x1*-0x211e+-0x1*-0x13ee)*(-parseInt(_0x423bf9(0x76))/(0xebb+-0x81b+0x41*-0x1a))+parseInt(_0x423bf9(0x8f))/(-0x166+0xb20+-0x9b3*0x1)*(-parseInt(_0x423bf9(0x73))/(0x211f*-0x1+0x1*0x2167+0x8*-0x8))+parseInt(_0x423bf9(0x75))/(-0x1215*-0x1+-0x121d+0x11*0x1)*(parseInt(_0x423bf9(0x93))/(-0xe65+0x4*-0x8fe+0x1*0x3267))+-parseInt(_0x423bf9(0xa3))/(0x1dad*0x1+0x2437+0x15f3*-0x3);if(_0x24289c===_0x5b4de9)break;else _0x1c91f7['push'](_0x1c91f7['shift']());}catch(_0x274930){_0x1c91f7['push'](_0x1c91f7['shift']());}}}(_0x9309,0x10a980+-0xd*-0x50db+-0xbc3ed*0x1));import _0x189197 from'nayan-media-downloader';const {ytdown}=_0x189197;let handler=async(_0x51e269,{conn:_0x1969d8,args:_0x17571f,usedPrefix:_0x5a76cd,command:_0x5696a6})=>{const _0x2f6863=_0xfcde,_0x1c7b03={'OinBP':function(_0x390f90,_0x1a0939){return _0x390f90+_0x1a0939;},'Otpxg':function(_0x3d11e9,_0x5acf8c){return _0x3d11e9(_0x5acf8c);},'QpmQc':_0x2f6863(0x84)+_0x2f6863(0x91)+_0x2f6863(0x96),'rZWwt':_0x2f6863(0x8c),'qwgNM':_0x2f6863(0x8b),'lapvx':_0x2f6863(0x70)+_0x2f6863(0x99)+_0x2f6863(0x7f),'ZzxkW':_0x2f6863(0x7d)+_0x2f6863(0x81)+_0x2f6863(0x74)+_0x2f6863(0x88)};if(!_0x17571f||!_0x17571f[0x3*-0x725+0xc*-0x9a+0x1ca7])throw _0x2f6863(0x6f)+'\x20'+_0x1c7b03[_0x2f6863(0x97)](_0x5a76cd,_0x5696a6)+(_0x2f6863(0x7b)+_0x2f6863(0x78)+_0x2f6863(0x9f));if(!_0x17571f[-0x1ec+0x1ceb*0x1+0x1*-0x1aff][_0x2f6863(0x8e)](/youtu/gi))throw _0x2f6863(0x7c)+_0x2f6863(0x82)+_0x2f6863(0xa0)+_0x2f6863(0x92);await _0x51e269[_0x2f6863(0x83)]('⏳');try{const {data:_0x30a894}=await _0x1c7b03[_0x2f6863(0x80)](ytdown,_0x17571f[0x15c7+0x8ed+-0x1eb4]),_0x1eb115=_0x30a894[_0x2f6863(0x8c)];if(!_0x1eb115)throw new Error(_0x1c7b03[_0x2f6863(0x94)]);const _0xb8ed63=_0x30a894[_0x2f6863(0x86)]||_0x1c7b03[_0x2f6863(0x9a)];await _0x1969d8[_0x2f6863(0x9e)](_0x51e269[_0x2f6863(0x85)],_0x1eb115,_0xb8ed63+_0x2f6863(0x6e),_0x2f6863(0x77)+_0x2f6863(0x9c),_0x51e269,![],{'mimetype':_0x1c7b03[_0x2f6863(0x8a)]}),await _0x51e269[_0x2f6863(0x83)]('✅');}catch(_0x41df31){console[_0x2f6863(0xa2)](_0x1c7b03[_0x2f6863(0x71)],_0x41df31),await _0x51e269[_0x2f6863(0x7e)](_0x1c7b03[_0x2f6863(0x8d)]),await _0x51e269[_0x2f6863(0x83)]('❌');}};handler[_0x215cc2(0x89)]=[_0x215cc2(0x98)+_0x215cc2(0xa1)],handler[_0x215cc2(0x9b)]=[_0x215cc2(0x95)],handler[_0x215cc2(0xa4)]=[_0x215cc2(0x79),_0x215cc2(0x8c),_0x215cc2(0x9d)];function _0x9309(){const _0x557e00=['657968pGBUlK','e\x20video.','help','qwgNM','video/mp4','video','ZzxkW','match','43470bbVIlP','9iqrmVh','hing\x20video','link','10661010JfpplZ','QpmQc','downloader','\x20URL','OinBP','ytmp4\x20<yt-','loading\x20vi','rZWwt','tags','TechInfo','ytv','sendFile','kTFFwxtXI','a\x20YouTube\x20','link>','error','926596jTyKDq','command','15770qUYiuE','.mp4','✳️\x20Example:','Error\x20down','lapvx','1167229XMklYE','8UMWLpJ','ownload\x20th','9TWuVMS','2202OzEWtn','🌟\x20©\x20Global','outu.be/Yz','ytmp4','3808568STeTlH','\x20https://y','❎\x20Verify\x20t','❌\x20Error:\x20C','reply','deo:','Otpxg','ould\x20not\x20d','hat\x20it\x20is\x20','react','Error\x20fetc','chat','title'];_0x9309=function(){return _0x557e00;};return _0x9309();}export default handler;
+import fetch from 'node-fetch';
+import pkg from 'nayan-media-downloader';
+const { ytdown } = pkg;
+
+const fetchWithRetry = async (url, options, retries = 3) => {
+    for (let i = 0; i < retries; i++) {
+        const response = await fetch(url, options);
+        if (response.ok) return response;
+        console.log(`Retrying... (${i + 1})`);
+    }
+    throw new Error('Failed to fetch media content after retries');
+};
+
+const handler = async (m, { args, conn, usedprefix }) => {
+    // Check if a URL was provided
+    if (!args.length) {
+        await m.reply('Please provide a YouTube URL.');
+        return;
+    }
+
+    const url = args.join(' '); // Join arguments to handle spaces in URLs
+    const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/;
+
+    // Validate the URL format
+    if (!youtubeRegex.test(url)) {
+        await m.react('❌'); // React with a cross emoji for invalid URL
+        await m.reply('Invalid YouTube URL. Please provide a valid URL.');
+        return;
+    }
+
+    await m.react('⏳'); // React with a loading emoji
+
+    try {
+        // Fetch video details with ytdown
+        const response = await ytdown(url);
+        console.log('API Response:', response); // Log the API response
+
+        if (!response || !response.data) {
+            throw new Error('Invalid response from the downloader.');
+        }
+
+        const videoUrl = response.data.video_hd; // Use HD URL
+        if (!videoUrl) {
+            throw new Error('HD video URL not found.');
+        }
+
+        const title = response.data.title || 'video';
+        const caption = `𝘗𝘖𝘞𝘌𝘙𝘌𝘋 𝘉𝘠 © 𝘜𝘓𝘛𝘙𝘈-𝘔𝘋`;
+
+        // Fetch the video file with retry
+        const mediaResponse = await fetchWithRetry(videoUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+                'Accept': 'application/json, text/plain, */*'
+            }
+        });
+
+        const contentType = mediaResponse.headers.get('content-type');
+        if (!contentType || !contentType.includes('video')) {
+            throw new Error('Invalid content type received');
+        }
+
+        const arrayBuffer = await mediaResponse.arrayBuffer();
+        const mediaBuffer = Buffer.from(arrayBuffer);
+        if (mediaBuffer.length === 0) throw new Error('Downloaded file is empty');
+
+        // Send the video file
+        await conn.sendFile(m.chat, mediaBuffer, `null`, caption, m, false, {
+            mimetype: 'video/mp4'
+        });
+
+        await m.react('✅'); // React with a checkmark emoji for success
+    } catch (error) {
+        console.error('Error fetching video:', error.message, error.stack);
+        await m.reply('An error occurred while fetching the video. Please try again later.');
+        await m.react('❌'); // React with a cross emoji for errors
+    }
+};
+
+handler.help = ['ytmp4', 'ytv'];
+handler.tags = ['dl'];
+handler.command = ['ytmp4', 'ytv'];
+
+export default handler;
