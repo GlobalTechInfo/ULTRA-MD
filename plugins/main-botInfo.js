@@ -64,15 +64,18 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ▢ *${chats.length - groupsIn.length}* private chats
 ▢ *${chats.length}* Total Chats
 
-*≡ OWNER*
+*≡ OWNERS*
 ▢ Instagram :
   • https://instagram.com/global.techinfo
+  • https://instagram.com/Strikerboy350
 ▢ GitHub :
   • https://github.com/GlobalTechInfo
+  • https://github.com/Devenlee350
 ▢ YouTube : 
   • https://youtube.com/@GlobalTechInfo
 ▢ credit: 
   • mr oreo
+  • STRIKERBOY
 
  *≡ S E R V E R*
 *🛑 RAM:* ${format(totalmem() - freemem())} / ${format(totalmem())}
