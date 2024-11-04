@@ -10,7 +10,7 @@ let handler = async (m, { conn }) => {
 VERSION:3.0
 N:;${ownerNumber};;;
 FN:Owner
-ORG:GlobalTechInfo
+ORG:sᴛʀɪᴋᴇʀʙᴏʏ-ᴡᴏʀʟᴅ
 TITLE:Owner
 item1.TEL;waid=${ownerNumber}:${ownerNumber}
 item1.X-ABLabel:Owner
