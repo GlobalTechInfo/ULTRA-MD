@@ -2,7 +2,7 @@
 #### MULTI DEVICE WHATSAPP BOT ULTRA | STILL MANY HIDDEN COMMANDS
 
 <p align="center">  
-  <a href="https://youtu.be/oXQjl39Bl7M">
+  <a href="https://youtu.be/nE4v4KWBfAU">
     <img alt="ULTRA" src="https://i.ibb.co/5v4vrfR/20241021-033752.jpg">
     <h1 align="center">ULTRA-MD 3.O</h1>
   </a>
@@ -134,6 +134,21 @@ Now Deploy
 
 ----
 
+3. #### DEPLOY IN PANEL
+
+<br>
+   <p align="center"><a href='https://bot-hosting.net/?aff=1097457675723341836' target="_blank"><img alt='Panel Link'
+src='https://img.shields.io/badge/HOSTING%20PANEL-blue?style=for-the-badge&logo=Cloudflare&logoColor=white' width="220" height="38.45"/></a>
+
+----
+
+  5. #### TUTORIAL FOR PANEL
+  
+  <br>
+   <p align="center"><a href="https://youtu.be/nE4v4KWBfAU"><img src="https://img.shields.io/badge/YouTube-ff0000?style=for-the-badge&logo=youtube&logoColor=ff000000&link=https://youtu.be/nE4v4KWBfAU" width="220" height="38.45"/><br>
+  
+----
+
 4. #### DEPLOY TO KOYEB
 
 if you don't have a koyeb account. Create an account.
@@ -199,6 +214,9 @@ apt install -y webp git ffmpeg curl imagemagick
 ```
 apt -y remove nodejs
 curl -fsSl https://deb.nodesource.com/setup_lts.x | bash - && apt -y install nodejs
+```
+```
+apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 ```
 ```
 git clone https://github.com/<your gitHub Username>/ULTRA-MD

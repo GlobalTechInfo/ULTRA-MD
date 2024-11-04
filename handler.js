@@ -6,30 +6,6 @@ import { unwatchFile, watchFile } from 'fs';
 import chalk from 'chalk';
 import fetch from 'node-fetch';
 import Pino from 'pino';
-import autoreactCommand from './plugins/Autoreact.js';
-
-// Declare the commands map here to make it accessible in the main handler
-const commands = new Map(); // Ensure commands is defined
-
-// Function to handle all messages
-const mainHandler = async (m, conn) => {
-  // Call the autoreact command handler directly
-  await autoreactCommand(m, { conn });
-  // Add other message handling logic here if needed
-};
-
-// Ensure this listener is properly set up
-conn.ev.on('messages.upsert', async (msg) => {
-  const m = msg.messages[0];
-  if (!m.message) return;
-  await mainHandler(m, conn);
-});
-
-// Register commands
-commands.set('autoreact', autoreactCommand);
-
-// If you have any other command registration logic, include it here
-
 /**
  * @type {import("@whiskeysockets/baileys")}
  */

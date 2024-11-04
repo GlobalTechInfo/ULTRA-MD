@@ -69,7 +69,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'randompic* - Random Images you might like and love.\n\n' +
         '🎥 *' +
         usedPrefix +
-        'randomvid* - Random Videos you might like and love 💖.\n\n' +
+        'randomvid* - Random Videos you might like and love.\n\n' +
         '🖍️ *' +
         usedPrefix +
         'fancy* - Fancy text generator Menu.\n\n' + 
@@ -82,8 +82,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Bot* 』─❍
 ◈ •quran
-◈ •autoreact
-◈ •bible
 ◈ •gita
 ◈ •ping
 ◈ •uptime
@@ -114,7 +112,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       case 'aimenu':
       lkr=`
  ╭───『 *AI* 』─❍
- ◈ •lexica
  ◈ •chatgpt
  ◈ •gitagpt
  ◈ •darkgpt
@@ -146,7 +143,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Owner* 』─❍
 ◈ •enable
-◈ •autoreact
 ◈ •banchat
 ◈ •unbanchat
 ◈ •banuser
@@ -207,6 +203,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •thai
 ◈ •vietnamese
 ◈ •indo
+◈ •girl
+◈ •person
 ◈ •boneka
 ◈ •blackpink3
 ◈ •bike
@@ -289,20 +287,22 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •threads
 ◈ •capcut
 ◈ •itunes
+◈ •playvid
 ◈ •play
+◈ •playvid2
 ◈ •play2
-◈ •play7
+◈ •play5
 ◈ •mega
-◈ •yts
+◈ •ytsearch
 ◈ •ytmp3 
 ◈ •ytmp4
-◈ •gimage
 ◈ •gdrive
 ◈ •gitclone 
 ◈ •twitter
 ◈ •tiktok
 ◈ •tiktokstalk
 ◈ •insta
+◈ •igstory
 ◈ •igstalk
 ◈ •facebook
 ◈ •wallpapers
@@ -477,7 +477,6 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Tools* 』─❍
 ◈ •autosticker
-◈ •tgsticker
 ◈ •topdf
 ◈ •whatmusic
 ◈ •filelength
