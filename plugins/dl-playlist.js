@@ -17,13 +17,13 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                     header: '🎶 MP3',
                     title: "",
                     description: `▢ ⌚ *Duration:* ${v.timestamp}\n▢ 👀 *Views:* ${v.views}\n▢ 📌 *Title:* ${v.title}\n▢ 📆 *Uploaded:* ${v.ago}\n`, 
-                    id: `${usedPrefix}ytmp3 ${v.url}`
+                    id: `${usedPrefix}yta ${v.url}`
                 },
                 {
                     header: "🎥 MP4",
                     title: "" ,
                     description: `▢ ⌚ *Duration:* ${v.timestamp}\n▢ 👀 *Views:* ${v.views}\n▢ 📌 *Title:* ${v.title}\n▢ 📆 *Uploaded:* ${v.ago}\n`, 
-                    id: `${usedPrefix}ytmp4 ${v.url}`
+                    id: `${usedPrefix}ytv ${v.url}`
                 }
             ]
         });
