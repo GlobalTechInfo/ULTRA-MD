@@ -2,11 +2,12 @@ let handler = async m =>
   m.reply(
     `
 
-≡ © GlobalTechInfo Groups
+≡ © GlobalTechInfo & Strikerboy Groups
 
 ─────────────
-▢ Join WhatsApp Channel For Updates
+▢ Join WhatsApp Channels For Updates & ʜᴀᴄᴋs
 https://whatsapp.com/channel/0029VagJIAr3bbVBCpEkAM07
+https://whatsapp.com/channel/0029VafbajGDuMRoRlel7k1p
 
 ▢ Group 2
 https://t.me/GlobalBotInc
@@ -15,10 +16,11 @@ https://t.me/GlobalBotInc
 ≡ Disabled links? Chat Directly! 
 
 ▢ Group WhatsApp 
- https://GlobalTechInc
+ https://chat.whatsapp.com/BsM8ZJcqPaIH2gK4OJbJBN
 ─────────────
-▢ *Owner instagram*
+▢ *Owners instagram*
  https://instagram.com/global.techinfo
+ https://instagram.com/Strikerboy350
 
 ▢ *YouTube*
 • https://www.youtube.com/@GlobalTechInfo
