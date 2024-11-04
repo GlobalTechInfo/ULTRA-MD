@@ -22,7 +22,8 @@ let handler = async (m, { conn, usedPrefix }) => {
 
     let str = `
       『 *ULTRA-MD* 』  
-      © 2024 *GlobalTechInfo*`;
+      © 2024 *GlobalTechInfo*
+      *ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ*`;
 
     let msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
@@ -86,14 +87,14 @@ let handler = async (m, { conn, usedPrefix }) => {
                                 "name": "cta_url",
                                 "buttonParamsJson": JSON.stringify({
                                     "display_text": "OWNER 🌟",
-                                    "url": "https://wa.me/message/HA35ZL76JSHJB1"
+                                    "url": "https://wa.me/263771600813"
                                 })
                             },
                             {
                                 "name": "cta_url",
                                 "buttonParamsJson": JSON.stringify({
                                     "display_text": "SCRIPT 💕",
-                                    "url": "https://github.com/GlobalTechInfo/ULTRA-MD"
+                                    "url": "https://github.com/Devenlee350/ULTRA-MD"
                                 })
                             }
                         ],
