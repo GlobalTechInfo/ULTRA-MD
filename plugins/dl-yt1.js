@@ -1,1 +1,108 @@
-const _0x22683c=_0x4ef3;function _0x4ef3(_0x5db595,_0x29a760){const _0xd7a7d4=_0x2723();return _0x4ef3=function(_0x5c1fcf,_0x37ac65){_0x5c1fcf=_0x5c1fcf-(0x2361+-0x2275*-0x1+-0x443c);let _0xf9c229=_0xd7a7d4[_0x5c1fcf];return _0xf9c229;},_0x4ef3(_0x5db595,_0x29a760);}(function(_0x5ee6bb,_0x20ab8b){const _0xf33ea5=_0x4ef3,_0x38cbc2=_0x5ee6bb();while(!![]){try{const _0x6604b0=parseInt(_0xf33ea5(0x1d1))/(0xbf1+0x12d*-0xf+0x5b3)+parseInt(_0xf33ea5(0x1a6))/(0x2240+0x45f*-0x5+-0x1c5*0x7)+parseInt(_0xf33ea5(0x1b9))/(-0x9c*0x2d+-0x191*-0x4+0x152b)+-parseInt(_0xf33ea5(0x1b6))/(-0x1980+0xdf0*-0x2+0x3564)+-parseInt(_0xf33ea5(0x1a9))/(-0xe17*0x1+0x273+0xba9)*(parseInt(_0xf33ea5(0x1a3))/(-0x899+0x1dfc+-0x71f*0x3))+-parseInt(_0xf33ea5(0x1cb))/(0x3*-0x4f9+-0x361+-0x1*-0x1253)*(-parseInt(_0xf33ea5(0x1bb))/(0x1411+0x2681+0x2*-0x1d45))+parseInt(_0xf33ea5(0x1b7))/(-0x1*-0x22cb+-0xa60+-0x2*0xc31)*(-parseInt(_0xf33ea5(0x1c1))/(-0x1290+-0xd0c+0x2*0xfd3));if(_0x6604b0===_0x20ab8b)break;else _0x38cbc2['push'](_0x38cbc2['shift']());}catch(_0xdcb4aa){_0x38cbc2['push'](_0x38cbc2['shift']());}}}(_0x2723,0x53*0x1db6+-0x1950f+-0x191d4));import _0x3fb378 from'nayan-media-downloader';const {ytdown}=_0x3fb378;function _0x2723(){const _0x37de1b=['error','kTFFwxtXI','ytmp3','.mp3','❎\x20Verify\x20t','Error\x20fetc','arrayBuffe','match','2754580bleCqW','27SOTFSp','react','2075229rTaQXS','help','3392YfPYrs','✳️\x20Example:','dio:','reply','command','QXWOo','313790gBShJM','TechInfo','a\x20YouTube\x20','\x20URL','Error\x20down','ownload\x20th','slexV','hing\x20audio','❌\x20Error:\x20C','loading\x20au','1722NoxPqn','chat','link.','bmVuD','dio','outu.be/Yz','357791TlOWEL','ytmp3\x20<url','\x20https://y','🌟\x20©\x20Global','title','audio/mpeg','hat\x20it\x20is\x20','bAHpo','audio','jTOFN','sendMessag','downloader','48vlUDrP','YfnBQ','tags','162254GLMWMI','ZhTMd','olcLC','17155HGtEBw','yta','ould\x20not\x20d','e\x20audio.','from'];_0x2723=function(){return _0x37de1b;};return _0x2723();}let handler=async(_0x351b2c,{conn:_0x5494ae,text:_0x4a14d3,args:_0x24e701,usedPrefix:_0x1d8d8a,command:_0x9a1b33})=>{const _0x550234=_0x4ef3,_0x411379={'QXWOo':function(_0x222d4a,_0x406d57){return _0x222d4a+_0x406d57;},'bAHpo':function(_0x4cb93e,_0x535af6){return _0x4cb93e(_0x535af6);},'YfnBQ':_0x550234(0x1b3)+_0x550234(0x1c8)+_0x550234(0x1c4),'jTOFN':_0x550234(0x19f),'olcLC':_0x550234(0x19a)+_0x550234(0x1c2),'bmVuD':_0x550234(0x1c5)+_0x550234(0x1ca)+_0x550234(0x1cf),'slexV':_0x550234(0x19c),'ZhTMd':_0x550234(0x1c5)+_0x550234(0x1ca)+_0x550234(0x1bd)};if(!_0x24e701||!_0x24e701[-0x876+0xa4*0x27+-0x1086])throw _0x550234(0x1bc)+'\x20'+_0x411379[_0x550234(0x1c0)](_0x1d8d8a,_0x9a1b33)+(_0x550234(0x1d3)+_0x550234(0x1d0)+_0x550234(0x1af));if(!_0x24e701[-0x181b+0xbfa+0xc21*0x1][_0x550234(0x1b5)](/youtu/gi))throw _0x550234(0x1b2)+_0x550234(0x19d)+_0x550234(0x1c3)+_0x550234(0x1cd);_0x351b2c[_0x550234(0x1b8)]('⏳');try{const {data:_0x37ed07}=await _0x411379[_0x550234(0x19e)](ytdown,_0x24e701[0x1*-0xd81+-0x2289+-0xd*-0x3b2]),_0x30f491=_0x37ed07[_0x550234(0x19f)];if(!_0x30f491)throw new Error(_0x411379[_0x550234(0x1a4)]);const _0x5e3daa=_0x37ed07[_0x550234(0x19b)]||_0x411379[_0x550234(0x1a0)],_0x33b6c1=_0x411379[_0x550234(0x1a8)],_0x432a33=await _0x411379[_0x550234(0x19e)](fetch,_0x30f491);if(!_0x432a33['ok'])throw new Error(_0x411379[_0x550234(0x1ce)]);const _0x49a506=await _0x432a33[_0x550234(0x1b4)+'r'](),_0x323b1d=Buffer[_0x550234(0x1ad)](_0x49a506);await _0x5494ae[_0x550234(0x1a1)+'e'](_0x351b2c[_0x550234(0x1cc)],{'audio':_0x323b1d,'mimetype':_0x411379[_0x550234(0x1c7)],'fileName':_0x5e3daa+_0x550234(0x1b1)},{'quoted':_0x351b2c}),_0x351b2c[_0x550234(0x1b8)]('✅');}catch(_0x203aee){console[_0x550234(0x1ae)](_0x411379[_0x550234(0x1a7)],_0x203aee),await _0x351b2c[_0x550234(0x1be)](_0x550234(0x1c9)+_0x550234(0x1ab)+_0x550234(0x1c6)+_0x550234(0x1ac)),_0x351b2c[_0x550234(0x1b8)]('❌');}};handler[_0x22683c(0x1ba)]=[_0x22683c(0x1d2)+'>'],handler[_0x22683c(0x1a5)]=[_0x22683c(0x1a2)],handler[_0x22683c(0x1bf)]=[_0x22683c(0x1b0),_0x22683c(0x1aa)];export default handler;
+import fetch from 'node-fetch';
+import pkg from 'nayan-media-downloader';
+import { exec } from 'child_process';
+import { promisify } from 'util';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const { ytdown } = pkg;
+const execPromise = promisify(exec);
+
+// Get the current directory
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const fetchWithRetry = async (url, options, retries = 3) => {
+    for (let i = 0; i < retries; i++) {
+        const response = await fetch(url, options);
+        if (response.ok) return response;
+        console.log(`Retrying... (${i + 1})`);
+    }
+    throw new Error('Failed to fetch media content after retries');
+};
+
+const convertToMp3 = async (inputBuffer, outputPath) => {
+    const tempInputPath = path.join(__dirname, 'temp_audio.mp4');
+    fs.writeFileSync(tempInputPath, inputBuffer);
+
+    try {
+        await execPromise(`ffmpeg -i "${tempInputPath}" -vn -ar 44100 -ac 2 -b:a 192k "${outputPath}"`);
+    } catch (error) {
+        console.error('FFmpeg Error:', error);
+        throw new Error('Failed to convert audio to MP3.');
+    } finally {
+        fs.unlinkSync(tempInputPath);
+    }
+};
+
+const handler = async (m, { args, conn, usedprefix }) => {
+    if (!args.length) {
+        await m.reply('Please provide a YouTube URL.');
+        return;
+    }
+
+    const url = args.join(' ');
+    const youtubeRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/.+$/;
+
+    if (!youtubeRegex.test(url)) {
+        await m.react('❌');
+        await m.reply('Invalid YouTube URL. Please provide a valid URL.');
+        return;
+    }
+
+    await m.react('⏳');
+
+    try {
+        const response = await ytdown(url);
+        console.log('API Response:', JSON.stringify(response, null, 2));
+
+        if (!response || !response.data) {
+            throw new Error('Invalid response from the downloader.');
+        }
+
+        // Check if the API provides the full-length audio file
+        const audioUrl = response.data.audio_hd || response.data.audio;  // Prefer HD audio
+        if (!audioUrl) {
+            throw new Error('Audio URL not found.');
+        }
+
+        console.log('Audio URL:', audioUrl);
+
+        const title = response.data.title || 'audio';
+        const safeTitle = title.substring(0, 4).replace(/[<>:"/\\|?*]/g, '_'); // Get the first four characters
+        const caption = `POWERED BY ULTRA`;
+
+        const mediaResponse = await fetchWithRetry(audioUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+                'Accept': 'application/json, text/plain, */*'
+            }
+        });
+
+        const arrayBuffer = await mediaResponse.arrayBuffer();
+        const mediaBuffer = Buffer.from(arrayBuffer);
+
+        console.log('Media Buffer Size:', mediaBuffer.length);
+        if (mediaBuffer.length === 0) throw new Error('Downloaded file is empty');
+
+        const outputPath = path.join(__dirname, `${safeTitle}.mp3`);
+        await convertToMp3(mediaBuffer, outputPath);
+
+        await conn.sendFile(m.chat, outputPath, path.basename(outputPath), caption, m, false, {
+            mimetype: 'audio/mpeg'
+        });
+
+        await m.react('✅');
+    } catch (error) {
+        console.error('Error fetching audio:', error.message);
+        await m.reply(`❌ Error: ${error.message}`);
+        await m.react('❌');
+    }
+};
+
+handler.help = ['ytmp3', 'yta'];
+handler.tags = ['dl'];
+handler.command = ['ytmp3', 'yta'];
+
+export default handler;
