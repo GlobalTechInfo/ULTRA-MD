@@ -3,9 +3,9 @@ let handler = async (m, { conn, usedPrefix, isOwner }) => {
 VERSION:3.0
 N:;Qasim;;;
 FN:Qasim Ali
-ORG:GlobalTechInfo
+ORG:GlobalTechInfo & STRIKERBOY-WORLD
 TITLE:Owner
-item1.TEL;waid=923444844060:923444844060
+item1.TEL;waid=923444844060:923444844060;263771600813;263719765023
 item1.X-ABLabel:Owner
 X-WA-BIZ-DESCRIPTION:Developer of the Bot
 X-WA-BIZ-NAME:Qasim Ali
@@ -13,7 +13,7 @@ END:VCARD`;
 
   await conn.sendMessage(m.chat, {
     contacts: {
-      displayName: 'Qasim Ali',
+      displayName: 'Qasim Ali & STRIKERBOY',
       contacts: [{ vcard }]
     }
   }, { quoted: m });
