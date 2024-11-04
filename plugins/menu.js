@@ -22,7 +22,9 @@ let handler = async (m, { conn, usedPrefix }) => {
 
     let str = `
       『 *ULTRA-MD* 』  
-      © 2024 *GlobalTechInfo*`;
+      © 2024 *GlobalTechInfo*
+                *&*
+       > ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ`;
 
     let msg = generateWAMessageFromContent(m.chat, {
         viewOnceMessage: {
@@ -86,14 +88,14 @@ let handler = async (m, { conn, usedPrefix }) => {
                                 "name": "cta_url",
                                 "buttonParamsJson": JSON.stringify({
                                     "display_text": "OWNER 🌟",
-                                    "url": "https://wa.me/message/HA35ZL76JSHJB1"
+                                    "url": "https://wa.me/263771600813"
                                 })
                             },
                             {
                                 "name": "cta_url",
                                 "buttonParamsJson": JSON.stringify({
                                     "display_text": "SCRIPT 💕",
-                                    "url": "https://github.com/GlobalTechInfo/ULTRA-MD"
+                                    "url": "https://github.comDevenlee350/ULTRA-MD"
                                 })
                             }
                         ],
@@ -106,7 +108,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     await conn.relayMessage(msg.key.remoteJid, msg.message, {
         messageId: msg.key.id
     });
-}
+
 
 handler.help = ['main'];
 handler.tags = ['group'];
@@ -122,7 +124,7 @@ function clockString(ms) {
 }
 
 function ucapan() {
-    const time = moment.tz('Asia/Karachi').format('HH');
+    const time = moment.tz('Africa/Harare').format('HH');
     let res = "happy early in the day☀️";
     if (time >= 4) {
         res = "Good Morning 🥱";

@@ -1,6 +1,7 @@
 import yts from 'yt-search';
 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
+
     if (!text) throw `✳️ Example: *${usedPrefix + command}* Lil Peep hate my life`;
     
     try {
@@ -13,7 +14,7 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
         m.react('🎧');
 
         let play = `
-≡ *ULTRA-MD MUSIC*
+≡ *ULTRA-MD ◑ MUSIC*
 ┌──────────────
 ▢ 📌 *Title:* ${title}
 ▢ 📆 *Uploaded:* ${ago}

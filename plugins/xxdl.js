@@ -1,4 +1,4 @@
- /* import { xnxxSearch, xnxxdl } from '../lib/scraper.js'
+import { xnxxSearch, xnxxdl } from '../lib/scraper.js'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
   let chat = global.db.data.chats[m.chat]
@@ -55,8 +55,7 @@ handler.help = ['xnxx']
 handler.tags = ['nsfw', 'premium']
 handler.command = ['xnxxsearch', 'xnxxdl', 'xnxx']
 handler.group = true
-handler.premium = false
+handler.premium = true
 handler.register = true
 
 export default handler
-*/
