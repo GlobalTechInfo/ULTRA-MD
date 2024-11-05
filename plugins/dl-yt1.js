@@ -58,7 +58,7 @@ const handler = async (m, { args, conn, usedprefix }) => {
         console.log('API Response:', JSON.stringify(response, null, 2));
 
         if (!response || !response.data) {
-            throw new Error('Invalid response from the downloader.');
+            throw new Error('Too many requests towards api wait little longer.');
         }
 
         // Check if the API provides the full-length audio file
@@ -96,7 +96,7 @@ const handler = async (m, { args, conn, usedprefix }) => {
         await m.react('✅');
     } catch (error) {
         console.error('Error fetching audio:', error.message);
-        await m.reply(`❌ Error: ${error.message}`);
+        await m.reply(`⏱️ Error: ${error.message}`);
         await m.react('❌');
     }
 };
