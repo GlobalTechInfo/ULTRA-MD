@@ -72,7 +72,7 @@ let str = `
 
 © GlobalTechInfo
 
-> 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2 It's like my magic spell book!_* 💡
+> 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
 
     
