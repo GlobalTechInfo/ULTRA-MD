@@ -32,6 +32,15 @@
 
 ----
 
+<h1 align="center"> ULTRA MD PLUGINS </h1>
+
+<p align="center">
+<a href="https://github.com/GlobalTechInfo/EXTERNAL-PLUGINS"><img title="Author" src="https://img.shields.io/badge/ULTRA MD-PLUGINS-black?style=for-the-badge&logo=Github"></a>
+<p/>
+
+  
+----
+
   <a href="https://github.com/GlobalTechInfo/ULTRA-MD/fork"><img title="GLOBAL-MD" src="https://img.shields.io/badge/FORK-ULTRA MD-h?color=blue&style=for-the-badge&logo=stackshare"></a>
 
 ----
