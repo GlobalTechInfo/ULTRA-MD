@@ -71,13 +71,12 @@ let str = `
 ◈┗━♪♪━★━☆━⦿
 
 © GlobalTechInfo
-> ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ
+
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ sᴛʀɪᴋᴇʀʙᴏʏ*
 > 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help2 It's like my magic spell book!_* 💡
+
 `
-
-    
-
-       // await conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
+// await conn.sendMessage(m.chat, { video: { url: [pp, pp2, pp3, pp4, pp5, pp6, pp7, pp8, pp9, pp10, pp11, pp12, pp13, pp14, pp15].getRandom() }, gifPlayback: true, caption: text.trim(), mentions: [m.sender] }, { quoted: estilo })
     
 
 
@@ -87,7 +86,7 @@ let str = `
 }
 handler.help = ['main']
 handler.tags = ['group']
-handler.command = ['menu2', 'help2'] 
+handler.command = ['menu', 'help'] 
 
 export default handler
 function clockString(ms) {
