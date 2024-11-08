@@ -1,6 +1,6 @@
 {
   "name": "ULTRA MD",
-  "description": " Whatsapp bot made by GlobalTechInfo.",
+  "description": " Whatsapp bot developed by GlobalTechInfo.",
   "keywords": [
     "whatsapp"
   ],
@@ -8,9 +8,14 @@
   "stack": "container",
   "env": {
     "OWNERS": {
-      "description": "owner numbers",
+      "description": "replace with your number",
       "required": true,
       "value": "923444844060"
+    },
+    "BOT_NUMBER": {
+      "description": "replace with your number",
+      "required": true,
+      "value": "923051391007"
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
