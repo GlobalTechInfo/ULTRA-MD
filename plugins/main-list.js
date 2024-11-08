@@ -125,6 +125,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  ╰─────────❍` //
  break
       case 'imagen':
+      case 'imagenai':
       lkr=`
  ╭───『 *Imagen* 』─❍
  ◈ •hercai-lexica
@@ -282,6 +283,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'downloadermenu':
     case 'dlmenu':
+    case 'downloads':
       lkr = `
 ╭───『 *Download* 』─❍
 ◈ •likee
@@ -313,18 +315,29 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────❍` //
       break
     case 'economymenu':
+    case 'economy':
       lkr = `
 ╭───『 *Economy* 』─❍
 ◈ •claim/daily
 ◈ •weekly
 ◈ •monthly
+◈ •wallet
+◈ •withdraw
 ◈ •leaderboard
+◈ •addxp
+◈ •buych
+◈ •buyall
+◈ •addgold
+◈ •bank
+◈ •deposit
+◈ •give
 ◈ •bet
 ◈ •heal
 ◈ •craft
 ◈ •balance
 ◈ •shop
 ◈ •sell
+◈ •rob
 ◈ •adventure
 ◈ •opencrate
 ◈ •mine
@@ -436,6 +449,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────❍` //
       break
     case 'gamemenu':
+    case 'gamesmenu':
       lkr = `
 ╭───『 *Game* 』─❍
 ◈ •tictactoe
@@ -445,6 +459,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •math answer
 ◈ •ppt
 ◈ •slot
+◈ •cock-fight
+◈ •roulette
 ◈ •casino
 ◈ •guessflag
 ◈ •fhint
@@ -477,6 +493,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────❍` //
       break
     case 'toolmenu':
+    case 'toolsmenu':
       lkr = `
 ╭───『 *Tools* 』─❍
 ◈ •autosticker
@@ -525,6 +542,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────❍` //
 break
 case 'aeditor':
+case 'audioeditor':
 lkr=`
 ╭───『 *Audio* 』─❍
 ◈ •bass
@@ -628,6 +646,7 @@ lkr=`
   ╰─────────❍` //
       break
     case 'logomenu':
+    case 'makermenu':
       lkr = `
   ╭───『 *Maker* 』─❍
   ◈ •blur
@@ -670,22 +689,29 @@ handler.help = [
   'list',
   'aimenu',
   'imagen',
+  'imagenai',
   'animemenu',
   'aeditor',
+  'audioeditor',
   'infoanime',
   'botmenu',
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'downloads',
   'downloadermenu',
   'economymenu',
+  'economy',
   'funmenu',
   'gamemenu',
+  'gamesmenu',
   'stickermenu',
   'nsfwmenu',
   'logomenu',
+  'makermenu',
   'randompic',
   'randomvid',
+  'toolsmenu',
   'toolmenu',
 ]
 handler.tags = ['main']
@@ -693,22 +719,29 @@ handler.command = [
   'list',
   'aimenu',
   'imagen',
+  'imagenai',
   'animemenu',
   'aeditor',
+  'audioeditor',
   'infoanime',
   'botmenu',
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'downloads',
   'downloadermenu',
   'economymenu',
+  'economy',
   'funmenu',
   'gamemenu',
+  'gamesmenu',
   'stickermenu',
   'nsfwmenu',
   'logomenu',
+  'makermenu',
   'randompic',
   'randomvid',
+  'toolsmenu',
   'toolmenu',
 ]
 
