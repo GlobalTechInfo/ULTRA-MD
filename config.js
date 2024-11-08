@@ -21,7 +21,6 @@ for (let i = 0; i < ownerlist.length; i++) {
 //
 global.botname = process.env.BOTNAME || 'ULTRA-MD';
 global.botNumber = '263771600813' //replace your bot number here
-
 global.mods = []
 global.prems = []
 global.allowed = ['263771600813', '263719765023']

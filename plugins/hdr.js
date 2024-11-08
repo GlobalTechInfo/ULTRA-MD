@@ -1,128 +1,79 @@
-import FormData from 'form-data'
-import Jimp from 'jimp'
+import remini from '../lib/remini.js'; // Importing the remini function
 
-let handler = async (m, { conn, usedPrefix, command }) => {
-  switch (command) {
-    case 'dehaze':
-      {
-        conn.enhancer = conn.enhancer ? conn.enhancer : {}
-        let q = m.quoted ? m.quoted : m
-        let mime = (q.msg || q).mimetype || q.mediaType || ''
-        if (!mime) throw `photo?`
-        if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
-        else conn.enhancer[m.sender] = true
-        m.reply(wait)
-        let img = await q.download?.()
-        let error
-        try {
-          const This = await processing(img, 'dehaze')
-          conn.sendFile(m.chat, This, '', 'Nih...', m)
-        } catch (er) {
-          error = true
-        } finally {
-          if (error) {
-            m.reply('Proses Gagal :(')
-          }
-          delete conn.enhancer[m.sender]
-        }
+let handler = async (m, { conn, usedPrefix, command, quoted }) => {
+  try {
+    let q = quoted ? quoted : m;
+    
+    console.log('Quoted:', q);
+
+    let mime = (q.msg || q).mimetype || q.mediaType || '';
+    console.log('Mime:', mime);
+
+    if (!mime) {
+      console.error('❌ No mime type found.');
+      return m.reply(`❌ Please reply to an image with the caption *${usedPrefix + command}*`);
+    }
+
+    if (!/image\/(jpe?g|png)/.test(mime)) {
+      console.error(`❌ The quoted message does not contain a valid image. Mime: ${mime}`);
+      return m.reply(`❌ Please reply with an image to use *${usedPrefix + command}*`);
+    }
+
+    await conn.reply(m.chat, '⏳ Processing image... Please wait a moment.', m);
+
+    let media;
+    try {
+      console.log('Downloading image...');
+      media = await q.download();
+      if (!Buffer.isBuffer(media)) {
+        console.error('❌ Invalid image buffer received from quoted message.');
+        return m.reply('❌ The quoted image is invalid. Please try again.');
       }
-      break
-    case 'recolor':
-      {
-        conn.recolor = conn.recolor ? conn.recolor : {}
-        let q = m.quoted ? m.quoted : m
-        let mime = (q.msg || q).mimetype || q.mediaType || ''
-        if (!mime) throw `photo?`
-        if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
-        else conn.recolor[m.sender] = true
-        m.reply(wait)
-        let img = await q.download?.()
-        let error
-        try {
-          const This = await processing(img, 'recolor')
-          conn.sendFile(m.chat, This, '', 'Nih...', m)
-        } catch (er) {
-          error = true
-        } finally {
-          if (error) {
-            m.reply('Proses Gagal :(')
-          }
-          delete conn.recolor[m.chat]
-        }
-      }
-      break
-    case 'hdr':
-      {
-        conn.hdr = conn.hdr ? conn.hdr : {}
-        let q = m.quoted ? m.quoted : m
-        let mime = (q.msg || q).mimetype || q.mediaType || ''
-        if (!mime) throw `photo?`
-        if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
-        else conn.hdr[m.sender] = true
-        m.reply(wait)
-        let img = await q.download?.()
-        let error
-        try {
-          const This = await processing(img, 'enhance')
-          conn.sendFile(m.chat, This, '', 'Nih...', m)
-        } catch (er) {
-          error = true
-        } finally {
-          if (error) {
-            m.reply('Proses Gagal :(')
-          }
-          delete conn.hdr[m.sender]
-        }
-      }
-      break
+      console.log('Image downloaded:', media);
+    } catch (error) {
+      console.error('❌ Error downloading image from quoted message:', error);
+      return m.reply('❌ Something went wrong while downloading the image. Please try again.');
+    }
+
+    let enhancementMethod;
+    switch (command) {
+      case 'dehaze':
+        enhancementMethod = 'dehaze';
+        break;
+      case 'recolor':
+        enhancementMethod = 'recolor';
+        break;
+      case 'hdr':
+        enhancementMethod = 'enhance';
+        break;
+      case 'remini':
+      default:
+        enhancementMethod = 'enhance';
+        break;
+    }
+
+    try {
+      console.log(`Enhancing image using method: ${enhancementMethod}...`);
+      let enhancedImage = await remini(media, enhancementMethod);
+      console.log('Image enhanced successfully.');
+
+      await conn.sendMessage(m.chat, {
+        image: enhancedImage,
+        caption: `*𝘗𝘖𝘞𝘌𝘙𝘌𝘋 𝘉𝘠 © 𝘜𝘓𝘛𝘙𝘈-𝘔𝘋*\nEnjoy the enhanced image!`
+      }, { quoted: m });
+    } catch (error) {
+      console.error('❌ Error enhancing image:', error);
+      return m.reply('❌ Something went wrong while enhancing the image. Please try again later.');
+    }
+  } catch (error) {
+    console.error('❌ Unexpected error:', error);
+    return m.reply('❌ An unexpected error occurred. Please try again later.');
   }
-}
-handler.help = ['dehaze', 'recolor', 'hdr']
-handler.tags = ['tools']
-handler.command = ['dehaze', 'recolor', 'hdr']
-export default handler
+};
 
-async function processing(urlPath, method) {
-  return new Promise(async (resolve, reject) => {
-    let Methods = ['enhance', 'recolor', 'dehaze']
-    Methods.includes(method) ? (method = method) : (method = Methods[0])
-    let buffer,
-      Form = new FormData(),
-      scheme = 'https' + '://' + 'inferenceengine' + '.vyro' + '.ai/' + method
-    Form.append('model_version', 1, {
-      'Content-Transfer-Encoding': 'binary',
-      contentType: 'multipart/form-data; charset=uttf-8',
-    })
-    Form.append('image', Buffer.from(urlPath), {
-      filename: 'enhance_image_body.jpg',
-      contentType: 'image/jpeg',
-    })
-    Form.submit(
-      {
-        url: scheme,
-        host: 'inferenceengine' + '.vyro' + '.ai',
-        path: '/' + method,
-        protocol: 'https:',
-        headers: {
-          'User-Agent': 'okhttp/4.9.3',
-          Connection: 'Keep-Alive',
-          'Accept-Encoding': 'gzip',
-        },
-      },
-      function (err, res) {
-        if (err) reject()
-        let data = []
-        res
-          .on('data', function (chunk, resp) {
-            data.push(chunk)
-          })
-          .on('end', () => {
-            resolve(Buffer.concat(data))
-          })
-        res.on('error', e => {
-          reject()
-        })
-      }
-    )
-  })
-}
+// Command definition
+handler.help = ['remini', 'dehaze', 'recolor', 'hdr'];
+handler.tags = ['image'];
+handler.command = ['remini', 'dehaze', 'recolor', 'hdr'];
+
+export default handler;

@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import googleIt from 'google-it'
 
 const handler = async (m, { conn, command, text, args, usedPrefix }) => {
-  if (!text) throw `give a text to search Example: *${usedPrefix + command}* GLOBAL MD`
+  if (!text) throw `give a text to search Example: *${usedPrefix + command}* ULTRA MD`
   conn.gogleit = conn.gogleit ? conn.gogleit : {}
   await conn.reply(m.chat, wait, m)
   const result = await googleresult(text)
@@ -57,7 +57,7 @@ handler.before = async (m, { conn }) => {
 
 handler.help = ['play']
 handler.tags = ['downloader']
-handler.command = /^(google)$/i
+handler.command = /^(googleit)$/i
 export default handler
 
 async function googleresult(query) {

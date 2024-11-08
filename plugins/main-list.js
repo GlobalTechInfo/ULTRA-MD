@@ -113,18 +113,19 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr=`
  ╭───『 *AI* 』─❍
  ◈ •chatgpt
- ◈ •gitagpt
- ◈ •darkgpt
+ ◈ •googleit
+ ◈ •blackbox
  ◈ •gpt4
- ◈ •civitai
+ ◈ •travel
  ◈ •blackpink
  ◈ •image
- ◈ •dalle
+ ◈ •google
  ◈ •bro
  ◈ •ai
  ╰─────────❍` //
  break
       case 'imagen':
+      case 'imagenai':
       lkr=`
  ╭───『 *Imagen* 』─❍
  ◈ •hercai-lexica
@@ -158,6 +159,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •getplugin
 ◈ •plugins
 ◈ •install
+◈ •remove
 ◈ •savecontact
 ◈ •fakereply
 ◈ •delcmd
@@ -177,10 +179,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •clearchat
 ◈ •restart
 ◈ •savefile
-◈ •getfile
 ◈ •logout
 ◈ •unban
 ◈ •update
+◈ •intro
 ◈ •ban
 ◈ •afk
 ◈ •save
@@ -247,6 +249,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •promote
 ◈ •demote
 ◈ •groupinfo
+◈ •getjids
 ◈ •resetlink
 ◈ •antilink
 ◈ •link
@@ -280,6 +283,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       break
     case 'downloadermenu':
     case 'dlmenu':
+    case 'downloads':
       lkr = `
 ╭───『 *Download* 』─❍
 ◈ •likee
@@ -311,18 +315,30 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────❍` //
       break
     case 'economymenu':
+    case 'economy':
       lkr = `
 ╭───『 *Economy* 』─❍
 ◈ •claim/daily
 ◈ •weekly
 ◈ •monthly
+◈ •wallet
+◈ •withdraw
 ◈ •leaderboard
+◈ •levelup
+◈ •addxp
+◈ •buych
+◈ •buyall
+◈ •addgold
+◈ •bank
+◈ •deposit
+◈ •give
 ◈ •bet
 ◈ •heal
 ◈ •craft
 ◈ •balance
 ◈ •shop
 ◈ •sell
+◈ •rob
 ◈ •adventure
 ◈ •opencrate
 ◈ •mine
@@ -338,6 +354,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •character
 ◈ •truth
 ◈ •dare
+◈ •hack
 ◈ •flirt
 ◈ •gay
 ◈ •shayeri
@@ -433,6 +450,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────❍` //
       break
     case 'gamemenu':
+    case 'gamesmenu':
       lkr = `
 ╭───『 *Game* 』─❍
 ◈ •tictactoe
@@ -442,6 +460,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •math answer
 ◈ •ppt
 ◈ •slot
+◈ •cock-fight
+◈ •roulette
 ◈ •casino
 ◈ •guessflag
 ◈ •fhint
@@ -451,6 +471,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Sticker* 』─❍
 ◈ •s
+◈ •tenor
 ◈ •take
 ◈ •scircle
 ◈ •smaker
@@ -462,11 +483,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •emojimix
 ◈ •toimg
 ◈ •tovid
+◈ •quoted
+◈ •rc
 ◈ •ttp
 ◈ •ttp2
-◈ •ttp3
-◈ •ttp4
-◈ •ttp5
 ◈ •attp
 ◈ •attp2
 ◈ •attp3
@@ -474,6 +494,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ╰─────────❍` //
       break
     case 'toolmenu':
+    case 'toolsmenu':
       lkr = `
 ╭───『 *Tools* 』─❍
 ◈ •autosticker
@@ -485,6 +506,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •course
 ◈ •calc
 ◈ •google
+◈ •googleit
+◈ •linux
 ◈ •imdb
 ◈ •reddit
 ◈ •lyrics
@@ -515,9 +538,12 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •wa
 ◈ •pokedex
 ◈ •voz
+◈ •remini
+◈ •enhance
 ╰─────────❍` //
 break
 case 'aeditor':
+case 'audioeditor':
 lkr=`
 ╭───『 *Audio* 』─❍
 ◈ •bass
@@ -621,9 +647,11 @@ lkr=`
   ╰─────────❍` //
       break
     case 'logomenu':
+    case 'makermenu':
       lkr = `
   ╭───『 *Maker* 』─❍
   ◈ •blur
+  ◈ •enhance
   ◈ •difuminar2
   ◈ •hornycard
   ◈ •hornylicense
@@ -662,22 +690,29 @@ handler.help = [
   'list',
   'aimenu',
   'imagen',
+  'imagenai',
   'animemenu',
   'aeditor',
+  'audioeditor',
   'infoanime',
   'botmenu',
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'downloads',
   'downloadermenu',
   'economymenu',
+  'economy',
   'funmenu',
   'gamemenu',
+  'gamesmenu',
   'stickermenu',
   'nsfwmenu',
   'logomenu',
+  'makermenu',
   'randompic',
   'randomvid',
+  'toolsmenu',
   'toolmenu',
 ]
 handler.tags = ['main']
@@ -685,22 +720,29 @@ handler.command = [
   'list',
   'aimenu',
   'imagen',
+  'imagenai',
   'animemenu',
   'aeditor',
+  'audioeditor',
   'infoanime',
   'botmenu',
   'ownermenu',
   'groupmenu',
   'dlmenu',
+  'downloads',
   'downloadermenu',
   'economymenu',
+  'economy',
   'funmenu',
   'gamemenu',
+  'gamesmenu',
   'stickermenu',
   'nsfwmenu',
   'logomenu',
+  'makermenu',
   'randompic',
   'randomvid',
+  'toolsmenu',
   'toolmenu',
 ]
 
