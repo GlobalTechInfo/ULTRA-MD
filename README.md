@@ -231,6 +231,21 @@ npm install && npm start
 
 - Star ⭐ the repo if you like ULTRA-MD.
 
+### IF YOU WANT TO EARN MONEY CLICK THE BELOW 👇 `GIFS`
+
+
+<!-- Start of banner code -->
+<a href="https://clicksfly.com/ref/STRIKERBOY350"><img src="https://clicksfly.com/img/ref/clicksglygifbanner.gif" title="ClicksFly - Shorten URLs and Earn Money" /></a>
+<!-- End of banner code -->
+
+
+`SECOND METHOD`
+<a href="https://devuploads.com/free77443.html"><img src="https://i.imgur.com/fGBjvAW.jpeg" width="250" height="250" alt="How to earn money" /></a>
+
+
+
+
+
 6. #### CREDITS 
 <div><button id="boton" type="button">FG98F</button></div>
 <a href="https://github.com/FG98F"><img src="https://github.com/FG98F.png" width="100" height="100" alt="adiwajshing"/></a>
