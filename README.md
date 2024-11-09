@@ -238,8 +238,7 @@ npm install && npm start
 <a href="https://clicksfly.com/ref/STRIKERBOY350"><img src="https://clicksfly.com/img/ref/clicksglygifbanner.gif" title="ClicksFly - Shorten URLs and Earn Money" /></a>
 <!-- End of banner code -->
 
-
-`SECOND METHOD`
+###SECOND METHOD CLICK PIC BELOW
 <a href="https://devuploads.com/free77443.html"><img src="https://i.imgur.com/fGBjvAW.jpeg" width="250" height="250" alt="How to earn money" /></a>
 
 
