@@ -51,9 +51,11 @@
 
 Fork Repo & Just Replace Your Number
 
-globalbotNumber = '923051391007'
+process.env.BOT_NUMBER = '923051391007'
 
 In config.js And It Will Directly Shows You A Pairing Code At The End Of Deployment, Pair And Enjoy.
+
+or put this value in sample.env and rename file to .env
 
 ----
 <p align="center">
