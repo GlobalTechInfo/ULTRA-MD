@@ -90,7 +90,7 @@ function clockString(ms) {
 }
 
 function ucapan() {
-  const time = moment.tz('Asia/Kolkata').format('HH')
+  const time = moment.tz('Asia/Karachi').format('HH')
   let res = 'happy early in the day☀️'
   if (time >= 4) {
     res = 'Good Morning 🌄'
