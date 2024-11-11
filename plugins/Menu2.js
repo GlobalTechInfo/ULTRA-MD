@@ -41,31 +41,35 @@ let str = `
 
 📜 *_Quote of the day: ${quote}_* 📜
 
-乂─『 *INFO*』─乂 
+『 *ULTRA-MD*』
 
 ◈┏━⟪ *MENU2* ⟫━⦿
-◈┃• Groupmenu
-◈┃• Animemenu
-◈┃• Infoanime
-◈┃• Makermenu
-◈┃• Ownermenu
-◈┃• Stickermenu
-◈┃• Toolsmenu
-◈┃• Gamemenu
-◈┃• Logomenu
-◈┃• Randompic
-◈┃• Randomvid
-◈┃• Setprivacy
-◈┃• Botmenu
-◈┃• Dlmenu
-◈┃• Enable
-◈┃• Aimenu
-◈┃• Aeditor
-◈┃• Imagen
-◈┃• Menu
-◈┃• Menu3
-◈┃• Menu4
-◈┃• List
+◈┃• groupmenu
+◈┃• animemenu
+◈┃• infoanime
+◈┃• makermenu
+◈┃• ownermenu
+◈┃• stickermenu
+◈┃• toolsmenu
+◈┃• gamesmenu
+◈┃• logomenu
+◈┃• economy
+◈┃• reactions
+◈┃• funmenu
+◈┃• nsfwmenu
+◈┃• randompic
+◈┃• randomvid
+◈┃• setprivacy
+◈┃• botmenu
+◈┃• dlmenu
+◈┃• enable
+◈┃• aimenu
+◈┃• aeditor
+◈┃• imagen
+◈┃• menu
+◈┃• menu3
+◈┃• menu4
+◈┃• list
 ◈┃• fancy
 ◈┃• fancy2
 ◈┗━♪♪━★━☆━⦿
