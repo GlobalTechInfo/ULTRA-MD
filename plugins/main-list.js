@@ -140,6 +140,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  ◈ •hercai-simurg
  ◈ •photoleap
  ◈ •realistic
+ ◈ •lexica
  ◈ •dalle
  ╰─────────❍` //
  break
@@ -187,6 +188,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •update
 ◈ •intro
 ◈ •ban
+◈ •var
 ◈ •afk
 ◈ •save
 ◈ •allow
@@ -517,6 +519,7 @@ lkr=`
 ◈ •emojimix
 ◈ •toimg
 ◈ •tovid
+◈ •quote
 ◈ •quoted
 ◈ •rc
 ◈ •ttp
@@ -707,6 +710,7 @@ lkr=`
   ◈ •stupid
   ◈ •tweet <comment>
   ◈ •lolicon
+  ◈ •logololi
   ◈ •ytcomment <comment>
   ╰─────────❍` //
       break
