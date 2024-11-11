@@ -33,7 +33,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         "funmenu* - The bot's party hat. Games, jokes and instant ROFLs.\n\n" +
         '💵 *' +
         usedPrefix +
-        'economymenu* - Your personal vault of virtual economy.\n\n' +
+        'economy* - Your personal vault of virtual economy.\n\n' +
         '🎮 *' +
         usedPrefix +
         'gamemenu* - Enter the gaming arena.\n\n' +
@@ -42,7 +42,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
         'stickermenu* - A rainbow of stickers.\n\n' +
         '🪙 *' +
         usedPrefix +
-        "toolmenu* - Your handy-dandy toolkit.\n\n" +
+        "toolsmenu* - Your handy-dandy toolkit.\n\n" +
         '🧲 *' +
         usedPrefix +
         'logomenu* - Create a logo that screams You.\n\n' +
@@ -58,7 +58,10 @@ let handler = async (m, { conn, usedPrefix, command }) => {
          '🎉 *' +
         usedPrefix +
         'animemenu* - Animated Images,Stickers and Videos.\n\n' +
-         '🪁 *' +
+         '🍒 *' +
+        usedPrefix +
+        'reactions* - Anime reactions menu for group.\n\n' +
+        '🪁 *' +
         usedPrefix +
         'infoanime* - Full Information About Animes Like imdb.\n\n' +
         '💡 *' +
@@ -366,6 +369,37 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •ytcomment
 ◈ •stupid
 ◈ •lolicon
+╰─────────❍` //
+      break
+      case 'animereactions':
+case 'reactions':
+lkr=`
+╭───『 *Reactions* 』─❍
+◈ •bully
+◈ •cuddle
+◈ •cry
+◈ •hug
+◈ •awoo
+◈ •kiss
+◈ •lick
+◈ •pat
+◈ •smug
+◈ •bonk
+◈ •yeet
+◈ •blush
+◈ •wave
+◈ •highfive
+◈ •handhold
+◈ •nom
+◈ •bite
+◈ •glomp
+◈ •slap
+◈ •kill
+◈ •happy
+◈ •wink
+◈ •poke
+◈ •dance
+◈ •cringe
 ╰─────────❍` //
       break
     case 'animemenu':
@@ -689,6 +723,8 @@ lkr=`
 handler.help = [
   'list',
   'aimenu',
+  'animereactions',
+  'reactions',
   'imagen',
   'imagenai',
   'animemenu',
@@ -719,6 +755,8 @@ handler.tags = ['main']
 handler.command = [
   'list',
   'aimenu',
+  'animereactions',
+  'reactions',
   'imagen',
   'imagenai',
   'animemenu',
