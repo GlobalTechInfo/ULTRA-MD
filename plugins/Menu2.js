@@ -44,9 +44,7 @@ let str = `
 『 *ULTRA-MD*』
 
 ☆┏━『 *User Info* 』 
-☆┃ 🪪  *User:* ${taguser} 
-☆┃ 🎩  *Name:* ${name} 
-☆┃ 🦸  *Master:* ${author} 
+☆┃ 🪪  *Name:* ${name}  
 ☆┃ 🏆  *Rank:* ${role}
 ☆┃ 🎮  *XP:* ${exp} 
 ☆┗━━━━━━━━━━⦿
@@ -55,11 +53,9 @@ let str = `
 ☆┃ ⏰ *Time:*  ${wib} 
 ☆┗━━━━━━━━━━⦿
 ☆┏━━『 *Bot Status* 』
-☆┃ 🪪  *Bot Name:* ${botname}
+☆┃  🎩 *Bot Name:* ${botname}
 ☆┃ 📣  *Prefix:* ${usedPrefix} 
 ☆┃ 🕓  *Uptime:* ${uptime}
-☆┃ 💌  *Database:* ${rtotalreg} of ${totaluser} 
-☆┃ 📚  *Total Users:* ${totaluser} 
 ☆┗━━━━━━━━━━⦿
 
 ◈┏━⟪ *MENU* ⟫━━⦿
