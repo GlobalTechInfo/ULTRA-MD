@@ -39,11 +39,30 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
 
-📜 *_Quote of the day: ${quote}_* 📜
+📋 *_Quote of the day: ${quote}_* 📋
 
 『 *ULTRA-MD*』
 
-◈┏━⟪ *MENU2* ⟫━⦿
+☆┏━『 *User Info* 』 
+☆┃ 🪪  *User:* ${taguser} 
+☆┃ 🎩  *Name:* ${name} 
+☆┃ 🦸  *Master:* ${author} 
+☆┃ 🏆  *Rank:* ${role}
+☆┃ 🎮  *XP:* ${exp} 
+☆┗━━━━━━━━━━⦿
+☆┏━━ 『 *Date/Time* 』
+☆┃ 📆   ${date} 
+☆┃ ⏰ *Time:*  ${wib} 
+☆┗━━━━━━━━━━⦿
+☆┏━━『 *Bot Status* 』
+☆┃ 🪪  *Bot Name:* ${botname}
+☆┃ 📣  *Prefix:* ${usedPrefix} 
+☆┃ 🕓  *Uptime:* ${uptime}
+☆┃ 💌  *Database:* ${rtotalreg} of ${totaluser} 
+☆┃ 📚  *Total Users:* ${totaluser} 
+☆┗━━━━━━━━━━⦿
+
+◈┏━⟪ *MENU* ⟫━━⦿
 ◈┃• groupmenu
 ◈┃• animemenu
 ◈┃• infoanime
