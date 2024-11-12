@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { Sticker, createSticker, StickerTypes } from 'wa-sticker-formatter'
+import { Sticker, StickerTypes } from 'wa-sticker-formatter'
 
 import fs from 'fs'
 import os from 'os'
@@ -7,9 +7,12 @@ import path from 'path'
 
 let handler = async (m, { conn, text }) => {
   try {
+    // Check if no text and no quoted message
     if (!text && !(m.quoted && m.quoted.text)) {
-      throw `Please provide some text or quote a message to get a response.`
+      // Reply in WhatsApp, not just logging in the terminal
+      return m.reply("Please provide some text or quote a message to get a response.")
     }
+
     if (!text && m.quoted && m.quoted.text) {
       text = m.quoted.text
     }
@@ -22,6 +25,7 @@ let handler = async (m, { conn, text }) => {
           ? conn.user.jid
           : m.sender
     if (!(who in global.db.data.users)) throw '✳️ The user is not found in my database'
+    
     let userPfp = await conn
       .profilePictureUrl(who, 'image')
       .catch(_ => 'https://i.ibb.co/9HY4wjz/a4c0b1af253197d4837ff6760d5b81c0.jpg')
@@ -87,15 +91,18 @@ let handler = async (m, { conn, text }) => {
       background: '#00000000',
     })
 
+    // Send the sticker without buttons
     try {
-      await conn.sendMessage(m.chat, await sticker.toMessage(), { quoted: m })
+      await conn.sendMessage(m.chat, await sticker.toMessage())
     } catch (stickerError) {
       console.error('Error sending sticker:', stickerError)
       m.reply('Error sending sticker. Sending image instead.')
 
+      // Send the image without buttons
       await conn.sendFile(m.chat, tempImagePath, 'quote.png', 'Here is the quote image:', m)
     }
 
+    // Clean up temporary file
     fs.unlinkSync(tempImagePath)
 
     m.react('🤡')

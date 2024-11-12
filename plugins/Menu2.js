@@ -39,33 +39,52 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 let str = `
 🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
 
-📜 *_Quote of the day: ${quote}_* 📜
+📋 *_Quote of the day: ${quote}_* 📋
 
-乂─『 *INFO*』─乂 
+『 *ULTRA-MD*』
 
-◈┏━⟪ *MENU2* ⟫━⦿
-◈┃• Groupmenu
-◈┃• Animemenu
-◈┃• Infoanime
-◈┃• Makermenu
-◈┃• Ownermenu
-◈┃• Stickermenu
-◈┃• Toolsmenu
-◈┃• Gamemenu
-◈┃• Logomenu
-◈┃• Randompic
-◈┃• Randomvid
-◈┃• Setprivacy
-◈┃• Botmenu
-◈┃• Dlmenu
-◈┃• Enable
-◈┃• Aimenu
-◈┃• Aeditor
-◈┃• Imagen
-◈┃• Menu
-◈┃• Menu3
-◈┃• Menu4
-◈┃• List
+☆┏━『 *User Info* 』 
+☆┃ 🪪  *Name:* ${name}  
+☆┃ 🏆  *Rank:* ${role}
+☆┃ 🎮  *XP:* ${exp} 
+☆┗━━━━━━━━━━⦿
+☆┏━━ 『 *Date/Time* 』
+☆┃ 📆   ${date} 
+☆┃ ⏰ *Time:*  ${wib} 
+☆┗━━━━━━━━━━⦿
+☆┏━━『 *Bot Status* 』
+☆┃  🎩 *Bot Name:* ${botname}
+☆┃ 📣  *Prefix:* ${usedPrefix} 
+☆┃ 🕓  *Uptime:* ${uptime}
+☆┗━━━━━━━━━━⦿
+
+◈┏━⟪ *MENU* ⟫━━⦿
+◈┃• groupmenu
+◈┃• animemenu
+◈┃• infoanime
+◈┃• makermenu
+◈┃• ownermenu
+◈┃• stickermenu
+◈┃• toolsmenu
+◈┃• gamesmenu
+◈┃• logomenu
+◈┃• economy
+◈┃• reactions
+◈┃• funmenu
+◈┃• nsfwmenu
+◈┃• randompic
+◈┃• randomvid
+◈┃• setprivacy
+◈┃• botmenu
+◈┃• dlmenu
+◈┃• enable
+◈┃• aimenu
+◈┃• aeditor
+◈┃• imagen
+◈┃• menu
+◈┃• menu3
+◈┃• menu4
+◈┃• list
 ◈┃• fancy
 ◈┃• fancy2
 ◈┗━♪♪━★━☆━⦿
