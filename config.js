@@ -24,7 +24,7 @@ global.botNumber = process.env.BOT_NUMBER || '353899733723';
 
 global.mods = []
 global.prems = []
-global.allowed = ['353899733723', '5535999263873']
+global.allowed = ['353899733723', '353899733723']
 global.keysZens = ['c2459db922', '37CC845916', '6fb0eff124']
 global.keysxxx = keysZens[Math.floor(keysZens.length * Math.random())]
 global.keysxteammm = [
