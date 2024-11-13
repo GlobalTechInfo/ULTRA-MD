@@ -1,21 +1,16 @@
 {
-  "name": "ULTRA MD",
-  "description": " Whatsapp bot developed by GlobalTechInfo.",
+  "name": "whatsapp-Automation",
+  "description": " Whatsapp Ai.",
   "keywords": [
-    "whatsapp"
+    "whatsapp Ai"
   ],
   "repository": "https://github.com/GlobalTechInfo/ULTRA-MD",
   "stack": "container",
   "env": {
     "OWNERS": {
-      "description": "replace with your number",
+      "description": "owner number",
       "required": true,
       "value": "923444844060"
-    },
-    "BOT_NUMBER": {
-      "description": "replace with your number",
-      "required": true,
-      "value": "923051391007"
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
@@ -23,8 +18,13 @@
       "value": "ULTRA-MD"
     },
     "DATABASE_URL": {
-      "description": "your mongodb or database url",
+      "description": "your mongodb database url",
       "required": false,
+      "value": ""
+    },
+    "SESSION_ID": {
+      "description": "your session id",
+      "required": true,
       "value": ""
     },
     "MODE": {
