@@ -77,7 +77,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 ### **Pairing the Bot**
    - Visit the bot site to generate a pairing code and get SESSION ID.
 
-     [![ULTRA-MD Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://difficult-malia-oletters-b1a5eb4c.koyeb.app/)
+     [![ULTRA-MD Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://wicked-marilin-oletters-92dfbce6.koyeb.app/)
 
 ### **Step-by-Step Deployment Guide**
 
