@@ -3,7 +3,7 @@
 
 <p align="center">  
   <a href="https://youtu.be/nE4v4KWBfAU">
-    <img alt="ULTRA" src="https://i.ibb.co/5v4vrfR/20241021-033752.jpg">
+    <img alt="ULTRA" src="https://i.ibb.co/yhP0jDK/20241114-161433.jpg">
   </a>
 </p>
 <p align="center">
@@ -352,18 +352,17 @@ npm install && npm start
 ```
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
-- Star ⭐ the repo if you like ULTRA-MD.
+- **Star ⭐ the repo if you like ULTRA-MD.**
 
-6. #### CREDITS 
-<div><button id="boton" type="button">FG98F</button></div>
-<a href="https://github.com/FG98F"><img src="https://github.com/FG98F.png" width="100" height="100" alt="adiwajshing"/></a>
+## Credits
 
-<div><button id="boton" type="button">GURU322</button></div>
-<a href="https://github.com/GURU322"><img src="https://github.com/GURU322.png" width="100" height="100" alt="adiwajshing"/></a>
-
+| [![Guru322](https://github.com/Guru322.png?size=100)](https://github.com/Guru322) | [![FG98](https://github.com/FG98F.png?size=100)](https://github.com/FG98F) | [![WhiskeySockets](https://github.com/WhiskeySockets.png?size=100)](https://github.com/WhiskeySockets) |
+| --- | --- | --- |
+| [Guru322](https://github.com/Guru322) | [FG98](https://github.com/FG98F) | [WhiskeySockets](https://github.com/WhiskeySockets) |
 
 
-## `Main Dev` 
+
+## Main Developer
 <a href="https://github.com/GlobalTechInfo"><img src="https://github.com/GlobalTechInfo.png" width="250" height="250" alt="GlobalTechInfo"/></a>
   
 `ULTRA-MD - By GlobalTechInfo`
