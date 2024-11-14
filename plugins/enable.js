@@ -221,7 +221,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
         return m.reply(`
 ≡ List of options
 
-◈──『 *ADMIN*』───❍
+◈──『 *ADMIN*』
 ⛊ welcome
 ⛊ antilink
 ⛊ nsfw
@@ -231,11 +231,11 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 ⛊ antispam
 ⛊ antitoxic
 ╰──────────❍ 
-◈──『 *USERS*』───❍
+◈──『 *USERS*』
 ⛊ autolevelup
 ⛊ chatbot 
 ╰──────────❍
-◈──『 *OWNER*』───❍
+◈──『 *OWNER*』
 ⛊ onlydm
 ⛊ grouponly
 ⛊ autotype
