@@ -76,6 +76,7 @@ let str = `
 ◈┃• randomvid
 ◈┃• setprivacy
 ◈┃• botmenu
+◈┃• listmenu
 ◈┃• dlmenu
 ◈┃• enable
 ◈┃• aimenu
@@ -84,7 +85,6 @@ let str = `
 ◈┃• menu
 ◈┃• menu3
 ◈┃• menu4
-◈┃• list
 ◈┃• fancy
 ◈┃• fancy2
 ◈┗━♪♪━★━☆━⦿
