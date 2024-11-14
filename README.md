@@ -27,6 +27,12 @@
 
   
 ----
+ <h2 align="center">  NOTE
+</h2>
+
+#### No Worries If You Don't Have pre connection/SESSION_ID , Just Put Your Number In The Value Of BOT_NUMBER, e.g BOT_NUMBER = '923444844XXX' , Either In config.js or .env file , And Deploy The Bot, You'll Get A Pairing Code Directly In The Terminal at The End Of Deployment, Pair And Get Connected.
+
+----
 
 set the Env Vars.
     <br>
