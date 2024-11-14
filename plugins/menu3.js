@@ -9,7 +9,7 @@ let handler = async function (m, { conn, text, usedPrefix }) {
 ▢ Don't be Sad
 └──────────────`;
   
-  let pp = './assets/qasim.jpg';
+  let pp = './assets/A.jpg';
 
   // Send a button message
   await conn.sendButton(m.chat, m2, 'ULTRA-MD', pp, [
