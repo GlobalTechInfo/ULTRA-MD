@@ -86,6 +86,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Bot* 』─❍
 ◈ •quran
+◈ •autoreact
 ◈ •gita
 ◈ •ping
 ◈ •uptime
@@ -126,6 +127,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
  ◈ •google
  ◈ •bro
  ◈ •ai
+ ◈ •fact
+ ◈ •why
  ╰─────────❍` //
  break
       case 'imagen':
@@ -149,7 +152,9 @@ let handler = async (m, { conn, usedPrefix, command }) => {
       lkr = `
 ╭───『 *Owner* 』─❍
 ◈ •enable
+◈ •intro
 ◈ •banchat
+◈ •autoreact
 ◈ •unbanchat
 ◈ •banuser
 ◈ •unbanuser
@@ -163,6 +168,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •getfile
 ◈ •getplugin
 ◈ •plugins
+◈ •listplugins
 ◈ •install
 ◈ •remove
 ◈ •savecontact
@@ -317,6 +323,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •igstalk
 ◈ •facebook
 ◈ •wallpapers
+◈ •rwall
+◈ •rnekos
 ◈ •swdl
 ◈ •dlstatus
 ╰─────────❍` //
@@ -516,6 +524,7 @@ lkr=`
 ◈ •removebg
 ◈ •smeme
 ◈ •trigger
+◈ •stickers
 ◈ •getsticker
 ◈ •tgsticker
 ◈ •emojimix
@@ -529,7 +538,6 @@ lkr=`
 ◈ •attp
 ◈ •attp2
 ◈ •attp3
-◈ Add remove bg key First
 ╰─────────❍` //
       break
     case 'toolmenu':
