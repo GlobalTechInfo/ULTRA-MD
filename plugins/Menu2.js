@@ -61,6 +61,7 @@ let str = `
 ◈┏━⟪ *MENU* ⟫━━⦿
 ◈┃• groupmenu
 ◈┃• animemenu
+◈┃• autoreact
 ◈┃• infoanime
 ◈┃• makermenu
 ◈┃• ownermenu
@@ -68,6 +69,7 @@ let str = `
 ◈┃• toolsmenu
 ◈┃• gamesmenu
 ◈┃• logomenu
+◈┃• listplugin
 ◈┃• economy
 ◈┃• reactions
 ◈┃• funmenu
