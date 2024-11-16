@@ -83,7 +83,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 ### **Pairing the Bot**
    - Visit the bot site to generate a pairing code and get SESSION ID.
 
-     [![ULTRA-MD Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://wicked-marilin-oletters-92dfbce6.koyeb.app/)
+     [![ULTRA-MD Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://spectacular-julianna-oletters-26f441db.koyeb.app/)
 
 ### **Step-by-Step Deployment Guide**
 
@@ -128,7 +128,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
    </a>
    
    **Option F: Deploy on Replit**
-1. [Sign Up On Replit](https://repl.it) if you don’t have one.
+1. [Create an Account on Replit](https://repl.it) if you don’t have one.
 2. Click the button below to deploy using Replit:
    <br>
    <a href='https://repl.it/github/GlobalTechInfo/ULTRA-MD' target="_blank">
@@ -137,7 +137,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
    
     **Option G: Deploy on Panel**
  1. First You Have to Sign up on discord using web or app then click below.
-2. [Sign Up On Panel](https://bot-hosting.net/?aff=1097457675723341836) if you don’t have one.
+2. [Sign Up On Panel](https://bot-hosting.net/?aff=1097457675723341836) if you don’t have Already.
 4. Click the button below to deploy using Panel:
    <br>
    <a href='https://bot-hosting.net/?aff=1097457675723341836' target="_blank">
