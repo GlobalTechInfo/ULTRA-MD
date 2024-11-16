@@ -64,12 +64,13 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 ---
 
 ## Features
+- **Autoreact**: If You enables, Bot Will Reats With **Beautiful Random Emojis** On All Messages In All Chats.
 - **Stickers**: A Rainbow Of Stickers Waiting For You.
 - **Downloader**: Download images,files or video from Varoius Platforms links.
 - **Games**: A gaming arena for you to play.
-- **Interactive Polls**: Create "Would You Rather" polls with randomized options.
+- **Interactive Polls**: Create **Would You Rather** polls with randomized options.
 - **Audio Editor** Tune Mp3/Audio ,Voices As You Wish.
-- **Imagen Ai** Will Generates Images And Designs Based On Your **Prompts/text**.
+- **Imagen Ai** Many Image Generator**AI Models** Will Generates Images And Designs Based On Your **Prompts/text**.
 - **Reactions**: A Secret Reations Menu For Group.
 ---
 
@@ -81,7 +82,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 [![ULTRA MD Github Repo](https://img.shields.io/badge/Github-Fork%20Repo-red?style=for-the-badge&logo=Github)](https://github.com/GlobalTechInfo/ULTRA-MD/fork)
 
 ### **Pairing the Bot**
-   - Visit the bot site to generate a pairing code and get SESSION ID.
+   - Visit the bot site to generate a pairing code and get **SESSION ID.**
 
      [![ULTRA-MD Github Repo](https://img.shields.io/badge/Whatsapp-Pair%20Code-green?style=for-the-badge&logo=Whatsapp)](https://spectacular-julianna-oletters-26f441db.koyeb.app/)
 
@@ -173,7 +174,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 **ULTRA-MD** is a multi-functional WhatsApp bot designed for automatic reactions, status updates, motivational quotes, and music/media downloads. Built with the **Baileys API**, it aims to enhance user interaction with custom and automated responses. Whether you want fun interactions in a group, to download media from links, or to get motivational quotes, this bot does it all!
 
 Key features include:
-- **Auto-React to Group Messages** with humorous emojis
+- **Autoreact**: If You enables, Bot Will Reats With **Beautiful Random Emojis** On All Messages In All Chats.
 - **Download Media** (audio/video) from URLs
 - **Send Motivational Quotes** in response to status updates
 - **Automatically Views Status Updates** with emojis
@@ -250,7 +251,7 @@ Once the installation is complete and the bot is running, you can use the ULTRA-
      - Example: `.insta <url_link>`
      
 #### 4. **Imagen Ai**
-   - Will Generates Images And Designs Based On Your **Prompts/text**.
+   - Many Image Generator **AI Models** Will Generates Images And Designs Based On Your **Prompts/text**.
 
 #### 5. **Group Customization**
    - You Can Customize All The Group **Settings/Events** Using Just Commands.
@@ -260,6 +261,9 @@ Once the installation is complete and the bot is running, you can use the ULTRA-
 
 #### 7. **Customization**
    - You can enable or disable certain features like chatbot, antilink etc., through the bot's configuration file.
+
+#### 8. **Autoreact**: 
+- If You enables, Bot Will Reats With **Beautiful Random Emojis** On All Messages In All Chats.
 
 For more information on configuring and customizing the bot, refer to the [configuration guide](docs/configuration.md).
 ---
