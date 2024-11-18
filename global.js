@@ -48,7 +48,6 @@ const {
   proto,
   delay,
   jidNormalizedUser,
-  PHONENUMBER_MCC,
 } = await (
   await import('@whiskeysockets/baileys')
 ).default
