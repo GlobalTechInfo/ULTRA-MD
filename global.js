@@ -173,7 +173,7 @@ global.loadDatabase = async function loadDatabase() {
   global.db.chain = chain(global.db.data)
 }
 loadDatabase()
-global.authFolder = `session`
+global.authFolder = `temp`
 const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
 //let { version, isLatest } = await fetchLatestWaWebVersion()
 
