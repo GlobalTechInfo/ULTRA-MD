@@ -8,7 +8,7 @@ import path, { join } from 'path'
 import { platform } from 'process'
 import { fileURLToPath, pathToFileURL } from 'url'
 import * as ws from 'ws'
-import CheckSessionID from './lib/makesession.js'
+import SaveCreds from './lib/makesession.js'
 import clearTmp from './lib/tempclear.js'
 global.__filename = function filename(pathURL = import.meta.url, rmPrefix = platform !== 'win32') {
   return rmPrefix
@@ -45,6 +45,7 @@ const {
   fetchLatestWaWebVersion,
   makeCacheableSignalKeyStore,
   makeInMemoryStore,
+  Browsers,
   proto,
   delay,
   jidNormalizedUser,
@@ -65,8 +66,8 @@ async function main() {
   }
 
   try {
-    await CheckSessionID(txt)
-    console.log('SessionID Check Completed.')
+    await SaveCreds(txt)
+    console.log('Check Completed.')
   } catch (error) {
     console.error('Error:', error)
   }
@@ -173,7 +174,7 @@ global.loadDatabase = async function loadDatabase() {
   global.db.chain = chain(global.db.data)
 }
 loadDatabase()
-global.authFolder = `temp`
+global.authFolder = `session`
 const { state, saveCreds } = await useMultiFileAuthState(global.authFolder)
 //let { version, isLatest } = await fetchLatestWaWebVersion()
 
@@ -183,7 +184,7 @@ const connectionOptions = {
     level: 'fatal',
   }),
   printQRInTerminal: !pairingCode,
-  browser: ["Ubuntu", "Chrome", "20.0.04"],
+  browser: Browsers.windows("Chrome"),
   auth: {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(
