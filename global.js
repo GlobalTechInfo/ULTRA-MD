@@ -184,7 +184,7 @@ const connectionOptions = {
     level: 'fatal',
   }),
   printQRInTerminal: !pairingCode,
-  browser: Browsers.windows("Chrome"),
+  browser: Browsers.macOS("Safari"),
   auth: {
     creds: state.creds,
     keys: makeCacheableSignalKeyStore(
