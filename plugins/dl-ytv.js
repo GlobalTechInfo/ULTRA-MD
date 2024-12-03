@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import pkg from 'nayan-media-downloader';
+import pkg from 'nayan-video-downloader';
 const { ytdown } = pkg;
 
 const fetchWithRetry = async (url, options, retries = 3) => {
