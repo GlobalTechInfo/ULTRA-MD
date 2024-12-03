@@ -89,7 +89,7 @@
         "mime-types": "^2.1.35",
         "moment-timezone": "^0.5.37",
         "mongoose": "^7.4.1",
-        "nayan-media-downloader": "*",
+        "nayan-video-downloader": "*",
         "node-fetch": "^3.3.1",
         "node-gtts": "^2.0.2",
         "node-webpmux": "^3.1.3",
