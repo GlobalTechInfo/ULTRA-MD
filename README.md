@@ -138,10 +138,10 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 
    **Option G: Deploy on Netlify**
 1. [Create an Account on Netlify](https://app.netlify.com) if you don’t have one.
-2. Click the button below to deploy using Replit:
+2. Click the button below to deploy using Netlify:
    <br>
    <a href='https://app.netlify.com' target="_blank">
-      <img alt='Deploy on Netlify' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=netlify&logoColor=white'/>
+      <img alt='Deploy on Netlify' src='https://img.shields.io/badge/-DEPLOY-pink?style=for-the-badge&logo=netlify&logoColor=white'/>
    </a>
    
     **Option H: Deploy on Panel**
