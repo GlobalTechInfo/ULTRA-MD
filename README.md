@@ -100,7 +100,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 1. [Sign Up on Koyeb](https://app.koyeb.com/auth/signup).
 3. Deploy your app using the button below:
    <br>
-   <a href='https://github.com/GlobalTechInfo/ULTRA-MD' target="_blank">
+   <a href='https://app.koyeb.com' target="_blank">
       <img alt='Deploy on Koyeb' src='https://img.shields.io/badge/-DEPLOY-red?style=for-the-badge&logo=koyeb&logoColor=white'/>
    </a>
 
@@ -135,8 +135,16 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
    <a href='https://repl.it/github/GlobalTechInfo/ULTRA-MD' target="_blank">
       <img alt='Deploy on Replit' src='https://img.shields.io/badge/-DEPLOY-orange?style=for-the-badge&logo=replit&logoColor=white'/>
    </a>
+
+   **Option G: Deploy on Netlify**
+1. [Create an Account on Netlify](https://app.netlify.com) if you don’t have one.
+2. Click the button below to deploy using Replit:
+   <br>
+   <a href='https://app.netlify.com' target="_blank">
+      <img alt='Deploy on Netlify' src='https://img.shields.io/badge/-DEPLOY-purple?style=for-the-badge&logo=netlify&logoColor=white'/>
+   </a>
    
-    **Option G: Deploy on Panel**
+    **Option H: Deploy on Panel**
  1. First You Have to Sign up on discord using web or app then click below.
 2. [Sign Up On Panel](https://bot-hosting.net/?aff=1097457675723341836) if you don’t have Already.
 4. Click the button below to deploy using Panel:
