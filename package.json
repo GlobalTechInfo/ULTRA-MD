@@ -88,7 +88,7 @@
         "millify": "^6.1.0",
         "mime-types": "^2.1.35",
         "moment-timezone": "^0.5.37",
-        "mongoose": "^7.4.1",
+        "mongoose": "^8.8.3",
         "nayan-video-downloader": "*",
         "node-fetch": "^3.3.1",
         "node-gtts": "^2.0.2",
