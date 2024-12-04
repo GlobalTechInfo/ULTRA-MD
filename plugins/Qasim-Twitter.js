@@ -1,1 +1,89 @@
-function _0x3db2(_0x46936b,_0x350bfc){const _0x167d11=_0x2f68();return _0x3db2=function(_0xb8644e,_0x54d952){_0xb8644e=_0xb8644e-(-0x2cc+-0x949*0x4+0x2893);let _0x3d5d58=_0x167d11[_0xb8644e];return _0x3d5d58;},_0x3db2(_0x46936b,_0x350bfc);}const _0x507b26=_0x3db2;(function(_0x9a55c9,_0x41c829){const _0x1fe80d=_0x3db2,_0x4cb933=_0x9a55c9();while(!![]){try{const _0x118377=-parseInt(_0x1fe80d(0xbd))/(0xa2b+0xed5*-0x1+0x4ab)+parseInt(_0x1fe80d(0xb1))/(-0x1f9c+0x1*-0x109a+-0x3038*-0x1)*(parseInt(_0x1fe80d(0xd5))/(0xb59+0x1*0x26ed+-0x3243))+-parseInt(_0x1fe80d(0xce))/(0x2083+-0x20ab+0x4*0xb)+-parseInt(_0x1fe80d(0xba))/(0x2*0xdb1+-0x1c5d+0x100)+parseInt(_0x1fe80d(0xbb))/(-0x1a45+0xd33+-0x8*-0x1a3)*(parseInt(_0x1fe80d(0xb6))/(0x11*0x16+-0x1605+0x1496))+-parseInt(_0x1fe80d(0xa8))/(0x9c*0x21+0x12ed+0x1*-0x2701)*(parseInt(_0x1fe80d(0xbc))/(-0x1b04+0x1*-0x9a7+0xc*0x30f))+parseInt(_0x1fe80d(0xb3))/(-0x135c+-0x1*0xbd2+0x1f38);if(_0x118377===_0x41c829)break;else _0x4cb933['push'](_0x4cb933['shift']());}catch(_0x245db0){_0x4cb933['push'](_0x4cb933['shift']());}}}(_0x2f68,-0xa136f+-0x89f*-0xfb+0x914ba));import _0x5ee06e from'nayan-media-downloader';function _0x2f68(){const _0x5642d9=['orrect','tags','6219mvbkny','loading\x20fr','help','twitdl','to\x20the\x20com','om\x20Twitter','491608zgpPcL','rl>','O\x20TITLE:*\x20','\x20\x0a\x0a☆\x20*VIDE','link\x20next\x20','mand','react','YOUR\x20VIDEO','⚠️\x20An\x20error','322AbeKwj','Error\x20down','12942880YWAfqp','QXxvz','twitter','398069hBuhDH','❥\x20HERE\x20IS\x20','match','downloader','2786345FocABA','96ZzzYMk','72deRfJQ','375827bBXVQY','error','\x0a\x0a❥\x20©\x20Glob','\x20request.\x20','alTechInfo','\x20occurred\x20','\x20again\x20lat','✳️\x20Enter\x20th','chat','sendFile','while\x20proc','Please\x20try','twitter\x20<u','wLLid','reply','PcpKh','❌\x20Link\x20inc','2497828CekxkK','essing\x20the','command','e\x20Twitter\x20','er.'];_0x2f68=function(){return _0x5642d9;};return _0x2f68();}const {twitterdown}=_0x5ee06e,handler=async(_0x3b0c0d,{conn:_0x3deb1a,args:_0x3587ac})=>{const _0x4d61b3=_0x3db2,_0x2850d1={'wLLid':function(_0x465aeb,_0x539d61){return _0x465aeb(_0x539d61);},'QXxvz':_0x4d61b3(0xb2)+_0x4d61b3(0xa3)+_0x4d61b3(0xa7)+':','PcpKh':_0x4d61b3(0xb0)+_0x4d61b3(0xc2)+_0x4d61b3(0xc7)+_0x4d61b3(0xcf)+_0x4d61b3(0xc0)+_0x4d61b3(0xc8)+_0x4d61b3(0xc3)+_0x4d61b3(0xd2)};if(!_0x3587ac[-0x1d45*-0x1+0x335*0x1+-0x207a])throw _0x4d61b3(0xc4)+_0x4d61b3(0xd1)+_0x4d61b3(0xac)+_0x4d61b3(0xa6)+_0x4d61b3(0xad);if(!_0x3587ac[-0x1604+-0x1758+0x2d5c*0x1][_0x4d61b3(0xb8)](/twitter|x\.com/gi))throw _0x4d61b3(0xcd)+_0x4d61b3(0xd3);_0x3b0c0d[_0x4d61b3(0xae)]('⏳');try{const _0x4898ca=_0x3587ac[-0x75e*0x3+-0x1f+0x1639];let _0x120ba8=await _0x2850d1[_0x4d61b3(0xca)](twitterdown,_0x4898ca);const {download:_0x54376e,fileName:_0x17f235,mimetype:_0x57047e}=_0x120ba8,_0x44f3c2=_0x4d61b3(0xb7)+_0x4d61b3(0xaf)+_0x4d61b3(0xab)+_0x4d61b3(0xaa)+_0x17f235+(_0x4d61b3(0xbf)+_0x4d61b3(0xc1));await _0x3deb1a[_0x4d61b3(0xc6)](_0x3b0c0d[_0x4d61b3(0xc5)],_0x54376e,_0x17f235,_0x44f3c2,_0x3b0c0d,![],{'mimetype':_0x57047e}),_0x3b0c0d[_0x4d61b3(0xae)]('✅');}catch(_0x3a2afe){console[_0x4d61b3(0xbe)](_0x2850d1[_0x4d61b3(0xb4)],_0x3a2afe),await _0x3b0c0d[_0x4d61b3(0xcb)](_0x2850d1[_0x4d61b3(0xcc)]),_0x3b0c0d[_0x4d61b3(0xae)]('❌');}};handler[_0x507b26(0xa4)]=[_0x507b26(0xc9)+_0x507b26(0xa9)],handler[_0x507b26(0xd4)]=[_0x507b26(0xb9)],handler[_0x507b26(0xd0)]=[_0x507b26(0xb5),_0x507b26(0xa5)];export default handler;
+import fetch from 'node-fetch';
+import pkg from 'nayan-video-downloader';
+const { twitterdown } = pkg;  // Import the Twitter video downloader
+
+// Retry function for fetching the video with better error handling
+const fetchWithRetry = async (url, options, retries = 3, delay = 3000) => {
+    for (let i = 0; i < retries; i++) {
+        try {
+            const response = await fetch(url, options);
+            if (response.ok) return response;  // Return if fetch is successful
+            console.log(`Attempt ${i + 1} failed, retrying...`);
+        } catch (error) {
+            console.error(`Attempt ${i + 1} failed, retrying...`, error.message);
+        }
+        await new Promise(resolve => setTimeout(resolve, delay));  // Delay before retrying
+    }
+    throw new Error('Failed to fetch media content after retries');
+};
+
+const handler = async (m, { args, conn }) => {
+    // Check if a URL was provided
+    if (!args.length) {
+        await m.reply('Please provide a Twitter or X URL.');
+        return;
+    }
+
+    const url = args.join(' ');  // Join arguments to handle spaces in URLs
+
+    // Updated regex to match both twitter.com and x.com URLs
+    const twitterRegex = /^(https?:\/\/)?(www\.)?(twitter\.com|x\.com)\/.+$/;
+
+    // Validate the URL format
+    if (!twitterRegex.test(url)) {
+        await m.react('❌');  // React with a cross emoji for invalid URL
+        await m.reply('Invalid Twitter or X URL. Please provide a valid URL.');
+        return;
+    }
+
+    await m.react('⏳');  // React with a loading emoji
+
+    try {
+        // Fetch video details from Twitter using nayan-video-downloader
+        const response = await twitterdown(url);
+        console.log('API Response:', response);
+
+        if (!response || !response.data) {
+            throw new Error('Invalid response from the downloader.');
+        }
+
+        const videoUrl = response.data.SD;  // Use the HD video URL
+        if (!videoUrl) {
+            throw new Error('HD video URL not found.');
+        }
+
+        // Fetch the video file with retry logic
+        const mediaResponse = await fetchWithRetry(videoUrl, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.121 Safari/537.36',
+                'Accept': 'application/json, text/plain, */*'
+            }
+        });
+
+        const contentType = mediaResponse.headers.get('content-type');
+        if (!contentType || !contentType.includes('video')) {
+            throw new Error('Invalid content type received');
+        }
+
+        const arrayBuffer = await mediaResponse.arrayBuffer();
+        const mediaBuffer = Buffer.from(arrayBuffer);
+        if (mediaBuffer.length === 0) throw new Error('Downloaded file is empty');
+
+        // Send the video file
+        await conn.sendFile(m.chat, mediaBuffer, 'video.mp4', `Downloaded from ${url}`, m, false, {
+            mimetype: 'video/mp4'
+        });
+
+        await m.react('✅'); // React with a checkmark emoji for success
+    } catch (error) {
+        console.error('Error fetching video:', error.message);
+        await m.reply('An error occurred while fetching the video. Please try again later.');
+        await m.react('❌');  // React with a cross emoji for errors
+    }
+};
+
+handler.help = ['twitter', 'twitdl'];
+handler.tags = ['download'];
+handler.command = ['twitter', 'twitdl'];
+
+export default handler;
