@@ -40,23 +40,10 @@ let str = `
 🚀 *_Buckle up ${name}, ${greeting}! We're going on an adventure!_* 🚀
 
 📋 *_Quote of the day: ${quote}_* 📋
-
-『 *ULTRA-MD*』
-
-☆┏━『 *User Info* 』 
-☆┃ 🪪  *Name:* ${name}  
-☆┃ 🏆  *Rank:* ${role}
-☆┃ 🎮  *XP:* ${exp} 
-☆┗━━━━━━━━━━⦿
-☆┏━━ 『 *Date/Time* 』
-☆┃ 📆   ${date} 
-☆┃ ⏰ *Time:*  ${wib} 
-☆┗━━━━━━━━━━⦿
-☆┏━━『 *Bot Status* 』
-☆┃  🎩 *Bot Name:* ${botname}
-☆┃ 📣  *Prefix:* ${usedPrefix} 
-☆┃ 🕓  *Uptime:* ${uptime}
-☆┗━━━━━━━━━━⦿
+> ➠ *Bot Name* : *ULTRA-MD*
+> ➠ *Version*     : *3 . 1 . 0*
+> ➠ *Type*          : *PLUGINS*
+> ➠ *Platform*   : *LINUX*
 
 ◈┏━⟪ *MENU* ⟫━━⦿
 ◈┃• groupmenu
@@ -93,7 +80,7 @@ let str = `
 
 © GlobalTechInfo
 
-> 💡 *_Remember, when in doubt, use ${usedPrefix}list or ${usedPrefix}help It's like my magic spell book!_* 💡
+> 💡 *_Remember, when in doubt, use ${usedPrefix}listmenu or ${usedPrefix}help It's like my magic spell book!_* 💡
 `
 
     
