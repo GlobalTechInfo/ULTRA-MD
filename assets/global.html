@@ -3,30 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLOBAL MD Status</title>
+    <title>ULTRA MD Status</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        /* Global Styles */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
 
         .container {
-            max-width: 400px;
-            margin: 40px auto;
-            padding: 20px;
+            max-width: 450px;
+            margin: 0;
+            padding: 30px;
             background-color: #fff;
-            border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
-        .battery-status {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px;
+        .header {
+            font-size: 28px;
+            font-weight: 600;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
 
+        .running-status {
+            font-size: 20px;
+            font-weight: 600;
+            color: #FF5722;
+            margin-bottom: 20px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+
+        .battery-status, .ip-address, .geolocation, .system-info, .network-status {
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        /* Battery Status */
         .battery-status svg {
-            margin-right: 10px;
+            margin-right: 15px;
+            transform: rotate(90deg);
         }
 
         .battery-status circle {
@@ -44,22 +79,76 @@
             }
         }
 
-        .ip-address {
-            margin-bottom: 10px;
-        }
-
-        .silva-md-status {
+        .battery-percentage {
             font-weight: bold;
-            color: #4CAF50;
+            color: #4CAF50; /* Green for full battery */
         }
 
+        .battery-medium {
+            color: #FFEB3B; /* Yellow for medium battery */
+        }
+
+        .battery-low {
+            color: #F44336; /* Red for low battery */
+        }
+
+        /* Online/Offline Status */
+        .online {
+            color: #4CAF50; /* Green for online */
+        }
+
+        .offline {
+            color: #F44336; /* Red for offline */
+        }
+
+        /* Icons and Text Color */
+        .ip-address i {
+            color: #2196F3; /* Blue for IP Address */
+        }
+
+        .geolocation i {
+            color: #FFC107; /* Amber for Location */
+        }
+
+        .system-info i {
+            color: #9C27B0; /* Purple for System Info */
+        }
+
+        /* Toggle Button */
+        .toggle-dark-mode {
+            margin-top: 20px;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-dark-mode:hover {
+            background-color: #388E3C;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background-color: #303030;
+            color: #fff;
+        }
+
+        .container.dark-mode {
+            background-color: #424242;
+            color: #fff;
+        }
+
+        /* Animation Styles */
         .animated-background {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100vh;
-            background-color: #f0f0f0;
             z-index: -1;
         }
 
@@ -68,11 +157,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
             background-color: #4CAF50;
             border-radius: 50%;
             animation: animate-circle 2s linear infinite;
+            opacity: 0.2;
         }
 
         @keyframes animate-circle {
@@ -87,35 +177,127 @@
 </head>
 <body>
     <div class="container">
+        <div class="header">
+            ULTRA MD STATUS
+        </div>
+        
+        <div class="running-status">
+            ULTRA MD IS RUNNING
+        </div>
+
         <div class="battery-status">
-            <span id="battery-percentage">80%</span>
-            <svg width="20" height="20">
-                <circle cx="10" cy="10" r="8" fill="none" stroke-width="2" stroke="#4CAF50"></circle>
+            <span id="battery-percentage" class="battery-percentage">0% Battery</span>
+            <svg width="30" height="30">
+                <circle cx="15" cy="15" r="10" fill="none" stroke-width="3" stroke="#4CAF50"></circle>
             </svg>
         </div>
+
         <div class="ip-address">
-            <span id="ip-address">192.168.1.100</span>
+            <i class="fas fa-globe"></i> <span id="ip-address">Loading IP...</span>
         </div>
-        <div class="global-md-status">
-            <span>GLOBAL MD IS RUNNING</span>
+
+        <div class="geolocation">
+            <i class="fas fa-map-marker-alt"></i> <span id="location">Loading location...</span>
         </div>
+
+        <div class="system-info">
+            <i class="fas fa-cogs"></i> <span id="system-info">Loading system info...</span>
+        </div>
+
+        <div class="network-status">
+            <i class="fas fa-wifi"></i> <span id="network-status" class="offline">Offline</span>
+        </div>
+
+        <button class="toggle-dark-mode" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
+
     <div class="animated-background">
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
     </div>
+
     <script>
-        // Update battery percentage and IP address dynamically using JavaScript
-        function updateStatus() {
-            document.getElementById("battery-percentage").innerHTML = "90%"; // Update battery percentage
-            document.getElementById("ip-address").innerHTML = "10.0.0.1"; // Update IP address
+        // Get Battery Status
+        if ('getBattery' in navigator) {
+            navigator.getBattery().then(function(battery) {
+                const batteryPercentage = Math.round(battery.level * 100);
+                const batteryLabel = document.getElementById("battery-percentage");
+
+                if (batteryPercentage >= 80) {
+                    batteryLabel.classList.add('battery-percentage');
+                    batteryLabel.classList.remove('battery-medium', 'battery-low');
+                    batteryLabel.innerHTML = `${batteryPercentage}% Battery`;
+                } else if (batteryPercentage >= 30) {
+                    batteryLabel.classList.add('battery-medium');
+                    batteryLabel.classList.remove('battery-percentage', 'battery-low');
+                    batteryLabel.innerHTML = `${batteryPercentage}% Battery`;
+                } else {
+                    batteryLabel.classList.add('battery-low');
+                    batteryLabel.classList.remove('battery-percentage', 'battery-medium');
+                    batteryLabel.innerHTML = `${batteryPercentage}% Battery`;
+                }
+
+                battery.addEventListener('levelchange', function() {
+                    batteryLabel.innerHTML = `${Math.round(battery.level * 100)}% Battery`;
+                });
+            });
         }
 
-        // Call the updateStatus function every 5 seconds
-        setInterval(updateStatus, 5000);
+        // Get User IP Address
+        async function fetchIpAddress() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                document.getElementById("ip-address").innerHTML = data.ip;
+            } catch (error) {
+                document.getElementById("ip-address").innerHTML = 'Unable to fetch IP';
+            }
+        }
+        fetchIpAddress();
+
+        // Get User Location
+        async function fetchLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    document.getElementById("location").innerHTML = `Lat: ${lat}, Lon: ${lon}`;
+                });
+            } else {
+                document.getElementById("location").innerHTML = 'Geolocation not supported';
+            }
+        }
+        fetchLocation();
+
+        // Get System Information
+        function fetchSystemInfo() {
+            const systemInfo = `Browser: ${navigator.userAgent}, OS: ${navigator.platform}`;
+            document.getElementById("system-info").innerHTML = systemInfo;
+        }
+        fetchSystemInfo();
+
+        // Check Network Status
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
+        function updateNetworkStatus() {
+            const status = navigator.onLine ? 'Online' : 'Offline';
+            const networkStatus = document.getElementById("network-status");
+            networkStatus.innerHTML = status;
+            if (navigator.onLine) {
+                networkStatus.classList.remove('offline');
+                networkStatus.classList.add('online');
+            } else {
+                networkStatus.classList.remove('online');
+                networkStatus.classList.add('offline');
+            }
+        }
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            document.querySelector('.container').classList.toggle('dark-mode');
+        }
     </script>
 </body>
 </html>
