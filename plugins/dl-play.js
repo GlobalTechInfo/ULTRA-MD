@@ -1,40 +1,155 @@
-import yts from 'yt-search';
+import fetch from 'node-fetch'
+import ytdl from 'youtubedl-core'
+import yts from 'youtube-yts'
+import fs from 'fs'
+import { pipeline } from 'stream'
+import { promisify } from 'util'
+import os from 'os'
 
-let handler = async (m, { conn, command, text, usedPrefix }) => {
-    if (!text) throw `✳️ Example: *${usedPrefix + command}* Lil Peep hate my life`;
-    
-    try {
-        let res = await yts(text);
-        let vid = res.videos[0];
-        
-        if (!vid) throw `✳️ Video/Audio not found`;
+const streamPipeline = promisify(pipeline)
 
-        let { description, thumbnail, videoId, timestamp, views, ago, url } = vid;
-        m.react('🎧');
+const handler = async (m, { conn, command, text, args, usedPrefix }) => {
+  if (!text) throw `give a text to search Example: *${usedPrefix + command}* sefali odia song`
+  conn.ultra = conn.ultra ? conn.ultra : {}
+  await conn.reply(m.chat, wait, m)
+  const result = await searchAndDownloadMusic(text)
+  const infoText = `✦ ──『 *ULTRA PLAYER* 』── ⚝ \n\n [ ⭐ Reply the number of the desired search result to get the Audio]. \n\n`
 
-        let play = `
-≡ *ULTRA-MD MUSIC*
-┌──────────────
-▢ 📆 *Uploaded:* ${ago}
-▢ ⌚ *Duration:* ${timestamp}
-▢ 👀 *Views:* ${views.toLocaleString()}
-└──────────────`;
+  const orderedLinks = result.allLinks.map((link, index) => {
+    const sectionNumber = index + 1
+    const { title, url } = link
+    return `*${sectionNumber}.* ${title}`
+  })
 
-        await conn.sendButton(m.chat, play, null, null, [
-            ['🎶 MP3', `${usedPrefix}yta ${url}`],
-            ['🎥 MP4', `${usedPrefix}ytv ${url}`]
-        ], m, { mentions: [m.sender] });
+  const orderedLinksText = orderedLinks.join('\n\n')
+  const fullText = `${infoText}\n\n${orderedLinksText}`
+  const { key } = await conn.reply(m.chat, fullText, m)
+  conn.ultra[m.sender] = {
+    result,
+    key,
+    timeout: setTimeout(() => {
+      conn.sendMessage(m.chat, {
+        delete: key,
+      })
+      delete conn.ultra[m.sender]
+    }, 150 * 1000),
+  }
+}
 
-    } catch (error) {
-        console.error('Error in handler:', error);
-        // You can choose to notify the user if necessary
-        throw 'An error occurred while processing your request.';
+handler.before = async (m, { conn }) => {
+  conn.ultra = conn.ultra ? conn.ultra : {}
+  if (m.isBaileys || !(m.sender in conn.ultra)) return
+  const { result, key, timeout } = conn.ultra[m.sender]
+
+  if (!m.quoted || m.quoted.id !== key.id || !m.text) return
+  const choice = m.text.trim()
+  const inputNumber = Number(choice)
+  if (inputNumber >= 1 && inputNumber <= result.allLinks.length) {
+    const selectedUrl = result.allLinks[inputNumber - 1].url
+    console.log('selectedUrl', selectedUrl)
+    let title = generateRandomName()
+    const audioStream = ytdl(selectedUrl, {
+      filter: 'audioonly',
+      quality: 'highestaudio',
+    })
+
+    const tmpDir = os.tmpdir()
+
+    const writableStream = fs.createWriteStream(`${tmpDir}/${title}.mp3`)
+
+    await streamPipeline(audioStream, writableStream)
+
+    const doc = {
+      audio: {
+        url: `${tmpDir}/${title}.mp3`,
+      },
+      mimetype: 'audio/mpeg',
+      ptt: false,
+      waveform: [100, 0, 0, 0, 0, 0, 100],
+      fileName: `${title}`,
     }
-};
 
-handler.help = ['play'];
-handler.tags = ['dl'];
-handler.command = ['play', 'playvid'];
-handler.disabled = false;
+    await conn.sendMessage(m.chat, doc, { quoted: m })
+  } else {
+    m.reply(
+      'Invalid sequence number. Please select the appropriate number from the list above.\nBetween 1 to ' +
+        result.allLinks.length
+    )
+  }
+}
 
-export default handler;
+handler.help = ['play']
+handler.tags = ['downloader']
+handler.command = /^(play)$/i
+handler.limit = true
+export default handler
+
+function formatBytes(bytes, decimals = 2) {
+  if (bytes === 0) return '0 B'
+  const k = 1024
+  const dm = decimals < 0 ? 0 : decimals
+  const sizes = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+  const i = Math.floor(Math.log(bytes) / Math.log(k))
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
+}
+
+async function searchAndDownloadMusic(query) {
+  try {
+    const { videos } = await yts(query)
+    if (!videos.length) return 'Sorry, no video results were found for this search.'
+
+    const allLinks = videos.map(video => ({
+      title: video.title,
+      url: video.url,
+    }))
+
+    const jsonData = {
+      title: videos[0].title,
+      description: videos[0].description,
+      duration: videos[0].duration,
+      author: videos[0].author.name,
+      allLinks: allLinks,
+      videoUrl: videos[0].url,
+      thumbnail: videos[0].thumbnail,
+    }
+
+    return jsonData
+  } catch (error) {
+    return 'Error: ' + error.message
+  }
+}
+
+async function fetchVideoBuffer() {
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+      },
+    })
+    return await response.buffer()
+  } catch (error) {
+    return null
+  }
+}
+
+function generateRandomName() {
+  const adjectives = [
+    'happy',
+    'sad',
+    'funny',
+    'brave',
+    'clever',
+    'kind',
+    'silly',
+    'wise',
+    'gentle',
+    'bold',
+  ]
+  const nouns = ['cat', 'dog', 'bird', 'tree', 'river', 'mountain', 'sun', 'moon', 'star', 'cloud']
+
+  const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+  const randomNoun = nouns[Math.floor(Math.random() * nouns.length)]
+
+  return randomAdjective + '-' + randomNoun
+}
