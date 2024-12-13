@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import pkg from 'nayan-video-downloader';
+import pkg from 'nayan-videos-downloader';
 const { twitterdown } = pkg;  // Import the Twitter video downloader
 
 // Retry function for fetching the video with better error handling
