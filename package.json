@@ -66,6 +66,7 @@
         "fg-ig": "^0.0.2",
         "figlet": "^1.7.0",
         "file-type": "^18.0.0",
+        "file_size_url": "^1.0.6",
         "fluent-ffmpeg": "^2.1.2",
         "ffmpeg": "^0.0.4",
         "formdata-node": "^5.0.0",
@@ -118,7 +119,7 @@
         "ytdl-core": "^latest",
         "yargs": "^17.6.0",
         "youtube-yts": "^2.0.0",
-        "youtubedl-core": "npm:@distube/ytdl-core@latest"
+        "youtubedl-core": "npm:@distube/ytdl-core"
     },
     "overrides": {
         "cache-manager": "5.2.2"
