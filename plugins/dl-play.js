@@ -80,7 +80,7 @@ handler.before = async (m, { conn }) => {
 
 handler.help = ['play']
 handler.tags = ['downloader']
-handler.command = /^(play)$/i
+handler.command = ['play', 'song', 'spotify', 'playsong', 'ytplay']
 handler.limit = true
 export default handler
 
