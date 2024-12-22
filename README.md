@@ -55,6 +55,12 @@ set the Env Vars.
 
 ----
 
+```
+https://www.npmjs.com/package/api-qasim
+
+npm i api-qasim
+
+```
 
 ## 🎬 Watch the Tutorial
 
