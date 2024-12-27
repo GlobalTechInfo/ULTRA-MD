@@ -170,7 +170,7 @@ To set up the ULTRA-MD quickly, follow our detailed tutorial on YouTube:
 
 ## Support & Community
 
-<p align="center">Need help? Create an <a href="https://github.com/GlobalTechInfo/ULTRA-MD/issues">issue</a> or <a href="https://wa.me/923444844060?text=Hello+Silva+Tech,+I+need+assistance+with+Silva+MD+Bot">Contact Us on WhatsApp</a>.</p>
+<p align="center">Need help? Create an <a href="https://github.com/GlobalTechInfo/ULTRA-MD/issues">issue</a> or <a href="https://wa.me/923444844060?text=Hello+Global+Tech,+I+Need+Assistance+For+ULTRA+MD+Bot">Contact Us on WhatsApp</a>.</p>
 
 ---
 
@@ -323,7 +323,7 @@ This project is licensed under the [Apache-2.0 license](LICENSE) - see the LICEN
 
 ---
 
-<p align="center">© Globaltechinfo 2024</p>
+<p align="center">© GlobalTechInfo 2024</p>
 
   
   
