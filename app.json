@@ -4,18 +4,18 @@
   "keywords": [
     "whatsapp Ai"
   ],
-  "repository": "https://github.com/GlobalTechInfo/ULTRA-MD",
+  "repository": "https://github.com",
   "stack": "container",
   "env": {
     "OWNERS": {
       "description": "owner number",
       "required": true,
-      "value": "923444844060"
+      "value": "94766687628"
     },
     "BOTNAME": {
       "description": "Give your BOT a name",
       "required": true,
-      "value": "ULTRA-MD"
+      "value": "ANNSUN-Y"
     },
     "DATABASE_URL": {
       "description": "your mongodb database url",
@@ -23,9 +23,9 @@
       "value": ""
     },
     "SESSION_ID": {
-      "description": "your session id",
+      "description": "TJwFEQSI#QNNSU5O22aa1peWh1WfHV_QBUfAYQn66jQU8DLX0-OQ",
       "required": true,
-      "value": ""
+      "value": "TJwFEQSI#QNNSU5O22aa1peWh1WfHV_QBUfAYQn66jQU8DLX0-OQ"
     },
     "MODE": {
       "description": "mode public or private",
@@ -49,7 +49,7 @@
     },
     "statusview": {
       "description": "make it true if you want bot to view status",
-      "required": false,
+      "required": true,
       "value": ""
     },
     "autoRead": {
@@ -59,7 +59,7 @@
     },
     "antidelete": {
       "description": "bot will forward deleted messages if you make it true",
-      "required": false,
+      "required": true,
       "value": "false"
     },
      "REMOVEBG_KEY": {
