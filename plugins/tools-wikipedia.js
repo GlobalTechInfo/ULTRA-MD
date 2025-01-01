@@ -5,7 +5,7 @@ let handler = async (m, { text }) => {
   if (!text) throw `✳️ Enter what you want to search for on Wikipedia`
 
   try {
-    const link = await axios.get(`https://es.wikipedia.org/wiki/${text}`)
+    const link = await axios.get(`https://en.wikipedia.org/wiki/${text}`)
     const $ = cheerio.load(link.data)
     let wik = $('#firstHeading').text().trim()
     let resulw = $('#mw-content-text > div.mw-parser-output').find('p').text().trim()
