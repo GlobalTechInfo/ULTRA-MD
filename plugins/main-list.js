@@ -326,6 +326,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
 ◈ •swdl
 ◈ •apksearch
 ◈ •playstore
+◈ •ringtone
 ◈ •dlstatus
 ╰─────────❍` //
       break
@@ -558,6 +559,12 @@ lkr=`
 ◈ •imdb
 ◈ •reddit
 ◈ •lyrics
+◈ •wattpad
+◈ •happymod
+◈ •android
+◈ •styletext
+◈ •trendtwit
+◈ •wikipedia
 ◈ •readmore
 ◈ •ssweb
 ◈ •carbon
@@ -565,7 +572,6 @@ lkr=`
 ◈ •translate
 ◈ •tourl
 ◈ •trace
-◈ •wikipedia
 ◈ •nowa
 ◈ •qrmaker
 ◈ •readqr
