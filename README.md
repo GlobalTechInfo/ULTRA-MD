@@ -320,10 +320,12 @@ This project is licensed under the [Apache-2.0 license](LICENSE) - see the LICEN
 
 <p align="center">
   
- 7. #### DEPLOY IN TERMUX/UBUNTU
- 
+ 7. # DEPLOY IN TERMUX
+
+ 8. ## For Ubuntu Users
+   
 ```
-apt update && apt upgrade -y
+pkg update && pkg upgrade -y
 ```
 ```
 pkg install proot-distro
@@ -345,15 +347,134 @@ apt -y remove nodejs
 curl -fsSl https://deb.nodesource.com/setup_20.x | bash - && apt -y install nodejs
 ```
 ```
-apt-get install build-essential libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
+exit
+```
+```
+proot-distro login ubuntu
 ```
 ```
 git clone https://github.com/<your gitHub Username>/ULTRA-MD
 cd ULTRA-MD
 ```
 ```
-npm install && npm start
+npm install
 ```
+```
+npm start
+```
+
+-----
+
+## For Apline Users
+
+<details>
+  
+  <summary>𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘</summary>
+  
+```
+pkg update && pkg upgrade -y
+```
+```
+pkg install proot-distro
+```
+```
+proot-distro install alpine
+```
+```
+proot-distro login alpine
+```
+```
+apk update && apk upgrade
+```
+```
+apk add libwebp git ffmpeg curl imagemagick
+```
+```
+apk update
+apk add --no-cache \
+    build-base \
+    cairo-dev \
+    pango-dev \
+    jpeg-dev \
+    libpng-dev \
+    giflib-dev \
+    librsvg-dev \
+    python3 \
+    py3-pip
+
+```
+```
+ln -sf /usr/bin/python3 /usr/bin/python
+```
+```
+git clone https://github.com/<your gitHub Username>/ULTRA-MD
+cd ULTRA-MD
+```
+```
+npm install
+```
+```
+npm start
+```
+
+</details>
+
+-----
+
+### For Fedora Users
+
+<details>
+  
+<summary>𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘</summary>
+
+```
+pkg update && pkg upgrade -y
+```
+```
+pkg install proot-distro
+```
+```
+proot-distro install fedora
+```
+```
+proot-distro login fedora
+```
+```
+dnf update -y
+```
+```
+sudo dnf install -y https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+```
+sudo dnf install -y libwebp git ffmpeg curl ImageMagick
+```
+```
+curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo bash -
+sudo dnf install -y nodejs
+```
+```
+exit
+```
+```
+proot-distro login fedora
+```
+```
+git clone https://github.com/<your gitHub Username>/ULTRA-MD
+cd ULTRA-MD
+```
+```
+npm install
+```
+```
+npm start
+```
+
+</details>
+
+----
+</p>
+
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a><a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 
 - **Star ⭐ the repo if you like ULTRA-MD.**
