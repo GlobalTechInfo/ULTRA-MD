@@ -319,6 +319,7 @@ This project is licensed under the [Apache-2.0 license](LICENSE) - see the LICEN
 ----
 
 <p align="center">
+  
  7. # DEPLOY IN TERMUX
 
  8. ## For Ubuntu Users
@@ -406,7 +407,7 @@ cd ULTRA-MD
 npm install
 ```
 ```
-npm star
+npm start
 ```
 
 ----
