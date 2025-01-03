@@ -75,7 +75,6 @@ let str = `
 ◈┃• menu3
 ◈┃• menu4
 ◈┃• fancy
-◈┃• fancy2
 ◈┗━♪♪━★━☆━⦿
 
 © GlobalTechInfo
