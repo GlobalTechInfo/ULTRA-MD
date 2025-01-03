@@ -319,7 +319,6 @@ This project is licensed under the [Apache-2.0 license](LICENSE) - see the LICEN
 ----
 
 <p align="center">
-  
  7. # DEPLOY IN TERMUX
 
  8. ## For Ubuntu Users
@@ -365,67 +364,7 @@ npm start
 
 -----
 
-## For Apline Users
-
-<details>
-  
-  <summary>𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘</summary>
-  
-```
-pkg update && pkg upgrade -y
-```
-```
-pkg install proot-distro
-```
-```
-proot-distro install alpine
-```
-```
-proot-distro login alpine
-```
-```
-apk update && apk upgrade
-```
-```
-apk add libwebp git ffmpeg curl imagemagick
-```
-```
-apk update
-apk add --no-cache \
-    build-base \
-    cairo-dev \
-    pango-dev \
-    jpeg-dev \
-    libpng-dev \
-    giflib-dev \
-    librsvg-dev \
-    python3 \
-    py3-pip
-
-```
-```
-ln -sf /usr/bin/python3 /usr/bin/python
-```
-```
-git clone https://github.com/<your gitHub Username>/ULTRA-MD
-cd ULTRA-MD
-```
-```
-npm install
-```
-```
-npm start
-```
-
-</details>
-
------
-
 ## For Fedora Users
-
-<details>
-  
-<summary>𝗖𝗟𝗜𝗖𝗞 𝗛𝗘𝗥𝗘</summary>
 
 ```
 pkg update && pkg upgrade -y
@@ -467,10 +406,8 @@ cd ULTRA-MD
 npm install
 ```
 ```
-npm start
+npm star
 ```
-
-</details>
 
 ----
 </p>
